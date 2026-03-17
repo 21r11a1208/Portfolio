@@ -12,11 +12,9 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Never ship source maps to the browser — keeps JS unreadable in DevTools Sources tab
   productionBrowserSourceMaps: false,
-  experimental: {
-    turbo: {
-      resolveAlias: {
-        tailwindcss: path.resolve("./node_modules/tailwindcss"),
-      },
+  turbo: {
+    resolveAlias: {
+      tailwindcss: path.resolve("./node_modules/tailwindcss"),
     },
   },
   async headers() {
