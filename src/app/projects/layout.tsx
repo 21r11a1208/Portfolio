@@ -6,7 +6,7 @@ export default function ProjectsLayout({ children }: { children: React.ReactNode
       <div className="max-w-3xl mx-auto">
         <Link
           href="/"
-          className="inline-flex items-center gap-2 text-sm font-display text-[rgba(240,237,230,0.4)] hover:text-[#c8f060] transition-colors mb-10 group"
+          className="inline-flex items-center gap-2 text-sm font-display text-[var(--text-40)] hover:text-[var(--accent-text)] transition-colors mb-10 group"
           data-cursor="hover"
         >
           <span className="group-hover:-translate-x-1 transition-transform inline-block">←</span>
