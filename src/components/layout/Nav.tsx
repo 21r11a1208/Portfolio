@@ -33,7 +33,7 @@ export function Nav() {
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
           <a
-            href="#"
+            href="/"
             data-cursor="hover"
             className="text-lg font-display font-bold text-[var(--text)] hover:text-[var(--accent-text)] transition-colors"
           >
