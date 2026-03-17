@@ -317,7 +317,7 @@ export function GymatePRD() {
             <div className="flex flex-wrap gap-2 mb-5">
               {PERSONAS.map((p, i) => (
                 <button key={i} onClick={() => setActivePersona(i)} data-cursor="hover"
-                  className={`px-4 py-2 rounded-full text-[12px] font-display font-semibold border transition-all duration-200 ${activePersona === i ? "bg-[var(--accent)] text-[#0f0f14] border-[var(--accent)]" : "bg-transparent text-[var(--text-50)] border-[var(--border)] hover:border-[var(--accent-25)] hover:text-[var(--text)]"}`}>
+                  className={`px-4 py-2 rounded-full text-[12px] font-display font-semibold border transition-all duration-200 ${activePersona === i ? "bg-[var(--accent)] text-[var(--text-on-accent)] border-[var(--accent)]" : "bg-transparent text-[var(--text-50)] border-[var(--border)] hover:border-[var(--accent-25)] hover:text-[var(--text)]"}`}>
                   {p.name} — {p.type}
                 </button>
               ))}
@@ -369,7 +369,7 @@ export function GymatePRD() {
             <div className="flex flex-wrap gap-2 mb-5">
               {FEATURES.map((f, i) => (
                 <button key={i} onClick={() => setActiveFeature(i)} data-cursor="hover"
-                  className={`px-4 py-2 rounded-full text-[12px] font-display font-semibold border transition-all duration-200 ${activeFeature === i ? "bg-[var(--accent)] text-[#0f0f14] border-[var(--accent)]" : "bg-transparent text-[var(--text-50)] border-[var(--border)] hover:border-[var(--accent-25)] hover:text-[var(--text)]"}`}>
+                  className={`px-4 py-2 rounded-full text-[12px] font-display font-semibold border transition-all duration-200 ${activeFeature === i ? "bg-[var(--accent)] text-[var(--text-on-accent)] border-[var(--accent)]" : "bg-transparent text-[var(--text-50)] border-[var(--border)] hover:border-[var(--accent-25)] hover:text-[var(--text)]"}`}>
                   {f.title}
                 </button>
               ))}

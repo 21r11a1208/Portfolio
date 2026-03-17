@@ -196,7 +196,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>{children}</p>;
 }
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary, #fff)" }}>{children}</h2>;
+  return <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary)" }}>{children}</h2>;
 }
 function Divider() {
   return <div className="border-t my-12" style={{ borderColor: "var(--border)" }} />;
@@ -208,19 +208,19 @@ function FishboneDiagram() {
   return (
     <div>
       <div className="overflow-x-auto rounded-xl border p-4"
-        style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+        style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
         <svg viewBox="0 0 900 400" className="w-full" style={{ minWidth: 600, maxHeight: 440 }}>
           <line x1="70" y1="200" x2="758" y2="200" stroke="var(--border)" strokeWidth="2.5" />
           <polygon points="758,193 774,200 758,207" fill="var(--border)" />
           <rect x="774" y="165" width="58" height="70" rx="6"
-            fill="var(--surface-2, #1a1a1a)" stroke="var(--border)" strokeWidth="1.5" />
+            fill="var(--surface-2)" stroke="var(--border)" strokeWidth="1.5" />
           <text x="803" y="188" textAnchor="middle" fill="var(--accent)" fontSize="7" fontFamily="monospace" fontWeight="bold">EFFECT</text>
-          <text x="803" y="200" textAnchor="middle" fill="var(--text-primary, #fff)" fontSize="7" fontFamily="sans-serif" fontWeight="bold">99%</text>
-          <text x="803" y="211" textAnchor="middle" fill="var(--text-primary, #fff)" fontSize="7" fontFamily="sans-serif" fontWeight="bold">Download</text>
-          <text x="803" y="222" textAnchor="middle" fill="var(--text-primary, #fff)" fontSize="7" fontFamily="sans-serif" fontWeight="bold">Collapse</text>
+          <text x="803" y="200" textAnchor="middle" fill="var(--text-primary)" fontSize="7" fontFamily="sans-serif" fontWeight="bold">99%</text>
+          <text x="803" y="211" textAnchor="middle" fill="var(--text-primary)" fontSize="7" fontFamily="sans-serif" fontWeight="bold">Download</text>
+          <text x="803" y="222" textAnchor="middle" fill="var(--text-primary)" fontSize="7" fontFamily="sans-serif" fontWeight="bold">Collapse</text>
           {CATEGORIES.map((cat) => {
             const isActive = activeId === cat.id;
-            const strokeColor = isActive ? cat.color : "var(--text-secondary, #555)";
+            const strokeColor = isActive ? cat.color : "var(--text-secondary)";
             const labelY = cat.tipY < cat.spineY ? cat.tipY - 20 : cat.tipY + 14;
             const ticks = [0.28, 0.52, 0.76].map((t) => ({
               x: cat.tipX + (cat.spineX - cat.tipX) * t,
@@ -236,14 +236,14 @@ function FishboneDiagram() {
                     stroke={strokeColor} strokeWidth={1} style={{ transition: "all 0.25s" }} />
                 ))}
                 <circle cx={cat.spineX} cy={cat.spineY} r={isActive ? 5 : 3.5}
-                  fill={isActive ? cat.color : "var(--surface, #111)"}
+                  fill={isActive ? cat.color : "var(--surface)"}
                   stroke={strokeColor} strokeWidth={1.5} style={{ transition: "all 0.25s" }} />
                 <rect x={cat.tipX - 54} y={labelY - 13} width={108} height={22} rx={5}
-                  fill={isActive ? cat.colorDim : "var(--surface-2, #1a1a1a)"}
+                  fill={isActive ? cat.colorDim : "var(--surface-2)"}
                   stroke={isActive ? cat.color : "var(--border)"}
                   strokeWidth={isActive ? 1.5 : 1} style={{ transition: "all 0.25s" }} />
                 <text x={cat.tipX} y={labelY + 2} textAnchor="middle"
-                  fill={isActive ? cat.color : "var(--text-secondary, #888)"}
+                  fill={isActive ? cat.color : "var(--text-secondary)"}
                   fontSize="8.5" fontFamily="sans-serif" fontWeight={isActive ? "bold" : "normal"}
                   style={{ transition: "all 0.25s" }}>{cat.label}</text>
                 <rect x={cat.tipX - 54} y={labelY - 13} width={108} height={22} rx={5} fill="transparent" />
@@ -265,16 +265,16 @@ function FishboneDiagram() {
             </div>
             <ul className="space-y-1.5 mb-4">
               {active.causes.map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>
+                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
                   <span style={{ color: active.color, marginTop: 3, flexShrink: 0 }}>→</span>{c}
                 </li>
               ))}
             </ul>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{active.detail}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{active.detail}</p>
           </motion.div>
         ) : (
           <motion.p key="hint" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="mt-4 text-center text-xs py-3" style={{ color: "var(--text-secondary, #555)" }}>
+            className="mt-4 text-center text-xs py-3" style={{ color: "var(--text-secondary)" }}>
             Click any hypothesis category to see my read on it
           </motion.p>
         )}
@@ -290,31 +290,31 @@ function DiagnosisAccordion() {
       {FIVE_WHYS.map(({ symptom, chain, root, color }, idx) => (
         <div key={idx} className="rounded-xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
           <button className="w-full text-left px-5 py-4 flex items-center justify-between gap-4"
-            style={{ background: "var(--surface, #111)" }}
+            style={{ background: "var(--surface)" }}
             onClick={() => setOpenIdx(openIdx === idx ? null : idx)}>
             <div>
               <span className="text-xs font-mono uppercase tracking-wide" style={{ color }}>Observation</span>
-              <p className="font-semibold text-sm mt-0.5" style={{ color: "var(--text-primary, #fff)" }}>{symptom}</p>
+              <p className="font-semibold text-sm mt-0.5" style={{ color: "var(--text-primary)" }}>{symptom}</p>
             </div>
             <motion.span animate={{ rotate: openIdx === idx ? 180 : 0 }} transition={{ duration: 0.2 }}
-              style={{ color: "var(--text-secondary, #888)", flexShrink: 0 }}>▼</motion.span>
+              style={{ color: "var(--text-secondary)", flexShrink: 0 }}>▼</motion.span>
           </button>
           <AnimatePresence>
             {openIdx === idx && (
               <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} style={{ overflow: "hidden" }}>
                 <div className="px-5 pb-5 pt-3 border-t space-y-2.5"
-                  style={{ borderColor: "var(--border)", background: "var(--surface-2, #0d0d0d)" }}>
+                  style={{ borderColor: "var(--border)", background: "var(--surface-2)" }}>
                   <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color }}>Tracing back — why?</p>
                   {chain.map((step, i) => (
                     <div key={i} className="flex gap-3 items-start">
                       <span className="text-xs font-mono shrink-0 mt-0.5" style={{ color, opacity: 1 - i * 0.15 }}>Why?</span>
-                      <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{step}</p>
+                      <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{step}</p>
                     </div>
                   ))}
                   <div className="mt-3 pt-3 border-t" style={{ borderColor: color + "44" }}>
                     <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color }}>Where it bottoms out</p>
-                    <p className="text-sm font-medium italic" style={{ color: "var(--text-primary, #fff)" }}>{root}</p>
+                    <p className="text-sm font-medium italic" style={{ color: "var(--text-primary)" }}>{root}</p>
                   </div>
                 </div>
               </motion.div>
@@ -355,7 +355,7 @@ export function ArattaiRCA() {
         style={{ right: "max(1rem, calc(50vw - 680px))", width: 148 }}>
         {TOC.map(({ id, label }) => (
           <a key={id} href={`#${id}`} className="transition-all duration-200"
-            style={{ color: activeSection === id ? "var(--accent)" : "var(--text-secondary, #888)", fontWeight: activeSection === id ? 600 : 400 }}>
+            style={{ color: activeSection === id ? "var(--accent)" : "var(--text-secondary)", fontWeight: activeSection === id ? 600 : 400 }}>
             {label}
           </a>
         ))}
@@ -366,10 +366,10 @@ export function ArattaiRCA() {
         {/* Header */}
         <div className="mb-10">
           <Tag variant="type">RCA</Tag>
-          <h1 className="text-4xl font-bold mt-4 mb-2" style={{ color: "var(--text-primary, #fff)" }}>
+          <h1 className="text-4xl font-bold mt-4 mb-2" style={{ color: "var(--text-primary)" }}>
             Arattai: The One-Week Wonder
           </h1>
-          <p className="text-lg mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-lg mb-6" style={{ color: "var(--text-secondary)" }}>
             How I&apos;d diagnose a 99% download collapse for an app that hit #1 in India in 8 weeks
           </p>
           <div className="rounded-xl border p-5"
@@ -377,7 +377,7 @@ export function ArattaiRCA() {
             <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
               How I&apos;m approaching this
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               I&apos;m treating this as an RCA interview question: a product went from #1 to irrelevant in 8 weeks. My job is to figure out why — not just list all the bad things that happened, but identify the primary cause, separate it from the compounding factors, and explain what I&apos;d have done differently. I&apos;ll show every step of my reasoning, including the hypotheses I considered and rejected.
             </p>
           </div>
@@ -387,7 +387,7 @@ export function ArattaiRCA() {
         <section id="ar-clarify">
           <SectionLabel>Step 1 of 8</SectionLabel>
           <SectionTitle>Clarify what I&apos;m diagnosing</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             My first instinct when I hear &ldquo;downloads dropped 99%&rdquo; is: what exactly does that mean? Download count and active user count are very different metrics, and they have different root causes.
           </p>
 
@@ -410,9 +410,9 @@ export function ArattaiRCA() {
                 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 10 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
                 className="rounded-xl border p-5"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
-                <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary, #fff)" }}>Q: {q}</p>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary)" }}>Q: {q}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                   <span style={{ color: "var(--accent)" }}>→ </span>{a}
                 </p>
               </motion.div>
@@ -427,12 +427,12 @@ export function ArattaiRCA() {
               { label: "Est. D30 retention",    value: 5,    suffix: "%",   note: "No network = no return" },
             ].map(({ label, value, suffix, note }) => (
               <div key={label} className="rounded-lg p-4 text-center border"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="text-3xl font-bold mb-1" style={{ color: "var(--accent)" }}>
                   <Counter target={value} suffix={suffix} />
                 </div>
-                <div className="text-xs font-medium mb-0.5" style={{ color: "var(--text-primary, #fff)" }}>{label}</div>
-                <div className="text-xs" style={{ color: "var(--text-secondary, #888)" }}>{note}</div>
+                <div className="text-xs font-medium mb-0.5" style={{ color: "var(--text-primary)" }}>{label}</div>
+                <div className="text-xs" style={{ color: "var(--text-secondary)" }}>{note}</div>
               </div>
             ))}
           </div>
@@ -444,7 +444,7 @@ export function ArattaiRCA() {
         <section id="ar-context">
           <SectionLabel>Step 2 of 8</SectionLabel>
           <SectionTitle>Understand the context before forming hypotheses</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I&apos;d spend time understanding the product and market before I hypothesize. An RCA on a product I don&apos;t understand is just guessing.
           </p>
 
@@ -455,10 +455,10 @@ export function ArattaiRCA() {
               { label: "The moment", value: "Jan 2021", note: "WhatsApp announces mandatory Facebook data sharing. IT Ministry summons WhatsApp. Vocal for Local sentiment is at peak post-China app bans." },
             ].map(({ label, value, note }) => (
               <div key={label} className="rounded-xl border p-4"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color: "var(--accent)" }}>{label}</p>
-                <p className="font-semibold text-sm mb-1" style={{ color: "var(--text-primary, #fff)" }}>{value}</p>
-                <p className="text-xs" style={{ color: "var(--text-secondary, #888)" }}>{note}</p>
+                <p className="font-semibold text-sm mb-1" style={{ color: "var(--text-primary)" }}>{value}</p>
+                <p className="text-xs" style={{ color: "var(--text-secondary)" }}>{note}</p>
               </div>
             ))}
           </div>
@@ -472,7 +472,7 @@ export function ArattaiRCA() {
                 The Vocal for Local Context — Why I Can&apos;t Ignore It
               </p>
             </div>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               India had spent six months in 2020 banning Chinese apps under Atmanirbhar Bharat. When the WhatsApp controversy arrived in January 2021, the IT Ministry publicly summoned WhatsApp and government officials encouraged the switch to Indian alternatives. Arattai was the right nationality at the right moment. I&apos;d flag this early in my RCA because it means the download peak was inflated by two independent forces — the WhatsApp controversy AND a government-amplified nationalist sentiment — neither of which was product-driven demand. Any product with an Indian flag and a privacy story would have seen similar numbers. That&apos;s important context for what the peak actually means.
             </p>
           </div>
@@ -485,18 +485,18 @@ export function ArattaiRCA() {
             {TIMELINE.map(({ date, event, severity, detail }) => (
               <div key={date} className="relative">
                 <div className="absolute -left-9 top-1 w-4 h-4 rounded-full border-2 flex items-center justify-center"
-                  style={{ borderColor: SEVERITY_COLORS[severity] ?? "var(--accent)", background: "var(--surface, #111)" }}>
+                  style={{ borderColor: SEVERITY_COLORS[severity] ?? "var(--accent)", background: "var(--surface)" }}>
                   <div className="w-1.5 h-1.5 rounded-full" style={{ background: SEVERITY_COLORS[severity] ?? "var(--accent)" }} />
                 </div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <span className="text-xs font-mono" style={{ color: "var(--accent)" }}>{date}</span>
-                  <span className="font-semibold text-sm" style={{ color: "var(--text-primary, #fff)" }}>{event}</span>
+                  <span className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{event}</span>
                   <span className="text-xs px-2 py-0.5 rounded-full"
                     style={{ background: (SEVERITY_COLORS[severity] ?? "#888") + "22", color: SEVERITY_COLORS[severity] ?? "#888" }}>
                     {severity}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{detail}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{detail}</p>
               </div>
             ))}
           </div>
@@ -508,7 +508,7 @@ export function ArattaiRCA() {
         <section id="ar-sanity">
           <SectionLabel>Step 3 of 8</SectionLabel>
           <SectionTitle>Rule out the boring explanations</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Before I hypothesize interesting causes, I&apos;d rule out the obvious ones.
           </p>
           <div className="space-y-3">
@@ -521,13 +521,13 @@ export function ArattaiRCA() {
               const vc = verdict === "No" ? "#22c55e" : verdict.startsWith("Not") ? "#eab308" : "#ef4444";
               return (
                 <div key={check} className="rounded-xl border p-5"
-                  style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                  style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                   <div className="flex items-start gap-3">
                     <span className="text-xs px-2 py-0.5 rounded-full font-semibold shrink-0 mt-0.5"
                       style={{ background: vc + "22", color: vc }}>{verdict}</span>
                     <div>
-                      <p className="text-sm font-semibold mb-1" style={{ color: "var(--text-primary, #fff)" }}>{check}</p>
-                      <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{detail}</p>
+                      <p className="text-sm font-semibold mb-1" style={{ color: "var(--text-primary)" }}>{check}</p>
+                      <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{detail}</p>
                     </div>
                   </div>
                 </div>
@@ -535,9 +535,9 @@ export function ArattaiRCA() {
             })}
           </div>
           <div className="mt-4 rounded-xl border-l-4 p-4"
-            style={{ borderColor: "var(--accent)", background: "var(--surface, #111)" }}>
-            <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>
-              <strong style={{ color: "var(--text-primary, #fff)" }}>Conclusion: </strong>
+            style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
+            <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+              <strong style={{ color: "var(--text-primary)" }}>Conclusion: </strong>
               The collapse is real and external event-driven. The cause is not a product failure in the traditional sense — Arattai didn&apos;t break. It was never used. I&apos;m now diagnosing: why did downloads collapse when the external catalyst disappeared, and why was there no organic floor?
             </p>
           </div>
@@ -549,7 +549,7 @@ export function ArattaiRCA() {
         <section id="ar-hypotheses">
           <SectionLabel>Step 4 of 8</SectionLabel>
           <SectionTitle>Map all the hypotheses</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Before I pick a primary cause, I&apos;d generate all plausible hypotheses. Click each bone to see my assessment — whether I think it&apos;s primary, secondary, or a compounding factor.
           </p>
           <FishboneDiagram />
@@ -561,7 +561,7 @@ export function ArattaiRCA() {
         <section id="ar-prioritise">
           <SectionLabel>Step 5 of 8</SectionLabel>
           <SectionTitle>How I&apos;d rank and test each hypothesis</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I have 7 hypotheses. I&apos;d rank them by explanatory power — which one, if true, best explains the full shape of the collapse including the timing.
           </p>
 
@@ -604,12 +604,12 @@ export function ArattaiRCA() {
               },
             ].map(({ rank, hypothesis, test, verdict, color }) => (
               <div key={rank} className="rounded-xl border p-5"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="flex items-start gap-4 mb-3">
                   <span className="text-2xl font-bold shrink-0" style={{ color: "var(--accent)", opacity: 0.4 }}>{rank}</span>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-3 mb-1">
-                      <p className="font-semibold text-sm" style={{ color: "var(--text-primary, #fff)" }}>{hypothesis}</p>
+                      <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{hypothesis}</p>
                       <span className="text-xs px-2 py-0.5 rounded-full shrink-0 font-medium"
                         style={{ background: color + "22", color }}>{verdict.split(" — ")[0]}</span>
                     </div>
@@ -618,7 +618,7 @@ export function ArattaiRCA() {
                 </div>
                 <div className="ml-10">
                   <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color: "var(--accent)" }}>How I&apos;d test it</p>
-                  <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{test}</p>
+                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{test}</p>
                 </div>
               </div>
             ))}
@@ -631,7 +631,7 @@ export function ArattaiRCA() {
         <section id="ar-diagnosis">
           <SectionLabel>Step 6 of 8</SectionLabel>
           <SectionTitle>Trace each observation to its root</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             For each significant observable symptom, I&apos;d walk the causal chain backward until I hit something structural. Click each to see the chain.
           </p>
           <DiagnosisAccordion />
@@ -647,10 +647,10 @@ export function ArattaiRCA() {
           <div className="rounded-xl border p-6 mb-6"
             style={{ borderColor: "var(--accent)55", background: "var(--accent-08, rgba(255,140,0,0.05))" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "var(--accent)" }}>Primary hypothesis</p>
-            <p className="text-lg font-bold mb-3" style={{ color: "var(--text-primary, #fff)" }}>
+            <p className="text-lg font-bold mb-3" style={{ color: "var(--text-primary)" }}>
               Arattai launched a network-effect product into a cold-start problem with no cold-start strategy. The download peak was borrowed from an external event. When the event ended, there was no organic floor because the product had never activated.
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               The Vocal for Local sentiment and the WhatsApp controversy explain the extraordinary peak. The network effect failure explains why the floor was zero. These two hypotheses together account for the entire shape of the curve — the spike and the cliff — without needing any other cause.
             </p>
           </div>
@@ -665,7 +665,7 @@ export function ArattaiRCA() {
                   "Signal maintained meaningfully higher users post-peak — it had a pre-existing tech community to seed from",
                   "No organic baseline before the Jan 2021 surge — 100% borrowed demand",
                 ].map((e, i) => (
-                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary, #aaa)" }}>
+                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary)" }}>
                     <span style={{ color: "#22c55e", flexShrink: 0 }}>✓</span>{e}
                   </li>
                 ))}
@@ -679,7 +679,7 @@ export function ArattaiRCA() {
                   "Signal also had a cold-start problem in India — why did it fare better?",
                   "Product quality (no calls etc.) may have been the real activation killer, not network absence",
                 ].map((e, i) => (
-                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary, #aaa)" }}>
+                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary)" }}>
                     <span style={{ color: "#ef4444", flexShrink: 0 }}>✗</span>{e}
                   </li>
                 ))}
@@ -687,11 +687,11 @@ export function ArattaiRCA() {
             </div>
           </div>
 
-          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "var(--accent)" }}>
               How I&apos;d address the counter-arguments
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               WhatsApp&apos;s inertia is real but not deterministic — Signal and Telegram both built viable user bases in India. The difference is both had seeding strategies: Signal seeded through tech/privacy communities, Telegram through large-group enthusiasts. Arattai had neither. On Signal&apos;s cold-start: Signal&apos;s endorsement by Musk created a concentrated seeding event in a tech-savvy community that could afford to install en masse simultaneously. That&apos;s the rarest cold-start solution. Arattai would have needed a different one. On product quality: the product gap is real but secondary — even a WhatsApp-feature-complete Arattai would have found no one to message.
             </p>
           </div>
@@ -705,12 +705,12 @@ export function ArattaiRCA() {
               <motion.div key={label}
                 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 16 }} viewport={{ once: true }}
                 className="rounded-lg p-4 border text-center"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="text-2xl font-bold" style={{ color: "var(--accent)" }}>
                   <Counter target={value} suffix={suffix} />
                 </div>
-                <div className="text-xs font-medium mt-1" style={{ color: "var(--text-primary, #fff)" }}>{label}</div>
-                <div className="text-xs mt-0.5" style={{ color: "var(--text-secondary, #888)" }}>{note}</div>
+                <div className="text-xs font-medium mt-1" style={{ color: "var(--text-primary)" }}>{label}</div>
+                <div className="text-xs mt-0.5" style={{ color: "var(--text-secondary)" }}>{note}</div>
               </motion.div>
             ))}
           </div>
@@ -722,7 +722,7 @@ export function ArattaiRCA() {
         <section id="ar-recommend">
           <SectionLabel>Step 8 of 8</SectionLabel>
           <SectionTitle>What I would have done differently</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             If I had been PM on Arattai and knew a controversy-driven surge was coming, here&apos;s what I&apos;d have built — and what I&apos;d explicitly not have done.
           </p>
 
@@ -754,10 +754,10 @@ export function ArattaiRCA() {
                 className="flex gap-4 items-start">
                 <span className="text-2xl font-bold shrink-0 mt-0.5" style={{ color: "var(--accent)", opacity: 0.35 }}>{n}</span>
                 <div className="rounded-xl border p-4 flex-1"
-                  style={{ borderColor: n === "04" ? "#ef444433" : "var(--border)", background: "var(--surface, #111)" }}>
+                  style={{ borderColor: n === "04" ? "#ef444433" : "var(--border)", background: "var(--surface)" }}>
                   <h3 className="font-semibold text-sm mb-2"
-                    style={{ color: n === "04" ? "#ef4444" : "var(--text-primary, #fff)" }}>{action}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{rationale}</p>
+                    style={{ color: n === "04" ? "#ef4444" : "var(--text-primary)" }}>{action}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{rationale}</p>
                 </div>
               </motion.div>
             ))}

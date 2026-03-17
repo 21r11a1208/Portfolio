@@ -260,7 +260,7 @@ export default function RootLayout({
         <ThemeProvider>
           <a
             href="#hero"
-            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[#c8f060] focus:text-[#0f0f14] focus:text-sm focus:font-semibold focus:font-display"
+            className="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 focus:z-[99999] focus:px-4 focus:py-2 focus:rounded-lg focus:bg-[#c8f060] focus:text-[var(--text-on-accent)] focus:text-sm focus:font-semibold focus:font-display"
           >
             Skip to main content
           </a>

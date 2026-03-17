@@ -170,7 +170,7 @@ export function Projects() {
                   data-cursor="hover"
                   className={`px-4 py-1.5 rounded-full text-[13px] font-display font-semibold transition-all duration-200 border ${
                     isActive
-                      ? "bg-[var(--accent)] text-[#0f0f14] border-[var(--accent)]"
+                      ? "bg-[var(--accent)] text-[var(--text-on-accent)] border-[var(--accent)]"
                       : "bg-transparent text-[var(--text-50)] border-[var(--border)] hover:border-[var(--accent-25)] hover:text-[var(--text)]"
                   }`}
                 >

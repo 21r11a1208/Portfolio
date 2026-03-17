@@ -158,7 +158,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>{children}</p>;
 }
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary, #fff)" }}>{children}</h2>;
+  return <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary)" }}>{children}</h2>;
 }
 function Divider() {
   return <div className="border-t my-12" style={{ borderColor: "var(--border)" }} />;
@@ -182,8 +182,8 @@ function FeatureTabs() {
           <button key={i} onClick={() => setActiveIdx(i)}
             className="px-3 py-2 rounded-lg text-xs transition-all duration-200"
             style={{
-              background: activeIdx === i ? "var(--accent-25, rgba(255,140,0,0.2))" : "var(--surface, #111)",
-              color: activeIdx === i ? "var(--accent)" : "var(--text-secondary, #888)",
+              background: activeIdx === i ? "var(--accent-25)" : "var(--surface)",
+              color: activeIdx === i ? "var(--accent)" : "var(--text-secondary)",
               border: `1px solid ${activeIdx === i ? "var(--accent)" : "var(--border)"}`,
               fontWeight: activeIdx === i ? 600 : 400,
             }}>
@@ -196,27 +196,27 @@ function FeatureTabs() {
           initial={{ opacity: 0, y: 8 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -8 }}
           transition={{ duration: 0.2 }}
           className="rounded-xl border p-5"
-          style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+          style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
           <div className="flex flex-wrap items-start justify-between gap-3 mb-4">
             <div>
-              <h3 className="font-bold" style={{ color: "var(--text-primary, #fff)" }}>{active.title}</h3>
+              <h3 className="font-bold" style={{ color: "var(--text-primary)" }}>{active.title}</h3>
             </div>
             <span className="text-xs px-2 py-1 rounded-full shrink-0 font-semibold"
               style={{ background: ps.bg, color: ps.color }}>{ps.label}</span>
           </div>
-          <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-5" style={{ color: "var(--text-secondary)" }}>
             {active.description}
           </p>
           <div className="mb-4 rounded-lg p-3 border-l-2"
-            style={{ borderColor: "var(--accent)", background: "var(--surface-2, #0d0d0d)" }}>
+            style={{ borderColor: "var(--accent)", background: "var(--surface-2)" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color: "var(--accent)" }}>User Story</p>
-            <p className="text-sm italic" style={{ color: "var(--text-secondary, #aaa)" }}>{active.userStory}</p>
+            <p className="text-sm italic" style={{ color: "var(--text-secondary)" }}>{active.userStory}</p>
           </div>
           <div>
             <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "var(--accent)" }}>Acceptance Criteria</p>
             <ul className="space-y-1.5">
               {active.acceptanceCriteria.map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>
+                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
                   <span style={{ color: "var(--accent)", marginTop: 3, flexShrink: 0 }}>✓</span>{c}
                 </li>
               ))}
@@ -251,7 +251,7 @@ export function LinkedInFresherPE() {
         style={{ right: "max(1rem, calc(50vw - 680px))", width: 148 }}>
         {TOC.map(({ id, label }) => (
           <a key={id} href={`#${id}`} className="transition-all duration-200"
-            style={{ color: activeSection === id ? "var(--accent)" : "var(--text-secondary, #888)", fontWeight: activeSection === id ? 600 : 400 }}>
+            style={{ color: activeSection === id ? "var(--accent)" : "var(--text-secondary)", fontWeight: activeSection === id ? 600 : 400 }}>
             {label}
           </a>
         ))}
@@ -262,10 +262,10 @@ export function LinkedInFresherPE() {
         {/* Header */}
         <div className="mb-10">
           <Tag variant="type">Product Enhancement</Tag>
-          <h1 className="text-4xl font-bold mt-4 mb-2" style={{ color: "var(--text-primary, #fff)" }}>
+          <h1 className="text-4xl font-bold mt-4 mb-2" style={{ color: "var(--text-primary)" }}>
             LinkedIn for Freshers
           </h1>
-          <p className="text-lg mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-lg mb-6" style={{ color: "var(--text-secondary)" }}>
             How I&apos;d think through reducing job-search friction for India&apos;s 10M annual graduates
           </p>
           <div className="rounded-xl border p-5"
@@ -273,7 +273,7 @@ export function LinkedInFresherPE() {
             <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
               How I&apos;m approaching this
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               I&apos;m walking through this the way I would in a product design interview — out loud, showing my reasoning at each step. I&apos;ll start by scoping the problem, pick the user I&apos;m solving for and why, generate a wide brainstorm before cutting it down, pick one north-star metric and defend it, and then explicitly call out what I&apos;m leaving on the table. The goal isn&apos;t a perfect answer — it&apos;s a clear reasoning chain.
             </p>
           </div>
@@ -283,7 +283,7 @@ export function LinkedInFresherPE() {
         <section id="lf-clarify">
           <SectionLabel>Step 1 of 8</SectionLabel>
           <SectionTitle>Clarify the problem</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Before I jump in, I&apos;d ask a few clarifying questions to make sure I&apos;m solving the right problem.
           </p>
 
@@ -310,11 +310,11 @@ export function LinkedInFresherPE() {
                 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 10 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
                 className="rounded-xl border p-5"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
-                <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary, #fff)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary)" }}>
                   Q: {q}
                 </p>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                   <span style={{ color: "var(--accent)" }}>→ </span>{a}
                 </p>
               </motion.div>
@@ -328,7 +328,7 @@ export function LinkedInFresherPE() {
         <section id="lf-user">
           <SectionLabel>Step 2 of 8</SectionLabel>
           <SectionTitle>Who am I solving for?</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I wouldn&apos;t just say &ldquo;freshers.&rdquo; I&apos;d segment first, then pick one segment to anchor the solution on.
           </p>
 
@@ -359,10 +359,10 @@ export function LinkedInFresherPE() {
               <div key={segment} className="rounded-xl border p-4"
                 style={{
                   borderColor: chosen ? "var(--accent)" : "var(--border)",
-                  background: chosen ? "var(--accent-08, rgba(255,140,0,0.05))" : "var(--surface, #111)",
+                  background: chosen ? "var(--accent-08, rgba(255,140,0,0.05))" : "var(--surface)",
                 }}>
                 <div className="flex items-start justify-between gap-2 mb-2">
-                  <p className="font-semibold text-sm" style={{ color: chosen ? "var(--accent)" : "var(--text-primary, #fff)" }}>
+                  <p className="font-semibold text-sm" style={{ color: chosen ? "var(--accent)" : "var(--text-primary)" }}>
                     {segment}
                   </p>
                   {chosen && (
@@ -370,26 +370,26 @@ export function LinkedInFresherPE() {
                       style={{ background: "var(--accent-25)", color: "var(--accent)" }}>Primary</span>
                   )}
                 </div>
-                <p className="text-xs mb-2" style={{ color: "var(--text-secondary, #888)" }}>{example}</p>
+                <p className="text-xs mb-2" style={{ color: "var(--text-secondary)" }}>{example}</p>
                 <p className="text-xs mb-2 font-medium" style={{ color: friction === "Very High" ? "#ef4444" : friction === "High" ? "#f97316" : "#22c55e" }}>
                   Friction: {friction}
                 </p>
-                <p className="text-xs" style={{ color: "var(--text-secondary, #aaa)" }}>{note}</p>
+                <p className="text-xs" style={{ color: "var(--text-secondary)" }}>{note}</p>
               </div>
             ))}
           </div>
 
           {/* Persona */}
-          <div className="rounded-xl border p-5" style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+          <div className="rounded-xl border p-5" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-3" style={{ color: "var(--accent)" }}>
               The user I&apos;m designing for
             </p>
-            <p className="font-bold mb-0.5" style={{ color: "var(--text-primary, #fff)" }}>Priya — B.Tech CSE 2024, Tier-2 college, Hyderabad</p>
-            <p className="text-sm mb-4" style={{ color: "var(--text-secondary, #888)" }}>
+            <p className="font-bold mb-0.5" style={{ color: "var(--text-primary)" }}>Priya — B.Tech CSE 2024, Tier-2 college, Hyderabad</p>
+            <p className="text-sm mb-4" style={{ color: "var(--text-secondary)" }}>
               Opens LinkedIn every morning. Spends 2–3 hours searching. Applies to 5–8 jobs. Gets called back by 0–1.
             </p>
             <blockquote className="border-l-2 pl-4 italic text-sm"
-              style={{ borderColor: "var(--accent)", color: "var(--text-secondary, #aaa)" }}>
+              style={{ borderColor: "var(--accent)", color: "var(--text-secondary)" }}>
               &ldquo;I spend more time figuring out if I can apply than actually applying. Most of what I see isn&apos;t for me — but I don&apos;t know that until I&apos;m halfway through the job description.&rdquo;
             </blockquote>
           </div>
@@ -414,11 +414,11 @@ export function LinkedInFresherPE() {
                     whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 12 }} viewport={{ once: true }}
                     transition={{ delay: i * 0.07 }}
                     className="flex-1 rounded-xl border p-3 flex flex-col gap-2"
-                    style={{ borderColor: "var(--border)", background: "var(--surface, #111)", minWidth: 130 }}>
+                    style={{ borderColor: "var(--border)", background: "var(--surface)", minWidth: 130 }}>
                     <div className="text-xs px-2 py-0.5 rounded-full self-start font-medium"
                       style={{ background: (ec[emotion] ?? "#888") + "22", color: ec[emotion] ?? "#888" }}>{emotion}</div>
-                    <p className="text-xs font-semibold" style={{ color: "var(--text-primary, #fff)" }}>{step}</p>
-                    <p className="text-xs" style={{ color: "var(--text-secondary, #888)" }}>{note}</p>
+                    <p className="text-xs font-semibold" style={{ color: "var(--text-primary)" }}>{step}</p>
+                    <p className="text-xs" style={{ color: "var(--text-secondary)" }}>{note}</p>
                   </motion.div>
                 );
               })}
@@ -432,7 +432,7 @@ export function LinkedInFresherPE() {
         <section id="lf-hypothesis">
           <SectionLabel>Step 3 of 8</SectionLabel>
           <SectionTitle>What do I think is actually happening?</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I wouldn&apos;t jump to solutions yet. I&apos;d form a hypothesis about the root problem first — because the solution shape is very different depending on which one is true.
           </p>
 
@@ -464,25 +464,25 @@ export function LinkedInFresherPE() {
               },
             ].map(({ hypothesis, evidence, verdict, color }) => (
               <div key={hypothesis} className="rounded-xl border p-5"
-                style={{ borderColor: verdict === "Rejected" ? "var(--border)" : color + "44", background: "var(--surface, #111)" }}>
+                style={{ borderColor: verdict === "Rejected" ? "var(--border)" : color + "44", background: "var(--surface)" }}>
                 <div className="flex items-start justify-between gap-3 mb-2">
-                  <p className="font-semibold text-sm" style={{ color: "var(--text-primary, #fff)" }}>{hypothesis}</p>
+                  <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{hypothesis}</p>
                   <span className="text-xs px-2 py-0.5 rounded-full shrink-0 font-semibold"
                     style={{ background: color + "22", color }}>
                     {verdict}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{evidence}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{evidence}</p>
               </div>
             ))}
           </div>
 
           <div className="mt-6 rounded-xl border-l-4 p-4"
-            style={{ borderColor: "var(--accent)", background: "var(--surface, #111)" }}>
-            <p className="text-sm font-semibold mb-1" style={{ color: "var(--text-primary, #fff)" }}>
+            style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
+            <p className="text-sm font-semibold mb-1" style={{ color: "var(--text-primary)" }}>
               What I&apos;d test before building
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               I&apos;d pull a sample of 500 &ldquo;Entry Level&rdquo; LinkedIn jobs in India and manually score them against experience requirements. If H1 is confirmed at &gt;30% false-positives, the fix is a product-layer signal, not recruiter education. I&apos;d also run 10 user interviews specifically probing for whether the confidence gap (H2) is real or rationalised.
             </p>
           </div>
@@ -494,7 +494,7 @@ export function LinkedInFresherPE() {
         <section id="lf-brainstorm">
           <SectionLabel>Step 4 of 8</SectionLabel>
           <SectionTitle>Everything I could build</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Before I cut, I&apos;d generate broadly. Here are 8 ideas — ranging from obvious to unconventional. I&apos;m not filtering yet.
           </p>
 
@@ -503,7 +503,7 @@ export function LinkedInFresherPE() {
               <div key={idea.id} className="rounded-xl border overflow-hidden"
                 style={{ borderColor: idea.kept ? "var(--border)" : "var(--border)", opacity: idea.kept ? 1 : 0.6 }}>
                 <div className="px-5 py-4 flex items-start gap-4"
-                  style={{ background: "var(--surface, #111)" }}>
+                  style={{ background: "var(--surface)" }}>
                   <div className="w-5 h-5 rounded-full border-2 flex items-center justify-center shrink-0 mt-0.5"
                     style={{
                       borderColor: idea.kept ? "#22c55e" : "#6b7280",
@@ -514,13 +514,13 @@ export function LinkedInFresherPE() {
                       : <span style={{ color: "#6b7280", fontSize: 10 }}>✗</span>}
                   </div>
                   <div className="flex-1">
-                    <p className="font-semibold text-sm mb-0.5" style={{ color: "var(--text-primary, #fff)" }}>{idea.title}</p>
-                    <p className="text-sm mb-2" style={{ color: "var(--text-secondary, #888)" }}>{idea.description}</p>
+                    <p className="font-semibold text-sm mb-0.5" style={{ color: "var(--text-primary)" }}>{idea.title}</p>
+                    <p className="text-sm mb-2" style={{ color: "var(--text-secondary)" }}>{idea.description}</p>
                     <div className="flex items-start gap-2">
                       <span className="text-xs font-mono shrink-0" style={{ color: idea.kept ? "#22c55e" : "#6b7280" }}>
                         {idea.kept ? "Keeping:" : "Cutting:"}
                       </span>
-                      <p className="text-xs" style={{ color: "var(--text-secondary, #aaa)" }}>{idea.why}</p>
+                      <p className="text-xs" style={{ color: "var(--text-secondary)" }}>{idea.why}</p>
                     </div>
                   </div>
                 </div>
@@ -533,7 +533,7 @@ export function LinkedInFresherPE() {
               <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "#22c55e" }}>Moving forward with</p>
               <ul className="space-y-1">
                 {IDEAS.filter(i => i.kept).map(i => (
-                  <li key={i.id} className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>→ {i.title}</li>
+                  <li key={i.id} className="text-sm" style={{ color: "var(--text-secondary)" }}>→ {i.title}</li>
                 ))}
               </ul>
             </div>
@@ -541,7 +541,7 @@ export function LinkedInFresherPE() {
               <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "#6b7280" }}>Parked for later</p>
               <ul className="space-y-1">
                 {IDEAS.filter(i => !i.kept).map(i => (
-                  <li key={i.id} className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>→ {i.title}</li>
+                  <li key={i.id} className="text-sm" style={{ color: "var(--text-secondary)" }}>→ {i.title}</li>
                 ))}
               </ul>
             </div>
@@ -554,7 +554,7 @@ export function LinkedInFresherPE() {
         <section id="lf-prioritise">
           <SectionLabel>Step 5 of 8</SectionLabel>
           <SectionTitle>How I&apos;d sequence the 4 ideas I kept</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I have 4 ideas I want to build. I still need to decide what&apos;s P0 (launch together), P1 (sprint 2), and what waits for validation.
           </p>
 
@@ -564,7 +564,7 @@ export function LinkedInFresherPE() {
                 <tr>
                   {["Feature", "Impact on north star", "Effort", "Dependencies", "Priority"].map(h => (
                     <th key={h} className="text-left px-4 py-2 text-xs font-mono uppercase tracking-wide"
-                      style={{ color: "var(--text-secondary, #888)" }}>{h}</th>
+                      style={{ color: "var(--text-secondary)" }}>{h}</th>
                   ))}
                 </tr>
               </thead>
@@ -576,11 +576,11 @@ export function LinkedInFresherPE() {
                   { feature: "Fresh Start Hub",          impact: "Medium-High — LinkedIn graph leverage",            effort: "High",      dep: "Alumni data pipeline",   priority: "P1", pc: "#f97316" },
                 ].map(({ feature, impact, effort, dep, priority, pc }) => (
                   <tr key={feature} className="rounded-xl"
-                    style={{ background: "var(--surface, #111)" }}>
-                    <td className="px-4 py-3 rounded-l-lg font-medium" style={{ color: "var(--text-primary, #fff)" }}>{feature}</td>
-                    <td className="px-4 py-3" style={{ color: "var(--text-secondary, #aaa)" }}>{impact}</td>
-                    <td className="px-4 py-3" style={{ color: "var(--text-secondary, #aaa)" }}>{effort}</td>
-                    <td className="px-4 py-3" style={{ color: "var(--text-secondary, #aaa)" }}>{dep}</td>
+                    style={{ background: "var(--surface)" }}>
+                    <td className="px-4 py-3 rounded-l-lg font-medium" style={{ color: "var(--text-primary)" }}>{feature}</td>
+                    <td className="px-4 py-3" style={{ color: "var(--text-secondary)" }}>{impact}</td>
+                    <td className="px-4 py-3" style={{ color: "var(--text-secondary)" }}>{effort}</td>
+                    <td className="px-4 py-3" style={{ color: "var(--text-secondary)" }}>{dep}</td>
                     <td className="px-4 py-3 rounded-r-lg">
                       <span className="text-xs px-2 py-0.5 rounded-full font-semibold"
                         style={{ background: pc + "22", color: pc }}>{priority}</span>
@@ -591,9 +591,9 @@ export function LinkedInFresherPE() {
             </table>
           </div>
 
-          <div className="mt-4 rounded-xl border p-5" style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
-            <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary, #fff)" }}>Why Toggle + Badge ship together</p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <div className="mt-4 rounded-xl border p-5" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+            <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary)" }}>Why Toggle + Badge ship together</p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               The Toggle and Badge share the same NLP model — the infrastructure cost is incurred once. If I ship the Toggle without the Badge, the filter works but search results still look identical. If I ship the Badge without the Toggle, users get signal on individual cards but still have to scroll past irrelevant ones. Together, they solve the problem end-to-end. Shipping separately would halve the impact without halving the effort.
             </p>
           </div>
@@ -605,7 +605,7 @@ export function LinkedInFresherPE() {
         <section id="lf-solution">
           <SectionLabel>Step 6 of 8</SectionLabel>
           <SectionTitle>What I&apos;d actually build</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Spec for the 4 features I&apos;d ship, in priority order. Click each to see the design decisions.
           </p>
           <FeatureTabs />
@@ -617,22 +617,22 @@ export function LinkedInFresherPE() {
         <section id="lf-metric">
           <SectionLabel>Step 7 of 8</SectionLabel>
           <SectionTitle>The one number I&apos;d track</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I&apos;d resist reporting a dashboard of 6 metrics. The discipline is picking ONE that best captures whether the problem is solved — and being honest about the trade-off.
           </p>
 
           <div className="rounded-xl border p-6 mb-6"
             style={{ borderColor: "var(--accent)55", background: "var(--accent-08, rgba(255,140,0,0.05))" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color: "var(--accent)" }}>North Star Metric</p>
-            <p className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary, #fff)" }}>
+            <p className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary)" }}>
               Qualified applications per search session — fresher cohort
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               A &ldquo;qualified application&rdquo; = applied to a role where experience requirement ≤ 1yr. This directly measures whether the fresher found relevant roles and had the confidence to act. Target: move from the current estimated 1–2 per session to 3–4.
             </p>
           </div>
 
-          <p className="text-sm font-semibold mb-3" style={{ color: "var(--text-primary, #fff)" }}>
+          <p className="text-sm font-semibold mb-3" style={{ color: "var(--text-primary)" }}>
             Why I rejected the obvious alternatives:
           </p>
           <div className="space-y-3">
@@ -643,11 +643,11 @@ export function LinkedInFresherPE() {
               { metric: "Time spent in Jobs section", problem: "Engagement time going down is actually success if I reduce the time wasted on irrelevant postings. A 'reduce time' improvement would look bad in an engagement metric." },
             ].map(({ metric, problem }) => (
               <div key={metric} className="rounded-lg border p-4 flex gap-4"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <span className="text-lg shrink-0" style={{ color: "#ef4444" }}>✗</span>
                 <div>
-                  <p className="text-sm font-semibold mb-0.5" style={{ color: "var(--text-primary, #fff)" }}>{metric}</p>
-                  <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{problem}</p>
+                  <p className="text-sm font-semibold mb-0.5" style={{ color: "var(--text-primary)" }}>{metric}</p>
+                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{problem}</p>
                 </div>
               </div>
             ))}
@@ -662,12 +662,12 @@ export function LinkedInFresherPE() {
               <motion.div key={label}
                 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 16 }} viewport={{ once: true }}
                 className="rounded-lg p-4 border text-center"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="text-2xl font-bold" style={{ color: "var(--accent)" }}>
                   <Counter target={value} suffix={suffix} />
                 </div>
-                <div className="text-xs font-medium mt-1" style={{ color: "var(--text-primary, #fff)" }}>{label}</div>
-                <div className="text-xs mt-0.5" style={{ color: "var(--text-secondary, #888)" }}>{note}</div>
+                <div className="text-xs font-medium mt-1" style={{ color: "var(--text-primary)" }}>{label}</div>
+                <div className="text-xs mt-0.5" style={{ color: "var(--text-secondary)" }}>{note}</div>
               </motion.div>
             ))}
           </div>
@@ -679,7 +679,7 @@ export function LinkedInFresherPE() {
         <section id="lf-tradeoffs">
           <SectionLabel>Step 8 of 8</SectionLabel>
           <SectionTitle>What I&apos;m consciously leaving out — and why</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Good PM thinking isn&apos;t just about what you build — it&apos;s about what you decide NOT to build and why. Here are my four explicit trade-offs.
           </p>
 
@@ -713,18 +713,18 @@ export function LinkedInFresherPE() {
               <motion.div key={i}
                 whileInView={{ opacity: 1, x: 0 }} initial={{ opacity: 0, x: -16 }} viewport={{ once: true }}
                 className="rounded-xl border p-5"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="flex items-start gap-3 mb-3">
                   <div className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 text-xs font-bold"
                     style={{ background: color + "22", color }}>
                     {i + 1}
                   </div>
-                  <h3 className="font-semibold text-sm" style={{ color: "var(--text-primary, #fff)" }}>{title}</h3>
+                  <h3 className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{title}</h3>
                 </div>
-                <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-secondary, #aaa)" }}>{reasoning}</p>
+                <p className="text-sm leading-relaxed mb-3" style={{ color: "var(--text-secondary)" }}>{reasoning}</p>
                 <div className="rounded-lg px-4 py-2.5" style={{ background: color + "12", borderLeft: `3px solid ${color}` }}>
                   <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color }}>The tension I&apos;m accepting</p>
-                  <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{tension}</p>
+                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{tension}</p>
                 </div>
               </motion.div>
             ))}

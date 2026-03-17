@@ -32,7 +32,7 @@ const COMMANDS: Record<string, string[]> = {
 
 function fireConfetti() {
   import("canvas-confetti").then(({ default: confetti }) => {
-    confetti({ particleCount: 120, spread: 80, origin: { y: 0.7 }, colors: ["#c8f060", "#f0ede6", "#0f0f14"] });
+    confetti({ particleCount: 120, spread: 80, origin: { y: 0.7 }, colors: ["#c8f060", "#f0ede6", "#4a6e00"] });
   });
 }
 

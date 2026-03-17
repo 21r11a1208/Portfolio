@@ -172,7 +172,7 @@ export function Contact() {
                       type="submit"
                       disabled={submitting}
                       data-cursor="hover"
-                      className="px-7 py-3.5 bg-[var(--accent)] text-[#0f0f14] rounded-full font-display font-semibold text-sm hover:bg-[var(--accent-hover)] transition-all duration-200 hover:scale-105 active:scale-95 disabled:opacity-60 disabled:pointer-events-none"
+                      className="px-7 py-3.5 bg-[var(--accent)] text-[var(--text-on-accent)] rounded-full font-display font-semibold text-sm hover:bg-[var(--accent-hover)] transition-all duration-200 hover:scale-105 active:scale-95 disabled:opacity-60 disabled:pointer-events-none"
                     >
                       I&apos;m interested →
                     </button>

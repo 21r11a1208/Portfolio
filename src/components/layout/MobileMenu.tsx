@@ -23,7 +23,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
             onClick={onClose}
-            className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm"
+            className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
           />
           <motion.nav
             initial={{ x: "100%" }}
@@ -60,7 +60,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
               href="#contact"
               onClick={onClose}
               data-cursor="hover"
-              className="mt-4 inline-flex items-center justify-center px-6 py-3 bg-[var(--accent)] text-[#0f0f14] rounded-full font-display font-semibold text-sm hover:bg-[var(--accent-hover)] transition-colors"
+              className="mt-4 inline-flex items-center justify-center px-6 py-3 bg-[var(--accent)] text-[var(--text-on-accent)] rounded-full font-display font-semibold text-sm hover:bg-[var(--accent-hover)] transition-colors"
             >
               Hire Me
             </a>

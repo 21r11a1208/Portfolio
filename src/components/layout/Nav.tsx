@@ -56,7 +56,7 @@ export function Nav() {
             <a
               href="#contact"
               data-cursor="hover"
-              className="px-5 py-2 bg-[var(--accent)] text-[#0f0f14] rounded-full text-sm font-display font-semibold hover:bg-[var(--accent-hover)] transition-colors"
+              className="px-5 py-2 bg-[var(--accent)] text-[var(--text-on-accent)] rounded-full text-sm font-display font-semibold hover:bg-[var(--accent-hover)] transition-colors"
             >
               Hire Me
             </a>

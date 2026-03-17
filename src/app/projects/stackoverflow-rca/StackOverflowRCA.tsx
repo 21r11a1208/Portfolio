@@ -176,7 +176,7 @@ function SectionLabel({ children }: { children: React.ReactNode }) {
   return <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>{children}</p>;
 }
 function SectionTitle({ children }: { children: React.ReactNode }) {
-  return <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary, #fff)" }}>{children}</h2>;
+  return <h2 className="text-2xl font-bold mb-2" style={{ color: "var(--text-primary)" }}>{children}</h2>;
 }
 function Divider() {
   return <div className="border-t my-12" style={{ borderColor: "var(--border)" }} />;
@@ -188,18 +188,18 @@ function FishboneDiagram() {
   return (
     <div>
       <div className="overflow-x-auto rounded-xl border p-4"
-        style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+        style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
         <svg viewBox="0 0 780 384" className="w-full" style={{ minWidth: 560, maxHeight: 420 }}>
           <line x1="70" y1="192" x2="700" y2="192" stroke="var(--border)" strokeWidth="2.5" />
           <polygon points="700,185 716,192 700,199" fill="var(--border)" />
           <rect x="716" y="158" width="56" height="68" rx="6"
-            fill="var(--surface-2, #1a1a1a)" stroke="var(--border)" strokeWidth="1.5" />
+            fill="var(--surface-2)" stroke="var(--border)" strokeWidth="1.5" />
           <text x="744" y="183" textAnchor="middle" fill="var(--accent)" fontSize="7" fontFamily="monospace" fontWeight="bold">EFFECT</text>
-          <text x="744" y="197" textAnchor="middle" fill="var(--text-primary, #fff)" fontSize="7.5" fontFamily="sans-serif" fontWeight="bold">Traffic</text>
-          <text x="744" y="209" textAnchor="middle" fill="var(--text-primary, #fff)" fontSize="7.5" fontFamily="sans-serif" fontWeight="bold">Decline</text>
+          <text x="744" y="197" textAnchor="middle" fill="var(--text-primary)" fontSize="7.5" fontFamily="sans-serif" fontWeight="bold">Traffic</text>
+          <text x="744" y="209" textAnchor="middle" fill="var(--text-primary)" fontSize="7.5" fontFamily="sans-serif" fontWeight="bold">Decline</text>
           {CATEGORIES.map((cat) => {
             const isActive = activeId === cat.id;
-            const strokeColor = isActive ? cat.color : "var(--text-secondary, #555)";
+            const strokeColor = isActive ? cat.color : "var(--text-secondary)";
             const labelY = cat.tipY < cat.spineY ? cat.tipY - 20 : cat.tipY + 14;
             const ticks = [0.28, 0.52, 0.76].map((t) => ({
               x: cat.tipX + (cat.spineX - cat.tipX) * t,
@@ -215,14 +215,14 @@ function FishboneDiagram() {
                     stroke={strokeColor} strokeWidth={1} style={{ transition: "all 0.25s" }} />
                 ))}
                 <circle cx={cat.spineX} cy={cat.spineY} r={isActive ? 5 : 3.5}
-                  fill={isActive ? cat.color : "var(--surface, #111)"}
+                  fill={isActive ? cat.color : "var(--surface)"}
                   stroke={strokeColor} strokeWidth={1.5} style={{ transition: "all 0.25s" }} />
                 <rect x={cat.tipX - 54} y={labelY - 13} width={108} height={22} rx={5}
-                  fill={isActive ? cat.colorDim : "var(--surface-2, #1a1a1a)"}
+                  fill={isActive ? cat.colorDim : "var(--surface-2)"}
                   stroke={isActive ? cat.color : "var(--border)"}
                   strokeWidth={isActive ? 1.5 : 1} style={{ transition: "all 0.25s" }} />
                 <text x={cat.tipX} y={labelY + 2} textAnchor="middle"
-                  fill={isActive ? cat.color : "var(--text-secondary, #888)"}
+                  fill={isActive ? cat.color : "var(--text-secondary)"}
                   fontSize="8.5" fontFamily="sans-serif" fontWeight={isActive ? "bold" : "normal"}
                   style={{ transition: "all 0.25s" }}>{cat.label}</text>
                 <rect x={cat.tipX - 54} y={labelY - 13} width={108} height={22} rx={5} fill="transparent" />
@@ -244,16 +244,16 @@ function FishboneDiagram() {
             </div>
             <ul className="space-y-1.5 mb-4">
               {active.causes.map((c, i) => (
-                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>
+                <li key={i} className="flex items-start gap-2 text-sm" style={{ color: "var(--text-secondary)" }}>
                   <span style={{ color: active.color, marginTop: 3, flexShrink: 0 }}>→</span>{c}
                 </li>
               ))}
             </ul>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{active.detail}</p>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{active.detail}</p>
           </motion.div>
         ) : (
           <motion.p key="hint" initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
-            className="mt-4 text-center text-xs py-3" style={{ color: "var(--text-secondary, #555)" }}>
+            className="mt-4 text-center text-xs py-3" style={{ color: "var(--text-secondary)" }}>
             Click any hypothesis category to see the evidence and my read on it
           </motion.p>
         )}
@@ -269,33 +269,33 @@ function DiagnosisAccordion() {
       {FIVE_WHYS.map(({ symptom, chain, root, color }, idx) => (
         <div key={idx} className="rounded-xl border overflow-hidden" style={{ borderColor: "var(--border)" }}>
           <button className="w-full text-left px-5 py-4 flex items-center justify-between gap-4"
-            style={{ background: "var(--surface, #111)" }}
+            style={{ background: "var(--surface)" }}
             onClick={() => setOpenIdx(openIdx === idx ? null : idx)}>
             <div>
               <span className="text-xs font-mono uppercase tracking-wide" style={{ color }}>Observation</span>
-              <p className="font-semibold text-sm mt-0.5" style={{ color: "var(--text-primary, #fff)" }}>{symptom}</p>
+              <p className="font-semibold text-sm mt-0.5" style={{ color: "var(--text-primary)" }}>{symptom}</p>
             </div>
             <motion.span animate={{ rotate: openIdx === idx ? 180 : 0 }} transition={{ duration: 0.2 }}
-              style={{ color: "var(--text-secondary, #888)", flexShrink: 0 }}>▼</motion.span>
+              style={{ color: "var(--text-secondary)", flexShrink: 0 }}>▼</motion.span>
           </button>
           <AnimatePresence>
             {openIdx === idx && (
               <motion.div initial={{ height: 0, opacity: 0 }} animate={{ height: "auto", opacity: 1 }}
                 exit={{ height: 0, opacity: 0 }} transition={{ duration: 0.25 }} style={{ overflow: "hidden" }}>
                 <div className="px-5 pb-5 pt-3 border-t space-y-2.5"
-                  style={{ borderColor: "var(--border)", background: "var(--surface-2, #0d0d0d)" }}>
+                  style={{ borderColor: "var(--border)", background: "var(--surface-2)" }}>
                   <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color }}>
                     Tracing back — why?
                   </p>
                   {chain.map((step, i) => (
                     <div key={i} className="flex gap-3 items-start">
                       <span className="text-xs font-mono shrink-0 mt-0.5" style={{ color, opacity: 1 - i * 0.15 }}>Why?</span>
-                      <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{step}</p>
+                      <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{step}</p>
                     </div>
                   ))}
                   <div className="mt-3 pt-3 border-t" style={{ borderColor: color + "44" }}>
                     <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color }}>Where it bottoms out</p>
-                    <p className="text-sm font-medium italic" style={{ color: "var(--text-primary, #fff)" }}>{root}</p>
+                    <p className="text-sm font-medium italic" style={{ color: "var(--text-primary)" }}>{root}</p>
                   </div>
                 </div>
               </motion.div>
@@ -334,7 +334,7 @@ export function StackOverflowRCA() {
         style={{ right: "max(1rem, calc(50vw - 680px))", width: 148 }}>
         {TOC.map(({ id, label }) => (
           <a key={id} href={`#${id}`} className="transition-all duration-200"
-            style={{ color: activeSection === id ? "var(--accent)" : "var(--text-secondary, #888)", fontWeight: activeSection === id ? 600 : 400 }}>
+            style={{ color: activeSection === id ? "var(--accent)" : "var(--text-secondary)", fontWeight: activeSection === id ? 600 : 400 }}>
             {label}
           </a>
         ))}
@@ -345,10 +345,10 @@ export function StackOverflowRCA() {
         {/* Header */}
         <div className="mb-10">
           <Tag variant="type">RCA</Tag>
-          <h1 className="text-4xl font-bold mt-4 mb-2" style={{ color: "var(--text-primary, #fff)" }}>
+          <h1 className="text-4xl font-bold mt-4 mb-2" style={{ color: "var(--text-primary)" }}>
             Stack Overflow: The AI Displacement
           </h1>
-          <p className="text-lg mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-lg mb-6" style={{ color: "var(--text-secondary)" }}>
             How I&apos;d diagnose a 50%+ traffic decline for a 15-year market leader
           </p>
           <div className="rounded-xl border p-5"
@@ -356,7 +356,7 @@ export function StackOverflowRCA() {
             <p className="text-xs font-mono uppercase tracking-widest mb-2" style={{ color: "var(--accent)" }}>
               How I&apos;m approaching this
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               I&apos;m walking through this as I would in an RCA interview — not presenting a pre-formed conclusion, but showing the reasoning chain. I&apos;ll start by clarifying what metric I&apos;m diagnosing, run sanity checks before I hypothesize, generate a wide set of causes and classify them, then narrow to the primary hypothesis with explicit evidence. I&apos;ll also call out the hypothesis I considered and rejected, and why.
             </p>
           </div>
@@ -366,7 +366,7 @@ export function StackOverflowRCA() {
         <section id="so-clarify">
           <SectionLabel>Step 1 of 8</SectionLabel>
           <SectionTitle>Clarify what I&apos;m diagnosing</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Before I hypothesize anything, I&apos;d ask clarifying questions. &ldquo;Stack Overflow is declining&rdquo; is too vague — different metrics have different root causes and different fixes.
           </p>
 
@@ -389,9 +389,9 @@ export function StackOverflowRCA() {
                 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 10 }} viewport={{ once: true }}
                 transition={{ delay: i * 0.06 }}
                 className="rounded-xl border p-5"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
-                <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary, #fff)" }}>Q: {q}</p>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+                <p className="text-sm font-semibold mb-2" style={{ color: "var(--text-primary)" }}>Q: {q}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
                   <span style={{ color: "var(--accent)" }}>→ </span>{a}
                 </p>
               </motion.div>
@@ -406,12 +406,12 @@ export function StackOverflowRCA() {
               { label: "Mod strike", value: 6, suffix: " wks", note: "Jun–Jul 2023" },
             ].map(({ label, value, suffix, note }) => (
               <div key={label} className="rounded-lg p-4 text-center border"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="text-3xl font-bold mb-1" style={{ color: "var(--accent)" }}>
                   <Counter target={value} suffix={suffix} />
                 </div>
-                <div className="text-xs font-medium mb-0.5" style={{ color: "var(--text-primary, #fff)" }}>{label}</div>
-                <div className="text-xs" style={{ color: "var(--text-secondary, #888)" }}>{note}</div>
+                <div className="text-xs font-medium mb-0.5" style={{ color: "var(--text-primary)" }}>{label}</div>
+                <div className="text-xs" style={{ color: "var(--text-secondary)" }}>{note}</div>
               </div>
             ))}
           </div>
@@ -423,7 +423,7 @@ export function StackOverflowRCA() {
         <section id="so-sanity">
           <SectionLabel>Step 2 of 8</SectionLabel>
           <SectionTitle>Rule out the boring explanations first</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Before I jump to interesting hypotheses, I&apos;d spend 5 minutes ruling out the boring ones. A lot of &ldquo;why did metric X drop&rdquo; answers are actually &ldquo;the measurement changed, not the behaviour.&rdquo;
           </p>
 
@@ -437,13 +437,13 @@ export function StackOverflowRCA() {
               const vc = verdict === "No" ? "#22c55e" : verdict === "Partially" ? "#eab308" : "#ef4444";
               return (
                 <div key={check} className="rounded-xl border p-5"
-                  style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                  style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                   <div className="flex items-start gap-3">
                     <span className="text-xs px-2 py-0.5 rounded-full font-semibold shrink-0 mt-0.5"
                       style={{ background: vc + "22", color: vc }}>{verdict}</span>
                     <div>
-                      <p className="text-sm font-semibold mb-1" style={{ color: "var(--text-primary, #fff)" }}>{check}</p>
-                      <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{detail}</p>
+                      <p className="text-sm font-semibold mb-1" style={{ color: "var(--text-primary)" }}>{check}</p>
+                      <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{detail}</p>
                     </div>
                   </div>
                 </div>
@@ -452,9 +452,9 @@ export function StackOverflowRCA() {
           </div>
 
           <div className="mt-4 rounded-xl border-l-4 p-4"
-            style={{ borderColor: "var(--accent)", background: "var(--surface, #111)" }}>
-            <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>
-              <strong style={{ color: "var(--text-primary, #fff)" }}>Conclusion: </strong>
+            style={{ borderColor: "var(--accent)", background: "var(--surface)" }}>
+            <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+              <strong style={{ color: "var(--text-primary)" }}>Conclusion: </strong>
               The decline is real and disproportionate to the market. I&apos;m now confident the problem is structural, not a measurement artifact or a one-time event. Time to hypothesize.
             </p>
           </div>
@@ -466,7 +466,7 @@ export function StackOverflowRCA() {
         <section id="so-segment">
           <SectionLabel>Step 3 of 8</SectionLabel>
           <SectionTitle>Segment the cause space before hypothesizing</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I wouldn&apos;t just brainstorm randomly. I&apos;d first build a mental taxonomy of where causes could live — then generate hypotheses within each bucket. This prevents me from missing whole categories.
           </p>
 
@@ -494,11 +494,11 @@ export function StackOverflowRCA() {
               },
             ].map(({ bucket, color, items }) => (
               <div key={bucket} className="rounded-xl border p-4"
-                style={{ borderColor: color + "44", background: "var(--surface, #111)" }}>
+                style={{ borderColor: color + "44", background: "var(--surface)" }}>
                 <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color }}>{bucket}</p>
                 <ul className="space-y-1">
                   {items.map((item, i) => (
-                    <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary, #aaa)" }}>
+                    <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary)" }}>
                       <span style={{ color, flexShrink: 0, marginTop: 2 }}>·</span>{item}
                     </li>
                   ))}
@@ -507,9 +507,9 @@ export function StackOverflowRCA() {
             ))}
           </div>
 
-          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
-            <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>
-              <strong style={{ color: "var(--text-primary, #fff)" }}>My instinct at this stage: </strong>
+          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
+            <p className="text-sm" style={{ color: "var(--text-secondary)" }}>
+              <strong style={{ color: "var(--text-primary)" }}>My instinct at this stage: </strong>
               The external bucket (AI) is doing the heavy lifting and the internal buckets are compounding. I&apos;d expect a well-run version of Stack Overflow to still decline in the AI era — just more slowly. The internal failures turned a manageable threat into an existential one.
             </p>
           </div>
@@ -521,7 +521,7 @@ export function StackOverflowRCA() {
         <section id="so-hypotheses">
           <SectionLabel>Step 4 of 8</SectionLabel>
           <SectionTitle>Map all the hypotheses</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             Now I&apos;d lay out every plausible cause on a map before I start eliminating. Click each bone to see my read on that hypothesis — whether I think it&apos;s primary, secondary, or contributing.
           </p>
           <FishboneDiagram />
@@ -533,7 +533,7 @@ export function StackOverflowRCA() {
         <section id="so-prioritise">
           <SectionLabel>Step 5 of 8</SectionLabel>
           <SectionTitle>Which hypotheses would I test first, and how?</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             I can&apos;t test all six simultaneously. I&apos;d rank them by: how much of the decline does this explain if true? And how quickly can I confirm or reject it?
           </p>
 
@@ -569,12 +569,12 @@ export function StackOverflowRCA() {
               },
             ].map(({ rank, hypothesis, test, confidence, color }) => (
               <div key={rank} className="rounded-xl border p-5"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="flex items-start gap-4 mb-3">
                   <span className="text-2xl font-bold shrink-0" style={{ color: "var(--accent)", opacity: 0.4 }}>{rank}</span>
                   <div className="flex-1">
                     <div className="flex items-start justify-between gap-3 mb-1">
-                      <p className="font-semibold text-sm" style={{ color: "var(--text-primary, #fff)" }}>{hypothesis}</p>
+                      <p className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{hypothesis}</p>
                       <span className="text-xs px-2 py-0.5 rounded-full shrink-0 font-medium"
                         style={{ background: color + "22", color }}>{confidence}</span>
                     </div>
@@ -582,7 +582,7 @@ export function StackOverflowRCA() {
                 </div>
                 <div className="ml-10">
                   <p className="text-xs font-mono uppercase tracking-wide mb-1" style={{ color: "var(--accent)" }}>How I&apos;d test it</p>
-                  <p className="text-sm" style={{ color: "var(--text-secondary, #aaa)" }}>{test}</p>
+                  <p className="text-sm" style={{ color: "var(--text-secondary)" }}>{test}</p>
                 </div>
               </div>
             ))}
@@ -596,18 +596,18 @@ export function StackOverflowRCA() {
             {TIMELINE.map(({ date, event, severity, detail }) => (
               <div key={date} className="relative">
                 <div className="absolute -left-9 top-1 w-4 h-4 rounded-full border-2 flex items-center justify-center"
-                  style={{ borderColor: SEVERITY_COLORS[severity] ?? "var(--accent)", background: "var(--surface, #111)" }}>
+                  style={{ borderColor: SEVERITY_COLORS[severity] ?? "var(--accent)", background: "var(--surface)" }}>
                   <div className="w-1.5 h-1.5 rounded-full" style={{ background: SEVERITY_COLORS[severity] ?? "var(--accent)" }} />
                 </div>
                 <div className="flex flex-wrap items-center gap-2 mb-1">
                   <span className="text-xs font-mono" style={{ color: "var(--accent)" }}>{date}</span>
-                  <span className="font-semibold text-sm" style={{ color: "var(--text-primary, #fff)" }}>{event}</span>
+                  <span className="font-semibold text-sm" style={{ color: "var(--text-primary)" }}>{event}</span>
                   <span className="text-xs px-2 py-0.5 rounded-full"
                     style={{ background: (SEVERITY_COLORS[severity] ?? "#888") + "22", color: SEVERITY_COLORS[severity] ?? "#888" }}>
                     {severity}
                   </span>
                 </div>
-                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{detail}</p>
+                <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{detail}</p>
               </div>
             ))}
           </div>
@@ -619,7 +619,7 @@ export function StackOverflowRCA() {
         <section id="so-diagnosis">
           <SectionLabel>Step 6 of 8</SectionLabel>
           <SectionTitle>Trace each symptom to its root</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             For the three most significant observations, I&apos;d trace the causal chain backward until I hit something structural — something that isn&apos;t itself caused by something else. Click each to walk through the chain.
           </p>
           <DiagnosisAccordion />
@@ -635,10 +635,10 @@ export function StackOverflowRCA() {
           <div className="rounded-xl border p-6 mb-6"
             style={{ borderColor: "var(--accent)55", background: "var(--accent-08, rgba(255,140,0,0.05))" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "var(--accent)" }}>Primary hypothesis</p>
-            <p className="text-lg font-bold mb-3" style={{ color: "var(--text-primary, #fff)" }}>
+            <p className="text-lg font-bold mb-3" style={{ color: "var(--text-primary)" }}>
               Stack Overflow&apos;s async, vote-curated Q&amp;A format is structurally obsolete in a world where AI answers the question before the developer finishes typing it.
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               This isn&apos;t a product problem that can be fixed with a redesign. It&apos;s a business model problem — the core value proposition (fast access to community-verified answers) is now delivered better, faster, and for free by a competitor. The community decline and leadership failures are real, but they&apos;re compounding factors. Without the AI threat, they would have been manageable. With it, they became terminal.
             </p>
           </div>
@@ -653,7 +653,7 @@ export function StackOverflowRCA() {
                   "Developer surveys show shift from search to AI tools for coding questions",
                   "Google AI Overviews in 2024 closed the last remaining traffic loop",
                 ].map((e, i) => (
-                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary, #aaa)" }}>
+                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary)" }}>
                     <span style={{ color: "#22c55e", flexShrink: 0 }}>✓</span>{e}
                   </li>
                 ))}
@@ -667,7 +667,7 @@ export function StackOverflowRCA() {
                   "MDN and other developer reference sites didn't decline as steeply",
                   "Stack Overflow's Q&A format is still unique — AI answers aren't always correct",
                 ].map((e, i) => (
-                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary, #aaa)" }}>
+                  <li key={i} className="text-sm flex items-start gap-2" style={{ color: "var(--text-secondary)" }}>
                     <span style={{ color: "#ef4444", flexShrink: 0 }}>✗</span>{e}
                   </li>
                 ))}
@@ -675,11 +675,11 @@ export function StackOverflowRCA() {
             </div>
           </div>
 
-          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+          <div className="rounded-xl border p-4" style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
             <p className="text-xs font-mono uppercase tracking-wide mb-2" style={{ color: "var(--accent)" }}>
               How I&apos;d address the counter-argument
             </p>
-            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>
+            <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>
               The pre-AI decline is real but small — a slow erosion, not a cliff. The cliff happens in late 2022. MDN didn&apos;t decline as steeply because MDN is reference documentation, not Q&amp;A — AI doesn&apos;t replace a spec sheet the way it replaces &ldquo;how do I fix this error.&rdquo; The Q&amp;A accuracy argument is valid but practically irrelevant: developers use AI answers anyway, tolerating some inaccuracy for the speed and convenience. Perceived utility beats objective accuracy in a frictionless-enough product.
             </p>
           </div>
@@ -693,12 +693,12 @@ export function StackOverflowRCA() {
               <motion.div key={label}
                 whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 16 }} viewport={{ once: true }}
                 className="rounded-lg p-4 border text-center"
-                style={{ borderColor: "var(--border)", background: "var(--surface, #111)" }}>
+                style={{ borderColor: "var(--border)", background: "var(--surface)" }}>
                 <div className="text-2xl font-bold" style={{ color: "var(--accent)" }}>
                   <Counter target={value} suffix={suffix} />
                 </div>
-                <div className="text-xs font-medium mt-1" style={{ color: "var(--text-primary, #fff)" }}>{label}</div>
-                <div className="text-xs mt-0.5" style={{ color: "var(--text-secondary, #888)" }}>{note}</div>
+                <div className="text-xs font-medium mt-1" style={{ color: "var(--text-primary)" }}>{label}</div>
+                <div className="text-xs mt-0.5" style={{ color: "var(--text-secondary)" }}>{note}</div>
               </motion.div>
             ))}
           </div>
@@ -710,7 +710,7 @@ export function StackOverflowRCA() {
         <section id="so-recommend">
           <SectionLabel>Step 8 of 8</SectionLabel>
           <SectionTitle>If my diagnosis is right, what would I do?</SectionTitle>
-          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary, #aaa)" }}>
+          <p className="text-sm leading-relaxed mb-6" style={{ color: "var(--text-secondary)" }}>
             An RCA without a recommendation is just a post-mortem. Given the root cause, here&apos;s what I&apos;d prioritise — and I&apos;d be explicit about what I&apos;d NOT do.
           </p>
 
@@ -742,10 +742,10 @@ export function StackOverflowRCA() {
                 className="flex gap-4 items-start">
                 <span className="text-2xl font-bold shrink-0 mt-0.5" style={{ color: "var(--accent)", opacity: 0.35 }}>{n}</span>
                 <div className="rounded-xl border p-4 flex-1"
-                  style={{ borderColor: n === "04" ? "#ef444433" : "var(--border)", background: "var(--surface, #111)" }}>
+                  style={{ borderColor: n === "04" ? "#ef444433" : "var(--border)", background: "var(--surface)" }}>
                   <h3 className="font-semibold text-sm mb-2"
-                    style={{ color: n === "04" ? "#ef4444" : "var(--text-primary, #fff)" }}>{action}</h3>
-                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary, #aaa)" }}>{rationale}</p>
+                    style={{ color: n === "04" ? "#ef4444" : "var(--text-primary)" }}>{action}</h3>
+                  <p className="text-sm leading-relaxed" style={{ color: "var(--text-secondary)" }}>{rationale}</p>
                 </div>
               </motion.div>
             ))}

@@ -20,13 +20,19 @@ export function CustomCursor() {
   const ringY = useSpring(y, ringSpring);
 
   useEffect(() => {
-    setIsTouchDevice(!window.matchMedia("(hover: hover)").matches);
+    // Dynamically track input type — supports hybrid touch+mouse laptops
+    const onMouseMove = () => setIsTouchDevice(false);
+    const onTouchStart = () => setIsTouchDevice(true);
+    window.addEventListener("mousemove", onMouseMove);
+    window.addEventListener("touchstart", onTouchStart);
 
     const onEnter = () => setIsInWindow(true);
     const onLeave = () => setIsInWindow(false);
     document.addEventListener("mouseenter", onEnter);
     document.addEventListener("mouseleave", onLeave);
     return () => {
+      window.removeEventListener("mousemove", onMouseMove);
+      window.removeEventListener("touchstart", onTouchStart);
       document.removeEventListener("mouseenter", onEnter);
       document.removeEventListener("mouseleave", onLeave);
     };

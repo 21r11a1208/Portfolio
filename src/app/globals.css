@@ -44,6 +44,11 @@
   /* Circle widget */
   --widget-bg: rgba(15, 15, 20, 0.45);
 
+  /* Semantic aliases */
+  --text-on-accent: #0f0f14;
+  --text-primary:   #f0ede6;
+  --text-secondary: rgba(240, 237, 230, 0.50);
+
   /* color-scheme */
   color-scheme: dark;
 }
@@ -83,6 +88,11 @@
 
   --nav-bg: rgba(245, 243, 238, 0.88);
   --widget-bg: rgba(245, 243, 238, 0.55);
+
+  /* Semantic aliases */
+  --text-on-accent: #0f0f14;
+  --text-primary:   #1a1a22;
+  --text-secondary: rgba(26, 26, 34, 0.50);
 
   color-scheme: light;
 }

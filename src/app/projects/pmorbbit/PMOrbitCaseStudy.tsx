@@ -547,7 +547,7 @@ export function PMOrbitCaseStudy() {
                   data-cursor="hover"
                   className={`px-4 py-2 rounded-full text-[12px] font-display font-semibold border transition-all duration-200 ${
                     activeFeature === i
-                      ? "bg-[var(--accent)] text-[#0f0f14] border-[var(--accent)]"
+                      ? "bg-[var(--accent)] text-[var(--text-on-accent)] border-[var(--accent)]"
                       : "bg-transparent text-[var(--text-50)] border-[var(--border)] hover:border-[var(--accent-25)] hover:text-[var(--text)]"
                   }`}
                 >

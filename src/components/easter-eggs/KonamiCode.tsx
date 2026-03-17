@@ -7,7 +7,7 @@ export function KonamiCode() {
     import("canvas-confetti").then(({ default: confetti }) => {
       const duration = 3000;
       const end = Date.now() + duration;
-      const colors = ["#c8f060", "#f0ede6", "#0f0f14"];
+      const colors = ["#c8f060", "#f0ede6", "#4a6e00"];
 
       (function frame() {
         confetti({ particleCount: 3, angle: 60, spread: 55, origin: { x: 0 }, colors });
