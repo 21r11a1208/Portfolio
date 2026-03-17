@@ -23,7 +23,7 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://banish.me";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Anish.B",
+    default: "Anish.B | Portfolio",
     template: "%s | Anish.B",
   },
   description:
