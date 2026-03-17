@@ -1,5 +1,4 @@
 import type { NextConfig } from "next";
-import path from "path";
 
 const securityHeaders = [
   { key: "X-Content-Type-Options", value: "nosniff" },
@@ -12,11 +11,6 @@ const securityHeaders = [
 const nextConfig: NextConfig = {
   // Never ship source maps to the browser — keeps JS unreadable in DevTools Sources tab
   productionBrowserSourceMaps: false,
-  turbo: {
-    resolveAlias: {
-      tailwindcss: path.resolve("./node_modules/tailwindcss"),
-    },
-  },
   async headers() {
     return [
       {
