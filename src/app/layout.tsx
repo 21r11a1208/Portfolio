@@ -108,7 +108,7 @@ const personSchema = {
   url: BASE_URL,
   image: {
     "@type": "ImageObject",
-    url: `${BASE_URL}/nenmoody.png`,
+    url: `${BASE_URL}/nen.png`,
     width: 800,
     height: 800,
   },

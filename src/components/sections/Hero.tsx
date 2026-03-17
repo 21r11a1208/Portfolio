@@ -109,7 +109,7 @@ export function Hero() {
               }}
             >
               <Image
-                src="/nenmoody.png"
+                src="/nen.png"
                 alt="B Anish"
                 fill
                 priority
@@ -128,7 +128,7 @@ export function Hero() {
               }}
             >
               <Image
-                src="/nenmoody.png"
+                src="/nen.png"
                 alt="B Anish"
                 fill
                 priority
