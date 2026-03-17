@@ -1,26 +1,147 @@
 @import "tailwindcss";
+@plugin "@tailwindcss/typography";
 
+/* ─── Design tokens ─────────────────────────────────── */
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Base */
+  --bg:         #0f0f14;
+  --surface:    #1a1a22;
+  --surface-2:  #22222e;
+  --text:       #f0ede6;
+  --accent:     #c8f060;
+  --accent-hover: #d4f570;
+  --accent-text:  #c8f060;   /* lime as text on dark bg — readable */
+
+  /* Muted text variants */
+  --text-70:  rgba(240, 237, 230, 0.70);
+  --text-65:  rgba(240, 237, 230, 0.65);
+  --text-60:  rgba(240, 237, 230, 0.60);
+  --text-55:  rgba(240, 237, 230, 0.55);
+  --text-50:  rgba(240, 237, 230, 0.50);
+  --text-45:  rgba(240, 237, 230, 0.45);
+  --text-40:  rgba(240, 237, 230, 0.40);
+  --text-35:  rgba(240, 237, 230, 0.35);
+  --text-30:  rgba(240, 237, 230, 0.30);
+  --text-28:  rgba(240, 237, 230, 0.28);
+  --text-25:  rgba(240, 237, 230, 0.25);
+  --text-20:  rgba(240, 237, 230, 0.20);
+
+  /* Accent variants */
+  --accent-10: rgba(200, 240, 96, 0.10);
+  --accent-08: rgba(200, 240, 96, 0.08);
+  --accent-15: rgba(200, 240, 96, 0.15);
+  --accent-20: rgba(200, 240, 96, 0.20);
+  --accent-25: rgba(200, 240, 96, 0.25);
+
+  /* Borders */
+  --border:    rgba(240, 237, 230, 0.06);
+  --border-8:  rgba(240, 237, 230, 0.08);
+  --border-15: rgba(240, 237, 230, 0.15);
+
+  /* Nav */
+  --nav-bg: rgba(15, 15, 20, 0.85);
+
+  /* Circle widget */
+  --widget-bg: rgba(15, 15, 20, 0.45);
+
+  /* color-scheme */
+  color-scheme: dark;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+/* ─── Light theme overrides ──────────────────────────── */
+.light {
+  --bg:         #f5f3ee;
+  --surface:    #eceae3;
+  --surface-2:  #e2dfd8;
+  --text:       #1a1a22;
+  --accent:     #c8f060;
+  --accent-hover: #bde84e;
+  --accent-text:  #4a6e00;   /* dark lime for readable text on light bg */
+
+  --text-70:  rgba(26, 26, 34, 0.70);
+  --text-65:  rgba(26, 26, 34, 0.65);
+  --text-60:  rgba(26, 26, 34, 0.60);
+  --text-55:  rgba(26, 26, 34, 0.55);
+  --text-50:  rgba(26, 26, 34, 0.50);
+  --text-45:  rgba(26, 26, 34, 0.45);
+  --text-40:  rgba(26, 26, 34, 0.40);
+  --text-35:  rgba(26, 26, 34, 0.35);
+  --text-30:  rgba(26, 26, 34, 0.30);
+  --text-28:  rgba(26, 26, 34, 0.28);
+  --text-25:  rgba(26, 26, 34, 0.25);
+  --text-20:  rgba(26, 26, 34, 0.20);
+
+  --accent-10: rgba(74, 110, 0, 0.10);
+  --accent-08: rgba(74, 110, 0, 0.08);
+  --accent-15: rgba(74, 110, 0, 0.18);
+  --accent-20: rgba(74, 110, 0, 0.20);
+  --accent-25: rgba(74, 110, 0, 0.25);
+
+  --border:    rgba(26, 26, 34, 0.07);
+  --border-8:  rgba(26, 26, 34, 0.09);
+  --border-15: rgba(26, 26, 34, 0.14);
+
+  --nav-bg: rgba(245, 243, 238, 0.88);
+  --widget-bg: rgba(245, 243, 238, 0.55);
+
+  color-scheme: light;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* ─── Base ───────────────────────────────────────────── */
+html {
+  scroll-behavior: smooth;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  font-family: var(--font-dm-sans), sans-serif;
+  cursor: none;
+  overflow-x: hidden;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ─── Grain overlay ──────────────────────────────────── */
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background-image: url("/grain.png");
+  background-repeat: repeat;
+  opacity: 0.04;
+  mix-blend-mode: overlay;
+  pointer-events: none;
+  z-index: 9998;
+}
+
+/* ─── Custom scrollbar ───────────────────────────────── */
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg); }
+::-webkit-scrollbar-thumb {
+  background: var(--accent-15);
+  border-radius: 2px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--accent-25); }
+
+/* ─── Cursor ─────────────────────────────────────────── */
+@media (hover: hover) { * { cursor: none !important; } }
+@media (hover: none)  { body, * { cursor: auto !important; } }
+
+/* ─── Selection ──────────────────────────────────────── */
+::selection {
+  background: rgba(200, 240, 96, 0.25);
+  color: var(--text);
+}
+
+/* ─── Skeleton shimmer ───────────────────────────────── */
+@keyframes skeleton-shimmer {
+  0%   { transform: translateX(-100%); }
+  100% { transform: translateX(200%); }
+}
+
+/* ─── Focus-visible ──────────────────────────────────── */
+:focus-visible {
+  outline: 2px solid var(--accent-text);
+  outline-offset: 3px;
+  border-radius: 4px;
 }
