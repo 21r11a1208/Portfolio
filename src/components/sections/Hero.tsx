@@ -113,7 +113,9 @@ export function Hero() {
                 alt="B Anish"
                 fill
                 priority
-                className="object-cover object-top"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                className="object-cover object-top select-none"
                 sizes="144px"
               />
             </div>
@@ -132,9 +134,12 @@ export function Hero() {
                 alt="B Anish"
                 fill
                 priority
-                className="object-cover object-top"
+                draggable={false}
+                onContextMenu={(e) => e.preventDefault()}
+                className="object-cover object-top select-none"
                 sizes="(max-width: 1280px) 300px, 340px"
               />
+              <div className="absolute inset-0" aria-hidden="true" onContextMenu={(e) => e.preventDefault()} />
               <div
                 className="absolute bottom-0 left-0 right-0 h-28 pointer-events-none"
                 style={{ background: "linear-gradient(to top, var(--bg), transparent)" }}
