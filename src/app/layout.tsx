@@ -23,8 +23,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://banish.me";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "B Anish — APM & Product Manager | Engineer-turned-PM | Hyderabad",
-    template: "%s | B Anish",
+    default: "Anish.B",
+    template: "%s | Anish.B",
   },
   description:
     "B Anish is an engineer-turned-product-manager based in Hyderabad. Built PMOrbit at RealPage from 0 to production — reducing handoff friction by 40%. Actively seeking APM and PM roles. Full-stack background in React, TypeScript, and .NET Core.",
