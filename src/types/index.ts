@@ -5,9 +5,6 @@ export interface Project {
   description: string;
   status?: "Production" | "Self-initiated";
   tags?: string[];
-  logo?: string;        // path to logo image in /public, e.g. "/logos/realpage.png"
-  logoBg?: string;      // fallback bg color if no logo image, e.g. "#1a1a22"
-  logoInitials?: string; // fallback initials if no logo image, e.g. "RP"
 }
 
 export interface ExperienceEntry {

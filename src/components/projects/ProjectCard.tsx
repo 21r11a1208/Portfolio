@@ -1,6 +1,5 @@
 "use client";
 import { useRef, useState, useCallback } from "react";
-import Image from "next/image";
 import { useRouter } from "next/navigation";
 import { motion, AnimatePresence } from "framer-motion";
 import { Tag } from "@/components/ui/Tag";
@@ -10,34 +9,14 @@ interface ProjectCardProps {
   project: Project;
 }
 
-function ProjectLogo({ project }: { project: Project }) {
-  const [imgError, setImgError] = useState(false);
-
-  if (project.logo && !imgError) {
-    return (
-      <div
-        className="w-full h-16 rounded-xl overflow-hidden flex items-center justify-center mb-5"
-        style={{ background: project.logoBg ?? "var(--surface-2)" }}
-      >
-        <Image
-          src={project.logo}
-          alt={project.title}
-          width={120}
-          height={40}
-          className="object-contain max-h-9"
-          onError={() => setImgError(true)}
-        />
-      </div>
-    );
-  }
-
+function ProjectThumbnail({ project }: { project: Project }) {
   return (
-    <div
-      className="w-full h-16 rounded-xl flex items-center justify-center mb-5"
-      style={{ background: project.logoBg ?? "var(--surface-2)" }}
-    >
-      <span className="text-lg font-display font-bold tracking-widest text-[var(--accent-text)] opacity-60">
-        {project.logoInitials ?? project.title.slice(0, 2).toUpperCase()}
+    <div className="w-full h-24 rounded-xl mb-5 flex flex-col items-start justify-end p-4 overflow-hidden relative bg-[#0d0d0d] border border-white/[0.06]">
+      <span className="absolute top-3 right-3 text-[10px] font-body uppercase tracking-widest text-white/30 border border-white/10 rounded px-2 py-0.5">
+        {project.type}
+      </span>
+      <span className="text-xl font-display font-bold text-white/80 leading-tight">
+        {project.title}
       </span>
     </div>
   );
@@ -94,7 +73,7 @@ export function ProjectCard({ project }: ProjectCardProps) {
       className="group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none"
       data-cursor="view"
     >
-      <ProjectLogo project={project} />
+      <ProjectThumbnail project={project} />
 
       <div className="flex items-center justify-between mb-3">
         <Tag variant="type">{project.type}</Tag>

@@ -7,9 +7,6 @@ export const projects: Project[] = [
     type: "Case Study",
     description: "Built a production project management platform from 0 to 1 for PMO leads and executive leadership at RealPage.",
     status: "Production",
-    logo: "/logos/realpage.png",  // add RealPage logo to /public/logos/realpage.png
-    logoBg: "#0d1f2d",
-    logoInitials: "RP",
   },
   {
     slug: "keystay",
@@ -17,8 +14,6 @@ export const projects: Project[] = [
     type: "PRD",
     description: "A PRD for a vacation rental management platform with AI-driven pricing and streamlined guest communication for property hosts.",
     status: "Self-initiated",
-    logoBg: "#0d2010",
-    logoInitials: "KS",
   },
   {
     slug: "agridrone",
@@ -26,8 +21,6 @@ export const projects: Project[] = [
     type: "PRD",
     description: "A SaaS marketplace connecting farmers with licensed drone operators for on-demand aerial pesticide and fertilizer application.",
     status: "Self-initiated",
-    logoBg: "#162008",
-    logoInitials: "AD",
   },
   {
     slug: "gymate",
@@ -35,8 +28,6 @@ export const projects: Project[] = [
     type: "PRD",
     description: "A location-based social fitness app connecting gym-goers with compatible workout partners through intelligent matching and a swipe-based interface.",
     status: "Self-initiated",
-    logoBg: "#1a0a2e",
-    logoInitials: "GM",
   },
   {
     slug: "asana-trello-metrics",
@@ -44,8 +35,6 @@ export const projects: Project[] = [
     type: "Metrics",
     description: "A PM metrics deep-dive into Asana and Trello — north star definition, supporting hierarchy, rejection rationale, and guardrails for two divergent takes on collaborative work management.",
     status: "Self-initiated",
-    logoBg: "#0d1a12",
-    logoInitials: "M",
   },
   {
     slug: "stackoverflow-rca",
@@ -53,8 +42,6 @@ export const projects: Project[] = [
     type: "RCA",
     description: "Root cause analysis of Stack Overflow's 50%+ traffic decline in the AI era — how ChatGPT, community decay, and product stagnation converged to displace a market leader.",
     status: "Self-initiated",
-    logoBg: "#1c0800",
-    logoInitials: "SO",
   },
   {
     slug: "linkedin-fresher",
@@ -62,8 +49,6 @@ export const projects: Project[] = [
     type: "Product Enhancement",
     description: "A product enhancement proposal for LinkedIn — reducing the job-search friction freshers face when no explicit 0-experience filter exists and every posting requires manual inspection.",
     status: "Self-initiated",
-    logoBg: "#062040",
-    logoInitials: "in",
   },
   {
     slug: "cluely",
@@ -71,8 +56,6 @@ export const projects: Project[] = [
     type: "Product Teardown",
     description: "Product teardown and competitive analysis of the AI overlay that turned 'cheating on interviews' into a venture-backed company — examining whitespace, growth mechanics, and strategic pivots.",
     status: "Self-initiated",
-    logoBg: "#120820",
-    logoInitials: "CL",
   },
   {
     slug: "arattai-rca",
@@ -80,7 +63,5 @@ export const projects: Project[] = [
     type: "RCA",
     description: "Root cause analysis of Zoho's Indian messaging app that hit #1 in downloads then lost 99% of its user base within 8 weeks — a masterclass in what network-effect products get wrong.",
     status: "Self-initiated",
-    logoBg: "#0a1628",
-    logoInitials: "AR",
   },
 ];
