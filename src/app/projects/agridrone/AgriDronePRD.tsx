@@ -241,7 +241,7 @@ export function AgriDronePRD() {
         <motion.div initial={{ opacity: 0, y: 16 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.5 }}
           className="flex flex-wrap items-center gap-3 mb-6">
           <Tag variant="type">PRD</Tag>
-          <span className="text-[10px] font-body uppercase tracking-wider text-[var(--text-35)]">Conceptual</span>
+          <span className="text-[10px] font-body uppercase tracking-wider text-[var(--text-35)]">Self-initiated</span>
           <span className="text-[10px] font-body text-[var(--text-30)] uppercase tracking-wider">v1.0 · Flask + React</span>
         </motion.div>
         <motion.h1 initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.6, delay: 0.05 }}

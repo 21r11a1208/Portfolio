@@ -255,7 +255,7 @@ export function AsanaTrelloMetrics() {
           <div className="max-w-3xl mx-auto px-6 py-16">
             <div className="flex flex-wrap items-center gap-3 mb-5">
               <Tag variant="type">Metrics</Tag>
-              <Tag variant="default">Conceptual</Tag>
+              <Tag variant="default">Self-initiated</Tag>
             </div>
             <h1 className="text-4xl font-bold tracking-tight mb-3">Asana &amp; Trello — Metrics</h1>
             <p className="text-lg" style={{ color: "var(--text-secondary)" }}>

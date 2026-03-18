@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const project = {
   title: "LinkedIn DAU Drop",
   type: "RCA" as const,
-  status: "Conceptual" as const,
+  status: "Self-initiated" as const,
   description: "A structured RCA for a hypothetical 15% LinkedIn DAU drop in India over two weeks — root cause analysis from first principles.",
 };
 

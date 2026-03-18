@@ -9,7 +9,7 @@ export const metadata: Metadata = {
 const project = {
   title: "College ERP Teardown",
   type: "Product Teardown" as const,
-  status: "Conceptual" as const,
+  status: "Self-initiated" as const,
   description: "A detailed teardown of CampX ERP — the most painful workflow, what it does wrong, and a concrete redesign recommendation.",
 };
 

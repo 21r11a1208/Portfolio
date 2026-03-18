@@ -284,7 +284,7 @@ export function CluelyTeardown() {
           <div className="max-w-5xl mx-auto px-6 py-16">
             <div className="flex flex-wrap items-center gap-3 mb-5">
               <Tag variant="type">Product Teardown</Tag>
-              <Tag variant="default">Conceptual</Tag>
+              <Tag variant="default">Self-initiated</Tag>
             </div>
             <h1 className="text-4xl font-bold tracking-tight mb-3">Cluely</h1>
             <p className="text-lg max-w-2xl" style={{ color: "var(--text-secondary)" }}>

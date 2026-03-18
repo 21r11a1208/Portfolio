@@ -30,7 +30,7 @@ export default function Home() {
       <TerminalSection />
       <footer className="py-10 px-6 text-center border-t border-[var(--border)]">
         <p className="text-[13px] font-body text-[var(--text-25)]">
-          Built by B Anish &mdash; 2025. No lorem ipsum was harmed in the making of this site.
+          Built by B Anish &mdash; 2026 &middot; anibaaabuuu@gmail.com &middot; Hyderabad, available immediately
         </p>
       </footer>
     </main>

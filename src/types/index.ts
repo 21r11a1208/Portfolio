@@ -3,7 +3,7 @@ export interface Project {
   title: string;
   type: "Case Study" | "Product Breakdown" | "PRD" | "Product Teardown" | "RCA" | "Product Enhancement" | "Metrics";
   description: string;
-  status?: "Production" | "Conceptual";
+  status?: "Production" | "Self-initiated";
   tags?: string[];
   logo?: string;        // path to logo image in /public, e.g. "/logos/realpage.png"
   logoBg?: string;      // fallback bg color if no logo image, e.g. "#1a1a22"
