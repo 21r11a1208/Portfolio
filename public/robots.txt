@@ -20,4 +20,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://banish.me/sitemap.xml
+Sitemap: https://anish.works/sitemap.xml

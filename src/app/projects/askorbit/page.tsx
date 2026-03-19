@@ -1,9 +1,20 @@
 import { Metadata } from "next";
 import { CaseStudyLayout } from "@/components/projects/CaseStudyLayout";
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const CANONICAL = `${BASE_URL}/projects/askorbit`;
+
 export const metadata: Metadata = {
   title: "AskOrbit Product Breakdown — B Anish",
-  description: "Breaking down AskOrbit: the AI chatbot I scoped and shipped inside PMOrbit.",
+  description: "Breaking down AskOrbit: the AI chatbot I scoped and shipped inside PMOrbit to answer project health queries in natural language.",
+  alternates: { canonical: CANONICAL },
+  openGraph: {
+    type: "article",
+    url: CANONICAL,
+    title: "AskOrbit Product Breakdown | B Anish",
+    description: "Breaking down AskOrbit: the AI chatbot I scoped and shipped inside PMOrbit.",
+    images: [{ url: "/nen.png", width: 1200, height: 630, alt: "AskOrbit Product Breakdown — B Anish" }],
+  },
 };
 
 const project = {

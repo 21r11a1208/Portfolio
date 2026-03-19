@@ -18,13 +18,18 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://banish.me";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
     default: "Anish.B | Portfolio",
     template: "%s | Anish.B",
+  },
+  icons: {
+    icon: [{ url: "/Favicon.png", type: "image/png" }],
+    shortcut: "/Favicon.png",
+    apple: "/Favicon.png",
   },
   description:
     "B Anish is an engineer-turned-product-manager based in Hyderabad. Built PMOrbit at RealPage from 0 to production — reducing handoff friction by 40%. Actively seeking APM and PM roles. Full-stack background in React, TypeScript, and .NET Core.",
@@ -221,7 +226,7 @@ const faqSchema = {
       name: "How can I contact B Anish for a PM role?",
       acceptedAnswer: {
         "@type": "Answer",
-        text: "You can reach B Anish by leaving your email or LinkedIn URL on his portfolio contact form at banish.me, or by connecting with him directly on LinkedIn at linkedin.com/in/b-anish-a963bb337.",
+        text: "You can reach B Anish by leaving your email or LinkedIn URL on his portfolio contact form at anish.works, or by connecting with him directly on LinkedIn at linkedin.com/in/b-anish-a963bb337.",
       },
     },
     {
