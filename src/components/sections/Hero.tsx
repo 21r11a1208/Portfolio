@@ -53,7 +53,7 @@ export function Hero() {
               variants={item}
               className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-[var(--text)] leading-[0.95] tracking-tight"
             >
-              B Anish
+              B Anish <span className="sr-only">Bonagiri Anish Portfolio</span>
             </motion.h1>
 
             <motion.p

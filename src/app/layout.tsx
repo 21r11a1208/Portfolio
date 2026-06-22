@@ -23,8 +23,8 @@ const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: "Anish.B | Portfolio",
-    template: "%s | Anish.B",
+    default: "B Anish (Bonagiri Anish) | Product Manager Portfolio",
+    template: "%s | B Anish (Bonagiri Anish)",
   },
   icons: {
     icon: [{ url: "/Favicon.png", type: "image/png" }],
@@ -32,9 +32,17 @@ export const metadata: Metadata = {
     apple: "/Favicon.png",
   },
   description:
-    "B Anish is an engineer-turned-product-manager based in Hyderabad. Built PMOrbit at RealPage from 0 to production — reducing handoff friction by 40%. Actively seeking APM and PM roles. Full-stack background in React, TypeScript, and .NET Core.",
+    "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM & PM roles.",
   keywords: [
     "B Anish",
+    "Bonagiri Anish",
+    "Anish Bonagiri",
+    "anish b portfolio",
+    "b anish portfolio",
+    "b anish website",
+    "bonagiri anish website",
+    "anish bonagiri website",
+    "B Anish PM",
     "Product Manager",
     "APM",
     "Associate Product Manager",
@@ -47,15 +55,13 @@ export const metadata: Metadata = {
     "product management portfolio",
     "aspiring PM India",
     "junior product manager",
-    "B Anish PM",
-    "B Anish product manager",
     "hire product manager Hyderabad",
     "PRD writing",
     "user research",
     "roadmap planning",
     "React TypeScript product manager",
   ],
-  authors: [{ name: "B Anish", url: BASE_URL }],
+  authors: [{ name: "Bonagiri Anish", url: BASE_URL }],
   creator: "B Anish",
   publisher: "B Anish",
   robots: {
@@ -75,10 +81,10 @@ export const metadata: Metadata = {
     type: "profile",
     locale: "en_IN",
     url: BASE_URL,
-    siteName: "B Anish — Product Manager Portfolio",
-    title: "B Anish — APM & PM | Engineer who builds, thinks, and ships products",
+    siteName: "B Anish (Bonagiri Anish) — Product Manager Portfolio",
+    title: "Bonagiri Anish (B Anish) — APM & PM | Engineer who builds, thinks, and ships products",
     description:
-      "Built PMOrbit at RealPage from 0 to production. Reduced handoff friction by 40%. Full-stack PM with React, TypeScript, and .NET Core background. Actively looking for APM/PM roles in Hyderabad.",
+      "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM & PM roles.",
     images: [
       {
         url: "/nen.png",
@@ -93,9 +99,9 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "B Anish — APM & PM | Engineer-turned-Product-Thinker",
+    title: "Bonagiri Anish (B Anish) — APM & PM Portfolio",
     description:
-      "Built a production platform for PMO leads at RealPage. Full-stack PM. Actively looking for APM/PM roles in Hyderabad.",
+      "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM & PM roles.",
     images: ["/nen.png"],
     creator: "@banish",
   },
@@ -108,8 +114,8 @@ const personSchema = {
   "@context": "https://schema.org",
   "@type": "Person",
   "@id": `${BASE_URL}/#person`,
-  name: "B Anish",
-  alternateName: ["Anish B", "B. Anish"],
+  name: "Bonagiri Anish",
+  alternateName: ["B Anish", "Anish B", "B. Anish", "Anish Bonagiri"],
   url: BASE_URL,
   image: {
     "@type": "ImageObject",

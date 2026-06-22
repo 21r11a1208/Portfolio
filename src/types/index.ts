@@ -3,6 +3,8 @@ export interface Project {
   title: string;
   type: "Case Study" | "Product Breakdown" | "PRD" | "Product Teardown" | "RCA" | "Product Enhancement" | "Metrics";
   description: string;
+  problemStatement: string;
+  businessImpact?: string;
   status?: "Production" | "Self-initiated";
   tags?: string[];
 }
@@ -12,6 +14,8 @@ export interface ExperienceEntry {
   role: string;
   duration: string;
   location: string;
+  problemStatement?: string;
+  businessImpact?: string;
   highlight?: string;
   achievements: string[];
   link?: string;

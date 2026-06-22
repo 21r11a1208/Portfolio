@@ -4,20 +4,55 @@ import { CluelyTeardown } from "./CluelyTeardown";
 const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
 const CANONICAL = `${BASE_URL}/projects/cluely`;
 
-export const metadata: Metadata = {
-  title: "Cluely Teardown — B Anish",
-  description:
-    "Product teardown and competitive analysis of Cluely — the AI overlay that turned 'cheating on interviews' into a venture-backed company, and what it reveals about real-time AI as a product category.",
+const title = "Cluely Teardown";
+const description = "Product teardown and competitive analysis of Cluely — the AI overlay that turned ";
+
+export const metadata: import("next").Metadata = {
+  title: `${title} — B Anish`,
+  description,
   alternates: { canonical: CANONICAL },
   openGraph: {
     type: "article",
     url: CANONICAL,
-    title: "Cluely Product Teardown & Competitive Analysis | B Anish",
-    description: "How Cluely found genuine whitespace in real-time AI, weaponised controversy as a growth strategy, and what their B2B pivot means for the category.",
-    images: [{ url: "/nen.png", width: 1200, height: 630, alt: "Cluely Teardown — B Anish" }],
+    title: `${title} | B Anish`,
+    description,
+    images: [{ url: `${BASE_URL}/api/og?title=${encodeURIComponent(title)}&type=Product%20Teardown`, width: 1200, height: 630, alt: title }],
   },
 };
 
+const articleSchema = {
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  headline: title,
+  description: description,
+  image: `${BASE_URL}/api/og?title=${encodeURIComponent(title)}&type=Product%20Teardown`,
+  author: {
+    "@type": "Person",
+    name: "Bonagiri Anish",
+    url: BASE_URL
+  },
+  publisher: {
+    "@type": "Organization",
+    name: "Bonagiri Anish",
+    logo: {
+      "@type": "ImageObject",
+      url: `${BASE_URL}/Favicon.png`
+    }
+  },
+  mainEntityOfPage: {
+    "@type": "WebPage",
+    "@id": CANONICAL
+  }
+};
+
 export default function CluelyPage() {
-  return <CluelyTeardown />;
+  return (
+    <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
+      />
+      <CluelyTeardown />
+    </>
+  );
 }
