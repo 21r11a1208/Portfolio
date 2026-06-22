@@ -1,0 +1,3271 @@
+{
+    "success": true,
+    "results": {
+        "keywords": {
+            "name": "keywords",
+            "title": "Keyword Consistency",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": false,
+            "score": 0,
+            "maxScore": 3,
+            "priority": 1,
+            "answer": "Your page's main keywords are not distributed well across the important HTML Tags.",
+            "shortAnswer": "Keyword Consistency Too Low",
+            "recommendation": "Use your main keywords across the important HTML Tags",
+            "append2": "Your page content should be focused around particular keywords you would like to rank for. Ideally these keywords should also be distributed across tags such as the title, meta and header tags.",
+            "what": "Generally a page should be targeted to rank for particular set of keywords or phrases. These keywords should be used with some consistency in page content (naturally and without stuffing) to maximize ranking potential for those keywords. This means these keywords should be present across the most important HTML Tags of the page, and used with some frequency in the general page text content. The keyword consistency check illustrates the keywords we have identified appearing most frequently in these areas.",
+            "why": "",
+            "how": "If the keywords and phrases identified don't match your intended ranking keywords, and do not show a level of consistency, you should consider amending your core page content to better include these.",
+            "value": "1",
+            "data": {
+                "keywords": [
+                    {
+                        "word": "read",
+                        "count": 21,
+                        "grade": 100,
+                        "title": false,
+                        "description": false,
+                        "headers": true
+                    },
+                    {
+                        "word": "product",
+                        "count": 16,
+                        "grade": 76,
+                        "title": true,
+                        "description": true,
+                        "headers": true
+                    },
+                    {
+                        "word": "user",
+                        "count": 13,
+                        "grade": 62,
+                        "title": false,
+                        "description": false,
+                        "headers": true
+                    },
+                    {
+                        "word": "case",
+                        "count": 12,
+                        "grade": 57,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "study",
+                        "count": 11,
+                        "grade": 52,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "problem",
+                        "count": 10,
+                        "grade": 48,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "prd",
+                        "count": 9,
+                        "grade": 43,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "outcome",
+                        "count": 9,
+                        "grade": 43,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    }
+                ],
+                "phrases": [
+                    {
+                        "word": "case study",
+                        "count": 10,
+                        "grade": 100,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "read case",
+                        "count": 9,
+                        "grade": 90,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "read case study",
+                        "count": 9,
+                        "grade": 90,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "read on medium",
+                        "count": 6,
+                        "grade": 60,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "at realpage",
+                        "count": 5,
+                        "grade": 50,
+                        "title": false,
+                        "description": true,
+                        "headers": false
+                    },
+                    {
+                        "word": "user interviews",
+                        "count": 5,
+                        "grade": 50,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "min read",
+                        "count": 5,
+                        "grade": 50,
+                        "title": false,
+                        "description": false,
+                        "headers": false
+                    },
+                    {
+                        "word": "pm roles",
+                        "count": 4,
+                        "grade": 40,
+                        "title": false,
+                        "description": true,
+                        "headers": true
+                    }
+                ]
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/keyword-consistency/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "contentCount": {
+            "name": "contentCount",
+            "title": "Amount of Content",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "Your page has a good level of textual content, which will assist in it's ranking potential.<br>\n                    <div class=\"row mt-4\">\n                        <div class=\"col-xl-6\">\n                            <table class=\"table table-row-dashed\">\n                                <tbody>\n                                    <tr>\n                                        <td>Word Count: 1424</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>",
+            "shortAnswer": "Your page has a good level of textual content, which will assist in it's ranking potential.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Numerous studies have shown that there is a relationship between the amount of content on a page (typically measured in word count) and it's ranking potential - generally longer content will rank higher. Obviously content also needs to be topically relevant, keyword rich and highly readable for the visitor. Note, in our assessment, we look at all selectable text on the page at load time, not hidden content.",
+            "why": "",
+            "how": "As a general guideline, it is recommended to have atleast 500 words of content on a page to give it some ranking potential. However this should be considered on a case by case basis. It may not be relevant for particular pages like 'contact us' pages for example.",
+            "value": "1424",
+            "data": null,
+            "icon": "fa-tag",
+            "time": "60 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/content-length/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "llmReadability": {
+            "name": "llmReadability",
+            "title": "Rendered Content (LLM Readability)",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "geo",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page has a low level of rendered content which tends to make it more readable for LLMs.<br>\n                    <div class=\"row mt-4\">\n                        <div class=\"col-xl-6\">\n                            <table class=\"table table-row-dashed\">\n                                <tbody>\n                                    <tr>\n                                        <td>Rendering Percentage: 5%</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>",
+            "shortAnswer": "Your page has a low level of rendered content which tends to make it more readable for LLMs.",
+            "recommendation": null,
+            "append2": "",
+            "what": "LLMs and AI Crawlers predominantly read the raw HTML of a website instead of the completed, dynamically rendered HTML produced in a web-browser, that may have been updated by Javascript. This stems from LLMs being naturally optimized to parse static content like documents and files as well as the fact that rendering website Javascript at scale is expensive, slow, and can be less consistent.",
+            "why": "",
+            "how": "You should ensure that important site content is always present in the raw HTML of your site and minimize the usage of plugins and Javascript components known to add content dynamically. This requires a moderate technical understanding to achieve and test.",
+            "value": "5",
+            "data": 1.046557238549272739192019798792898654937744140625,
+            "icon": "fa-tag",
+            "time": "60 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasNoindexHeaders": {
+            "name": "hasNoindexHeaders",
+            "title": "Noindex Header Test",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your page is not using the Noindex Header which prevents indexing.",
+            "shortAnswer": "Your page is not using the Noindex Header which prevents indexing.",
+            "recommendation": null,
+            "append2": "",
+            "what": "A critical part of a page's ranking potential is ensuring that it can actually be accessed by Search Engines. The Noindex Header is another Noindexing method that tells Search Engines to ignore a page, and can destroy out it's ranking ability. Sometimes these tags are added intentionally for low value pages, but sometimes they are left over unintentionally from a theme or template that has been used on the site, or forgotten to be removed by a developer when a website moves from design and testing to live usage.",
+            "why": "",
+            "how": "If you want the page to rank and it's using a Noindex Header, you will need to remove the Noindex Header from your page. This may require access to the backend code, and may need to be done by a developer. If you are using a CMS, you may have an option enabled to prevent indexing of the page, which should be turned off.",
+            "value": "",
+            "data": null,
+            "icon": "fa-tag",
+            "time": "15 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasFacebookPixel": {
+            "name": "hasFacebookPixel",
+            "title": "Facebook Pixel",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "We have not detected a Facebook Pixel on your page.",
+            "shortAnswer": "No Facebook Pixel",
+            "recommendation": "Install a Facebook Pixel",
+            "append2": "Facebook's Pixel is a useful piece of analytics code that allows you to retarget visitors if you decide to run Facebook Ads in future.",
+            "what": "Facebook Pixel is a piece of analytics code that allows Facebook to capture and analyse visitor information from your site. This allows you to retarget these visitors with Facebook messaging in future, or build new 'lookalike' audiences similar to your existing visitors. ",
+            "why": "",
+            "how": "In can be a good idea to install a Facebook Pixel if you intend to do any Facebook related marketing in the future in order to prepare audience data.",
+            "value": "",
+            "data": [],
+            "icon": "fa-tag",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "screenshot": {
+            "name": "screenshot",
+            "title": "Page Screenshot",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "",
+            "shortAnswer": "",
+            "recommendation": null,
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "/screenshots/g1sE6UPx5NnYJJvrWYj-FfKf4J0N64lV-desktop.jpg",
+            "data": null,
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasDeprecated": {
+            "name": "hasDeprecated",
+            "title": "Deprecated HTML",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No deprecated HTML tags have been found within your page.",
+            "shortAnswer": "No deprecated HTML tags have been found within your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "HTML, like most coding languages, has had improvements made over time that has removed older features, either due to them simply being problematic, or more often replaced with something better. If you continue to use these older features in your page, you may at the bare minimum not get the expected functionality in your page, or in the worst case, break some execution. ",
+            "why": "",
+            "how": "It is recommended to identify and remove any old or 'deprecated' tags from your code. This could be done manually if you have HTML or web design skills, or could be done by upgrading the template and library versions on your website.",
+            "value": "",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasInlineCss": {
+            "name": "hasInlineCss",
+            "title": "Inline Styles",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page appears to be using Inline Styles.",
+            "shortAnswer": "Inline Styles Found",
+            "recommendation": "Remove Inline Styles",
+            "append2": "Inline Styles are an older coding practice and discouraged in favor of using CSS style sheets, due to their ability to degrade page load performance and unnecessarily complicate HTML Code.",
+            "what": "HTML provides the ability to embed UI styling attributes within individual HTML elements. Despite this feature being available, it is modern best practice to completely separate UI styling into separate CSS files. This separates functions and centralises UI styling into one place making it easier for example to upgrade the UI styling of a site independently of the page content and structure. Inline Styles also have some particular problems in that they can degrade the page load performance of a page and unnecessarily complicate HTML code.",
+            "why": "",
+            "how": "Inline Styles should be manually removed from the HTML code of a page and merged into separate CSS files, but may need the help of a designer to carefully consider their purpose and function.",
+            "value": "1",
+            "data": [
+                {
+                    "line": 1,
+                    "style": "opacity:1",
+                    "tag": [
+                        "<div class=\"fixed inset-0 z-[99999] bg-[var(--bg)] flex items-center justify-center\" style=\"opacity:1",
+                        11762
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:scaleX(0)",
+                    "tag": [
+                        "<div class=\"h-[2px] w-48 bg-[var(--accent)] origin-left rounded-full\" style=\"transform:scaleX(0)",
+                        12084
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(-60px)",
+                    "tag": [
+                        "<header class=\"fixed top-0 left-0 right-0 z-30 transition-all duration-300 py-5 bg-transparent\" style=\"opacity:0;transform:translateY(-60px)",
+                        12200
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:var(--widget-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--border-8)",
+                    "tag": [
+                        "<div class=\"fixed bottom-8 right-8 z-30 pointer-events-none hidden lg:flex items-center justify-center w-[130px] h-[130px] rounded-full\" aria-hidden=\"true\" style=\"background:var(--widget-bg);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border:1px solid var(--border-8)",
+                        13855
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:var(--accent);transform:scale(1.5)",
+                    "tag": [
+                        "<button aria-label=\"Go to Home\" data-cursor=\"hover\" class=\"relative w-1.5 h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]\" style=\"background:var(--accent);transform:scale(1.5)",
+                        14911
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:var(--text-25);transform:scale(1)",
+                    "tag": [
+                        "<button aria-label=\"Go to About\" data-cursor=\"hover\" class=\"relative w-1.5 h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]\" style=\"background:var(--text-25);transform:scale(1)",
+                        15303
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:var(--text-25);transform:scale(1)",
+                    "tag": [
+                        "<button aria-label=\"Go to Case Studies\" data-cursor=\"hover\" class=\"relative w-1.5 h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]\" style=\"background:var(--text-25);transform:scale(1)",
+                        15695
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:var(--text-25);transform:scale(1)",
+                    "tag": [
+                        "<button aria-label=\"Go to Writing\" data-cursor=\"hover\" class=\"relative w-1.5 h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]\" style=\"background:var(--text-25);transform:scale(1)",
+                        16094
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:var(--text-25);transform:scale(1)",
+                    "tag": [
+                        "<button aria-label=\"Go to Contact\" data-cursor=\"hover\" class=\"relative w-1.5 h-1.5 rounded-full transition-all duration-300 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[var(--accent)] focus-visible:ring-offset-2 focus-visible:ring-offset-[var(--bg)]\" style=\"background:var(--text-25);transform:scale(1)",
+                        16488
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "left:10%;top:20%;width:120px;height:120px;background-color:rgba(200,240,96,0.06);border:none",
+                    "tag": [
+                        "<div class=\"absolute rounded-full\" style=\"left:10%;top:20%;width:120px;height:120px;background-color:rgba(200,240,96,0.06);border:none",
+                        17050
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "left:80%;top:15%;width:200px;height:200px;background-color:transparent;border:1px solid rgba(200,240,96,0.05)",
+                    "tag": [
+                        "<div class=\"absolute rounded-full\" style=\"left:80%;top:15%;width:200px;height:200px;background-color:transparent;border:1px solid rgba(200,240,96,0.05)",
+                        17192
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "left:70%;top:70%;width:60px;height:60px;background-color:rgba(240,237,230,0.04);border:none",
+                    "tag": [
+                        "<div class=\"absolute rounded-full\" style=\"left:70%;top:70%;width:60px;height:60px;background-color:rgba(240,237,230,0.04);border:none",
+                        17351
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "left:15%;top:75%;width:80px;height:80px;background-color:transparent;border:1px solid rgba(200,240,96,0.07)",
+                    "tag": [
+                        "<div class=\"absolute rounded-full\" style=\"left:15%;top:75%;width:80px;height:80px;background-color:transparent;border:1px solid rgba(200,240,96,0.07)",
+                        17492
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "left:50%;top:30%;width:12px;height:12px;background-color:rgba(200,240,96,0.4);border:none",
+                    "tag": [
+                        "<div class=\"absolute rounded-full\" style=\"left:50%;top:30%;width:12px;height:12px;background-color:rgba(200,240,96,0.4);border:none",
+                        17649
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:radial-gradient(circle at 70% 30%, rgba(200,240,96,0.05) 0%, transparent 60%)",
+                    "tag": [
+                        "<div class=\"absolute top-0 right-0 w-[600px] h-[600px] rounded-full pointer-events-none\" style=\"background:radial-gradient(circle at 70% 30%, rgba(200,240,96,0.05) 0%, transparent 60%)",
+                        17794
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<span class=\"text-xs font-display font-semibold tracking-[0.25em] uppercase text-[var(--accent-text)]\" style=\"opacity:0;transform:translateY(24px)",
+                        18144
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<h1 class=\"text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-display font-bold text-[var(--text)] leading-[0.95] tracking-tight\" style=\"opacity:0;transform:translateY(24px)",
+                        18331
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<p class=\"text-2xl sm:text-3xl md:text-4xl font-display font-semibold text-[var(--text-50)] leading-tight\" style=\"opacity:0;transform:translateY(24px)",
+                        18571
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<p class=\"mt-2 max-w-xl text-base md:text-lg font-body text-[var(--text-55)] leading-relaxed\" style=\"opacity:0;transform:translateY(24px)",
+                        18848
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"flex flex-wrap gap-4 mt-4\" style=\"opacity:0;transform:translateY(24px)",
+                        19119
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "display:inline-block;transform:none",
+                    "tag": [
+                        "<div style=\"display:inline-block;transform:none",
+                        19203
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "display:inline-block;transform:none",
+                    "tag": [
+                        "<div style=\"display:inline-block;transform:none",
+                        19513
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(16px) scale(0.96)",
+                    "tag": [
+                        "<div class=\"order-first lg:order-none flex justify-center items-center\" style=\"opacity:0;transform:translateY(16px) scale(0.96)",
+                        19843
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "box-shadow:0 0 0 2px rgba(200,240,96,0.2), 0 0 32px rgba(200,240,96,0.1)",
+                    "tag": [
+                        "<div class=\"relative block lg:hidden w-28 h-28 sm:w-36 sm:h-36 rounded-full overflow-hidden\" style=\"box-shadow:0 0 0 2px rgba(200,240,96,0.2), 0 0 32px rgba(200,240,96,0.1)",
+                        19972
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent",
+                    "tag": [
+                        "<img alt=\"B Anish\" draggable=\"false\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover object-top select-none\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent",
+                        20146
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "aspect-ratio:3/4;box-shadow:0 0 0 1px rgba(200,240,96,0.1), 0 0 60px rgba(200,240,96,0.08), 0 32px 64px rgba(0,0,0,0.4)",
+                    "tag": [
+                        "<div class=\"relative hidden lg:block w-[300px] xl:w-[340px] rounded-2xl overflow-hidden\" style=\"aspect-ratio:3/4;box-shadow:0 0 0 1px rgba(200,240,96,0.1), 0 0 60px rgba(200,240,96,0.08), 0 32px 64px rgba(0,0,0,0.4)",
+                        21238
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent",
+                    "tag": [
+                        "<img alt=\"B Anish\" draggable=\"false\" decoding=\"async\" data-nimg=\"fill\" class=\"object-cover object-top select-none\" style=\"position:absolute;height:100%;width:100%;left:0;top:0;right:0;bottom:0;color:transparent",
+                        21455
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:linear-gradient(to top, var(--bg), transparent)",
+                    "tag": [
+                        "<div class=\"absolute bottom-0 left-0 right-0 h-28 pointer-events-none\" style=\"background:linear-gradient(to top, var(--bg), transparent)",
+                        22623
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:radial-gradient(circle at 0% 0%, rgba(200,240,96,0.18) 0%, transparent 70%)",
+                    "tag": [
+                        "<div class=\"absolute top-0 left-0 w-12 h-12 pointer-events-none\" style=\"background:radial-gradient(circle at 0% 0%, rgba(200,240,96,0.18) 0%, transparent 70%)",
+                        22786
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0",
+                    "tag": [
+                        "<div class=\"absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2\" aria-hidden=\"true\" style=\"opacity:0",
+                        22995
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "overflow:clip",
+                    "tag": [
+                        "<div class=\"py-5 border-y border-[var(--border)] flex flex-col gap-3\" style=\"overflow:clip",
+                        23325
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "overflow:clip",
+                    "tag": [
+                        "<div style=\"overflow:clip",
+                        23436
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "will-change:transform",
+                    "tag": [
+                        "<div class=\"flex w-max\" style=\"will-change:transform",
+                        23463
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "overflow:clip",
+                    "tag": [
+                        "<div style=\"overflow:clip",
+                        27901
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "will-change:transform",
+                    "tag": [
+                        "<div class=\"flex w-max\" style=\"will-change:transform",
+                        27928
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        32465
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        32913
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        33304
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        33601
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        33923
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        34177
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        34690
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        34914
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        35775
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        36616
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        37566
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        37928
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(12px)",
+                    "tag": [
+                        "<div style=\"opacity:0;transform:translateY(12px)",
+                        39886
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        39936
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:perspective(1200px) rotateY(0deg) rotateX(0deg);transition:transform 0.5s ease",
+                    "tag": [
+                        "<div class=\"group relative w-full p-8 md:p-12 rounded-3xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_80px_var(--accent-08)] transition-all duration-300 mb-5 select-none overflow-hidden\" data-cursor=\"view\" style=\"transform:perspective(1200px) rotateY(0deg) rotateX(0deg);transition:transform 0.5s ease",
+                        39995
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "background:radial-gradient(circle at 80% 20%, rgba(200,240,96,0.04) 0%, transparent 60%)",
+                    "tag": [
+                        "<div class=\"absolute top-0 right-0 w-96 h-96 pointer-events-none opacity-0 group-hover:opacity-100 transition-opacity duration-700\" style=\"background:radial-gradient(circle at 80% 20%, rgba(200,240,96,0.04) 0%, transparent 60%)",
+                        40354
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(12px)",
+                    "tag": [
+                        "<div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4\" style=\"opacity:0;transform:translateY(12px)",
+                        43571
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        43682
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        46158
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        48663
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        51159
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        53747
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        56305
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        58946
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                    "tag": [
+                        "<div class=\"group relative flex flex-col p-5 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-25)] hover:shadow-[0_0_40px_var(--accent-08)] transition-all duration-300 select-none\" data-cursor=\"view\" style=\"transform:translateY(24px);transition:transform 0.4s ease;cursor:none;opacity:0",
+                        61606
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        64284
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<a href=\"https://medium.com/@b.anish/the-pm-skills-i-didnt-expect-to-learn-as-a-developer-1b8908d6144f\" target=\"_blank\" rel=\"noopener noreferrer\" data-cursor=\"hover\" class=\"group flex flex-col p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-20)] hover:shadow-[0_0_30px_var(--accent-08)] transition-all duration-300\" style=\"opacity:0;transform:translateY(24px)",
+                        64694
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<a href=\"https://medium.com/@b.anish/i-applied-to-several-pm-roles-in-one-week-heres-what-the-process-actually-looks-like-928406501807\" target=\"_blank\" rel=\"noopener noreferrer\" data-cursor=\"hover\" class=\"group flex flex-col p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-20)] hover:shadow-[0_0_30px_var(--accent-08)] transition-all duration-300\" style=\"opacity:0;transform:translateY(24px)",
+                        65820
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<a href=\"https://medium.com/@b.anish/that-summarize-with-ai-button-might-be-lying-to-you-cb9198645f5c\" target=\"_blank\" rel=\"noopener noreferrer\" data-cursor=\"hover\" class=\"group flex flex-col p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-20)] hover:shadow-[0_0_30px_var(--accent-08)] transition-all duration-300\" style=\"opacity:0;transform:translateY(24px)",
+                        67009
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<a href=\"https://medium.com/@b.anish/anthropic-just-released-a-report-on-ai-and-jobs-heres-what-it-actually-means-for-freshers-edad8958d976\" target=\"_blank\" rel=\"noopener noreferrer\" data-cursor=\"hover\" class=\"group flex flex-col p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-20)] hover:shadow-[0_0_30px_var(--accent-08)] transition-all duration-300\" style=\"opacity:0;transform:translateY(24px)",
+                        68140
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<a href=\"https://medium.com/@b.anish/you-cant-out-code-a-machine-here-s-what-you-can-do-284aa682704b\" target=\"_blank\" rel=\"noopener noreferrer\" data-cursor=\"hover\" class=\"group flex flex-col p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-20)] hover:shadow-[0_0_30px_var(--accent-08)] transition-all duration-300\" style=\"opacity:0;transform:translateY(24px)",
+                        69323
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<a href=\"https://medium.com/@b.anish\" target=\"_blank\" rel=\"noopener noreferrer\" data-cursor=\"hover\" class=\"group flex flex-col p-6 rounded-2xl bg-[var(--surface)] border border-[var(--border)] hover:border-[var(--accent-20)] hover:shadow-[0_0_30px_var(--accent-08)] transition-all duration-300\" style=\"opacity:0;transform:translateY(24px)",
+                        70442
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        71609
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "display:inline-block;transform:none",
+                    "tag": [
+                        "<div style=\"display:inline-block;transform:none",
+                        76637
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:0;transform:translateY(24px)",
+                    "tag": [
+                        "<div class=\"\" style=\"opacity:0;transform:translateY(24px)",
+                        77148
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "opacity:1;transform:none",
+                    "tag": [
+                        "<div class=\"text-[var(--text-60)] mb-0.5\" style=\"opacity:1;transform:none",
+                        78171
+                    ]
+                },
+                {
+                    "line": 1,
+                    "style": "cursor:text",
+                    "tag": [
+                        "<input placeholder=\"type a command...\" class=\"flex-1 bg-transparent text-[var(--text)] outline-none placeholder-[var(--text-20)] caret-[var(--accent)]\" aria-label=\"Terminal input\" autoComplete=\"off\" spellCheck=\"false\" style=\"cursor:text",
+                        78474
+                    ]
+                }
+            ],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasGzip": {
+            "name": "hasGzip",
+            "title": "Compression Usage (Gzip, Deflate, Brotli)",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "Your website appears to be using a reasonable level of compression.",
+            "shortAnswer": "Your website appears to be using a reasonable level of compression.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Modern web servers allow website files to be compressed as part of their transfer, often dramatically reducing the Download File Size and Page Load Speed of a page. There are several different compression algorithms used such as GZIP, Deflate and Brotli. Enabling compression can often represent a simple and quick win to performance, and most new web servers will have this enabled by default.",
+            "why": "",
+            "how": "You should ensure that compression is enabled and working effectively on your web server. Sometimes compression may only be partially enabled for particular file types, or using an older compression method, so it is important to understand whether your server is configured as efficiently as possible. This may require the help of a developer to investigate.",
+            "value": "71",
+            "data": {
+                "total": 654864,
+                "html": 17297,
+                "css": 13600,
+                "js": 218050,
+                "image": 333884,
+                "other": 72033,
+                "rate": {
+                    "total": 44,
+                    "html": 17,
+                    "css": 17,
+                    "js": 32,
+                    "image": 61,
+                    "other": 100
+                }
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/webpage-size/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "numberOfResources": {
+            "name": "numberOfResources",
+            "title": "Resources Breakdown",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "This check displays the total number of files that need to be retrieved from web servers to load your page.",
+            "shortAnswer": "This check displays the total number of files that need to be retrieved from web servers to load your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "When browsers display a modern website, they have to retrieve a wide variety of files including HTML, CSS, Javascript, Images and other media. As a general rule, every file that needs to be retrieved is another network request that needs to be made by the browser to the server, which can each face some connection overhead and add to Page Load Time.",
+            "why": "",
+            "how": " It is a good idea to remove unnecessary files or consolidate smaller files with similar content like styles and scripts where possible to optimize performance.",
+            "value": "1",
+            "data": {
+                "total": 23,
+                "images": 5,
+                "css": 1,
+                "js": 14,
+                "html": 1,
+                "other": 2
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "pageSize": {
+            "name": "pageSize",
+            "title": "Website Download Size",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your page's file size is reasonably low which is good for Page Load Speed and user experience.",
+            "shortAnswer": "Your page's file size is reasonably low which is good for Page Load Speed and user experience.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Download Page Size refers to the total amount of file content that needs to be downloaded by the browser to view a particular webpage. This includes HTML, CSS, Javascript and Images, though can include a number of other file formats. Generally media files like images and videos are significantly larger than text files and make up the bulk of Download File Size, but also represent the largest optimization opportunity. An important distinction here is 'Download' vs 'Raw' file size. Modern web protocols compress files during transfer, meaning files are usually smaller to download than their actual or 'raw' size. So any manual optimizations you perform would be on the 'raw' file. Download Page Size is one of the biggest contributors to Page Load Speed, which can directly affect rankings, user experience and conversions.",
+            "why": "",
+            "how": "It is important to ensure your Download File Size is as small as possible by removing unnecessary files and minifying and optimizing others. 5MB is a good metric to strive for, though modern websites are gradually increasing in size.",
+            "value": "654864",
+            "data": {
+                "total": 654864,
+                "html": 17297,
+                "css": 13600,
+                "js": 218050,
+                "image": 333884,
+                "other": 72033,
+                "rate": {
+                    "total": 44,
+                    "html": 17,
+                    "css": 17,
+                    "js": 32,
+                    "image": 61,
+                    "other": 100
+                }
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/webpage-size/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "serverResponseTime": {
+            "name": "serverResponseTime",
+            "title": "Website Load Speed",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "Your page loads in a reasonable amount of time.",
+            "shortAnswer": "Your page loads in a reasonable amount of time.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Page Load Speed refers to the amount of time it takes to entirely load a webpage in a user's browser. Load speed is complex and  can be impacted by a multitude of factors including network, web server, page size, technology, database or coding problems, and may require the help of a developer or systems administrator to troubleshoot. Page Load Speed impacts a user's experience on a website and can directly impact bounce rate and conversions. Additionally, Search Engines are making Page Load Speed a ranking factor.",
+            "why": "",
+            "how": "Optimize Page Load Speed by examining common problem points such as overall file size, server resources or coding problems.",
+            "value": "35",
+            "data": {
+                "responseTime": 35,
+                "loadTime": 429,
+                "completeTime": 511
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/page-speed/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "javascriptErrors": {
+            "name": "javascriptErrors",
+            "title": "Javascript Errors",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page is not reporting any JavaScript errors.",
+            "shortAnswer": "Your page is not reporting any JavaScript errors.",
+            "recommendation": null,
+            "append2": "",
+            "what": "JavaScript is embedded code on a webpage that can perform any number of functions such as modifying page elements dynamically, or making calls to retrieve information live without refreshing the page. JavaScript is a staple of the modern web and used on almost every modern website. However, with increasing usage and complexity, Javascript can fail on a page due to coding problems, incorrect versions or loading issues. Sometimes failures can interrupt proper execution of a page and break other functions, and so Javascript errors should generally be examined to understand the cause and what it's impacts are .",
+            "why": "",
+            "how": "",
+            "value": "0",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "http": {
+            "name": "http",
+            "title": "HTTP2 Usage",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "Your website is using the recommended HTTP/2+ Protocol.",
+            "shortAnswer": "Your website is using the recommended HTTP/2+ Protocol.",
+            "recommendation": null,
+            "append2": "",
+            "what": "HTTP is a technology protocol used by web browser to communicate with websites and is a cornerstone of the world wide web. HTTP/2 (and above) are newer versions of the HTTP protocol that offer significant performance improvements. Older websites may be set to using an older HTTP protocol despite their web servers having been upgraded to support newer versions.",
+            "why": "",
+            "how": "It is worth reviewing whether your website is configured to use the latest available HTTP protocol as it can provide immediate Page Load Speed improvements.",
+            "value": "2",
+            "data": {
+                "h2": "https://www.anish.works/"
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasIframe": {
+            "name": "hasIframe",
+            "title": "iFrames used?",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "There are no iFrames detected on your page.",
+            "shortAnswer": "There are no iFrames detected on your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "iFrames are a HTML tag that allow you to embed other webpages inside your page in a small frame. They generally represent an older coding practice and are discouraged as they can complicate navigation, particularly in mobile, and are harder for search engines to index.",
+            "why": "",
+            "how": "We recommend removing any iFrames if they don't serve a critical purpose, or could be replaced with more natural navigation. However, some coding libraries like Google Tag Manager may still rely on iFrames as part of their internal functionality to load external pages and code files, so you may need to evaluate your usage of them on a case by case basis.",
+            "value": "",
+            "data": null,
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "deviceRendering": {
+            "name": "deviceRendering",
+            "title": "Device Rendering",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "This check visually demonstrates how your page renders on different devices. It is important that your page is optimized for mobile and tablet experiences as today the majority of web traffic comes from these sources.",
+            "shortAnswer": "This check visually demonstrates how your page renders on different devices. It is important that your page is optimized for mobile and tablet experiences as today the majority of web traffic comes from these sources.",
+            "recommendation": null,
+            "append2": "",
+            "what": "A website can be viewed in a wide variety of resolutions and formats, some dictated by the size of a desktop display, and others by the specific dimensions of a phone or tablet model. Device rendering provides a preview of how the site looks on some popular device resolutions to help identify obvious issues. Note, our method will load a website and resize it's portlet to several dimensions, as opposed to loading the site multiple times directly in different devices.",
+            "why": "",
+            "how": "In general a website should be designed and tested to be responsive across a large variety of desktop and mobile device resolutions, as well as being able to transition smoothly (for example when resizing a browser or flipping a tablet from vertical to horizontal).",
+            "value": "1",
+            "data": {
+                "mobile": "/screenshots/g1sE6UPx5NnYJJvrWYj-FfKf4J0N64lV-mobile.jpg",
+                "tablet": "/screenshots/g1sE6UPx5NnYJJvrWYj-FfKf4J0N64lV-tablet.jpg"
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasEmail": {
+            "name": "hasEmail",
+            "title": "Email Privacy",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Email addresses have been found in plain text.",
+            "shortAnswer": "Email Address Found in Plain Text",
+            "recommendation": "Remove Clear Text Email Addresses",
+            "append2": "We recommend removing any plain text email addresses and replacing them with images or contact forms. Plain text email addresses can be susceptible to scrapers and email spammers.",
+            "what": "Email addresses shown in clear text on your website can be easily scraped by bots, leading to inclusion in spam mailing lists.",
+            "why": "",
+            "how": "We recommend removing any plain text email addresses and replacing them with contact forms, images, or less obvious text like 'email at website'.",
+            "value": "1",
+            "data": [
+                {
+                    "email": "anibaaabuuu@gmail.com",
+                    "line": 1
+                },
+                {
+                    "email": "anibaaabuuu@gmail.com",
+                    "line": 1
+                },
+                {
+                    "email": "anibaaabuuu@gmail.com",
+                    "line": 1
+                },
+                {
+                    "email": "anibaaabuuu@gmail.com",
+                    "line": 1
+                },
+                {
+                    "email": "anibaaabuuu@gmail.com",
+                    "line": 1
+                }
+            ],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "technologies": {
+            "name": "technologies",
+            "title": "Technology List",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "technology",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "These software or coding libraries have been identified on your page.",
+            "shortAnswer": "These software or coding libraries have been identified on your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "1",
+            "data": {
+                "HSTS": {
+                    "name": "HSTS",
+                    "icon": false,
+                    "icon_pdf": false,
+                    "website": "https://www.rfc-editor.org/rfc/rfc6797#section-6.1",
+                    "version": ""
+                },
+                "Vercel": {
+                    "name": "Vercel",
+                    "icon": "/img/icons/app/vercel.svg",
+                    "icon_pdf": "/img/icons/app/vercel.svg",
+                    "website": "https://vercel.com",
+                    "version": ""
+                }
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        }
+    },
+    "errors": []
+}
+
+{
+    "success": true,
+    "results": {
+        "title": {
+            "name": "title",
+            "title": "Title Tag",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 6,
+            "maxScore": 6,
+            "priority": 2,
+            "answer": "You have a Title Tag of optimal length (between 50 and 60 characters).<br>\n                    <div class=\"row mt-4\">\n                        <div>\n                            <table class=\"table table-row-dashed mb-3\">\n                                <tbody>\n                                    <tr>\n                                        <td>B Anish (Bonagiri Anish) | Product Manager Portfolio</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                Length : 52",
+            "shortAnswer": "You have a Title Tag of optimal length (between 50 and 60 characters).",
+            "recommendation": null,
+            "append2": "",
+            "what": "The Title Tag is an important HTML element that tells users and Search Engines what the topic of the webpage is and the type of keywords the page should rank for. The Title will appear in the Header Bar of a user's browser. It is also one of the most important (and easiest to improve) On-Page SEO factors.",
+            "why": "",
+            "how": "We recommend setting a keyword rich Title between 50–60 characters. This is often simple to enter into your CMS system or may need to be manually set in the header section of the HTML code.",
+            "value": "52",
+            "data": "B Anish (Bonagiri Anish) | Product Manager Portfolio",
+            "icon": "fa-tag",
+            "time": "15 minutes",
+            "link1": "http://absolute.link",
+            "link2": "http://absolute.link",
+            "more-info": "/blog/title-tag/",
+            "best-practices": "/blog/title-tag/#How-to-create-an-SEO-friendly-title-tag",
+            "how-wordpress": "/blog/wordpress-page-title/",
+            "how-shopify": "/blog/title-and-meta-description-shopify/",
+            "how-wix": "/blog/wix-change-page-title-meta-tags/"
+        },
+        "description": {
+            "name": "description",
+            "title": "Meta Description Tag",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your page has a Meta Description of optimal length (between 120 and 160 characters).<br>\n                    <div class=\"row mt-4\">\n                        <div>\n                            <table class=\"table table-row-dashed mb-3\">\n                                <tbody>\n                                    <tr>\n                                        <td>Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM &amp; PM roles.</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                Length : 149",
+            "shortAnswer": "Your page has a Meta Description of optimal length (between 120 and 160 characters).",
+            "recommendation": null,
+            "append2": "",
+            "what": "Meta Description is another important HTML element that explains more descriptively to Search Engines what your page is about. Meta Descriptions are often used as the text snippets used in Search Engine results (though Search Engines are increasingly generating these themselves) and can help further signal to Search Engines what keywords your page should rank for.",
+            "why": "",
+            "how": "Make sure your page has a Meta Description included, and is at an optimum length (between 120 and 160 characters). Make your Meta Description text interesting and easy to comprehend. Use phrases and keywords relevant to the page and user that you would like to rank for. Meta Description is normally available to be updated in your CMS.",
+            "value": "149",
+            "data": "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM &amp; PM roles.",
+            "icon": "fa-tag",
+            "time": "30 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/meta-description/",
+            "best-practices": "/blog/meta-description/#Best-practice-How-to-write-a-meta-description",
+            "how-wordpress": "/blog/wordpress-meta-description/",
+            "how-shopify": "/blog/header-tags/#htshopify",
+            "how-wix": "/blog/header-tags/#htwix"
+        },
+        "hasHreflang": {
+            "name": "hasHreflang",
+            "title": "Hreflang Usage",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "Your page is not making use of Hreflang attributes.",
+            "shortAnswer": "Your page is not making use of Hreflang attributes.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Hreflang is an HTML attribute used to specify the language and geographical targeting of a page. It is commonly used together with the 'alternate' attribute in the code of a page to signal to Search Engines a list of alternative language or geographic versions of the current page.",
+            "why": "",
+            "how": "If you have multiple versions of the same page in different languages, it is important to add Hreflang tags to tell Search Engines about these variations. This code may need to be manually added into the HTML code of your page, but is also often controlled by your CMS or plugin system if multi-lingual features are enabled.",
+            "value": "",
+            "data": [],
+            "icon": "fa-tag",
+            "time": "30 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/hreflang/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "langCheck": {
+            "name": "langCheck",
+            "title": "Language",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page is using the Lang Attribute.<br>\n                    <div class=\"row mt-4\">\n                        <div class=\"col-xl-6\">\n                            <table class=\"table table-row-dashed\">\n                                <tbody>\n                                    <tr>\n                                        <td>Declared: English</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>",
+            "shortAnswer": "Your page is using the Lang Attribute.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The Lang Attribute  is used to describe the intended language of the current page to user's browsers and Search Engines. Search Engines may use the Lang Attribute to return language specific search results to a searcher, and in the browser, Lang Attribute can signal the need to switch to a different language if it is different to the user's own preferred language. ",
+            "why": "",
+            "how": "We recommend adding the Lang Attribute to the HTML tag of every page to avoid any chance of misinterpretation of language. This may need to be manually added to the site's HTML code, or may be controlled by your CMS.",
+            "value": "English",
+            "data": "en",
+            "icon": "fa-tag",
+            "time": "15 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/html-lang-attribute/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "canonicalCheck": {
+            "name": "canonicalCheck",
+            "title": "Canonical Tag",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "Your page is using the Canonical Tag.",
+            "shortAnswer": "Your page is using the Canonical Tag.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The Canonical Tag is a HTML Tag that tells Search Engines the primary URL of a page. URLs can have multiple versions due to things like parameters being passed or www and non-www versions, resulting in potential duplicate content. Google recommends all pages specify a Canonical for this reason.",
+            "why": "",
+            "how": "You may need to determine what the primary preferred version of the page is. Often the CMS may manage this, or provide the ability to specify it.",
+            "value": "1",
+            "data": [
+                "https://anish.works"
+            ],
+            "icon": "fa-tag",
+            "time": "15 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/canonical-url/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "googleSearchPreview": {
+            "name": "googleSearchPreview",
+            "title": "SERP Snippet Preview",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "This illustrates how your page may appear in Search Results. Note, this is intended as a guide and Search Engines are more frequently generating this content dynamically.",
+            "shortAnswer": "This illustrates how your page may appear in Search Results. Note, this is intended as a guide and Search Engines are more frequently generating this content dynamically.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The SERP Snippet illustrates how your page may be shown in Search Results for a particular query. Typically the page's Title, URL and Meta Description have been the main components utilized here, and hence could be carefully dictated, though Search Engines are more frequently building these snippets themselves to better represent the page content to their searchers.",
+            "why": "",
+            "how": "It's important that the SERP Snippet is enticing for your searchers to click on, and accurately represents your content to avoid bounces or heavy re-writing by the Search Engine. You should keep these factors in mind when populating the page Title, Meta Description and URL.",
+            "value": "1",
+            "data": {
+                "url": "https://www.anish.works",
+                "title": "B Anish (Bonagiri Anish) | Product Manager Portfolio",
+                "description": "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM &amp; PM roles.",
+                "favicon": "data:image/jpg;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAATCAMAAADGSv/FAAAAY1BMVEVHcEyevksdHRsjIyMgISAhISMiIyMgICIjIyQiIyQgICOhwUqfwEymxEkiIyOfv0ykxU6kxU0fHiIbGSEiIyMZGSAjJCSdvUyevkuevEYiIyOdvUt4jzxNWC0jJCSev00bGSHqertcAAAAIXRSTlMAWQsfLUO4Uur4jj6YEGPLZ3zQoNtwWIitKtnqVlL///67NQFRAAAA3ElEQVQokXVQ6RqCMAzrDhjjkkNBUIvv/5R2Y27FIz/g+5o0yQoQYSZFnwgNH8gQCwBMKORRUNCsJYFdz4TVej3DxW9BjnkYjIiKC2iVQkoZBdlRUDr/gSzGQXtkxSFC+kSNtB9LWl4yRzT7T7doHZwkRSjXYJqMZNUVf8YQXLWvklzZjUKsa8CG7EYmvcbh6VGGYcvTnsN4MY+76Lq+70TVuJlNBrCI+rRt26nudi4ceTdYesfdahGp95ExA6hqIrergC+UOEKzs9U3S0fOZeVTf+wGiHme++Yf+wIBgBZuS0tc0AAAAABJRU5ErkJggg==",
+                "siteName": "B Anish &#8212; Product Manager Portfolio"
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasH1Header": {
+            "name": "hasH1Header",
+            "title": "H1 Header Tag Usage",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "Your page has a H1 Tag.",
+            "shortAnswer": "Your page has a H1 Tag.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The H1 Header Tag is one of the most important ways of signaling to Search Engines the topic of a page and subsequently the keywords it should rank for. The H1 Tag normally appears as visible text in the largest font size on the page.",
+            "why": "",
+            "how": "We recommend adding a H1 Header Tag near the top of your page content and include important keywords you would like to rank for. You should have one, and only one H1 tag on each page. If you are using a CMS, this would normally be entered into the core content section of the page.",
+            "value": "1",
+            "data": {
+                "h1": [
+                    "B Anish Bonagiri Anish Portfolio"
+                ],
+                "h2": [
+                    "Engineer turned product thinker",
+                    "What I've built & thought through",
+                    "How I think in public",
+                    "Let's talk.",
+                    "Try the terminal."
+                ],
+                "h3": [
+                    "Ships change minds. Specs don't.",
+                    "If the dev is confused, the spec is wrong.",
+                    "Talk to users before you have a solution.",
+                    "PMOrbit",
+                    "KeyStay",
+                    "AgriDrone",
+                    "Gymate",
+                    "Asana & Trello",
+                    "Stack Overflow",
+                    "LinkedIn for Freshers",
+                    "Cluely",
+                    "Arattai",
+                    "The PM Skills I Didn't Expect to Learn as a Developer",
+                    "I Applied to Several PM Roles in One Week. Here's What the Process Actually Looks Like.",
+                    "That \"Summarize with AI\" Button Might Be Lying to You",
+                    "Anthropic Just Released a Report on AI and Jobs. Here's What It Actually Means for Freshers.",
+                    "You Can't Out-Code a Machine. Here's What You Can Do.",
+                    "Read More on Medium"
+                ]
+            },
+            "icon": "fa-tag",
+            "time": "30 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/h1-html-tag/",
+            "best-practices": "/blog/header-tags/#htbest",
+            "how-wordpress": "/blog/header-tags/#htwp",
+            "how-shopify": "/blog/header-tags/#htshopify",
+            "how-wix": "/blog/header-tags/#htwix"
+        },
+        "hasHeaders": {
+            "name": "hasHeaders",
+            "title": "H2-H6 Header Tag Usage",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "Your page is making use multiple levels of Header Tags.",
+            "shortAnswer": "Your page is making use multiple levels of Header Tags.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The H2-H6 Header Tags are an important way of organizing the content of your page and signaling to Search Engines the longer tail topics your page should rank for.",
+            "why": "",
+            "how": "We recommend including at least 2 other Header Tag levels on your page (such as H2 and H3) in addition to the H1. It is useful to also include important keywords in these Header Tags. These would be added to the core content section of your page.",
+            "value": "1",
+            "data": {
+                "h1": [
+                    "B Anish Bonagiri Anish Portfolio"
+                ],
+                "h2": [
+                    "Engineer turned product thinker",
+                    "What I've built & thought through",
+                    "How I think in public",
+                    "Let's talk.",
+                    "Try the terminal."
+                ],
+                "h3": [
+                    "Ships change minds. Specs don't.",
+                    "If the dev is confused, the spec is wrong.",
+                    "Talk to users before you have a solution.",
+                    "PMOrbit",
+                    "KeyStay",
+                    "AgriDrone",
+                    "Gymate",
+                    "Asana & Trello",
+                    "Stack Overflow",
+                    "LinkedIn for Freshers",
+                    "Cluely",
+                    "Arattai",
+                    "The PM Skills I Didn't Expect to Learn as a Developer",
+                    "I Applied to Several PM Roles in One Week. Here's What the Process Actually Looks Like.",
+                    "That \"Summarize with AI\" Button Might Be Lying to You",
+                    "Anthropic Just Released a Report on AI and Jobs. Here's What It Actually Means for Freshers.",
+                    "You Can't Out-Code a Machine. Here's What You Can Do.",
+                    "Read More on Medium"
+                ]
+            },
+            "icon": "fa-tag",
+            "time": "30 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/header-tags/",
+            "best-practices": "/blog/header-tags/#htbest",
+            "how-wordpress": "/blog/header-tags/#htwp",
+            "how-shopify": "/blog/header-tags/#htshopify",
+            "how-wix": "/blog/header-tags/#htwix"
+        },
+        "hasAmp": {
+            "name": "hasAmp",
+            "title": "Google Accelerated Mobile Pages (AMP)",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "This page does not appear to have AMP Enabled.",
+            "shortAnswer": "This page does not appear to have AMP Enabled.",
+            "recommendation": null,
+            "append2": "",
+            "what": "AMP or Accelerated Mobile Pages, was an initiative originally created by Google to help mobile pages load faster through adherence to a specific set of requirements. Some research demonstrated that AMP enabled pages would receive  a ranking benefit. AMP has often been criticized and begun to be deprecated by particular browsers and frameworks.",
+            "why": "",
+            "how": "",
+            "value": "",
+            "data": {
+                "isAmpOpenTag": false,
+                "isAmpScriptTag": false,
+                "hasAmpBoilerplate": false,
+                "hasAmpCustomStyles": false,
+                "hasAmpImgTag": false,
+                "hasCanonicalLink": true,
+                "customStyleLengthAlert": false,
+                "customStyleLength": 0
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "identitySchema": {
+            "name": "identitySchema",
+            "title": "Identity Schema",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "geo",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Organization or Person Schema identified on the page.",
+            "shortAnswer": "Organization or Person Schema identified on the page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Organization and Person Schema is a type of Structured Data that helps clearly signal to Search Engines and LLMs 'who you are'. This helps them to more confidently answer brand, company or person queries, recommend your services and avoid mixups with similarly named people or organizations.",
+            "why": "",
+            "how": "The approach for adding Organization or Person Schema depends on your website's capabilities. Your CMS may have the ability to input this directly, or you may need to install a Schema app or plugin. Alternatively you can manually create your Schema through the use of an online Schema Generator tool and copy this into the code of your site.",
+            "value": "1",
+            "data": {
+                "schema": [
+                    "Organization",
+                    "CollegeOrUniversity",
+                    "Person"
+                ]
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/schema-markup-for-ai-search/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasAnalytics": {
+            "name": "hasAnalytics",
+            "title": "Analytics",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "We could not detect an analytics tool installed on your page.",
+            "shortAnswer": "Analytics Tracking Missing",
+            "recommendation": "Implement an Analytics Tracking Tool",
+            "append2": "Website analytics tools like Google Analytics assist you in measuring, analyzing and ultimately improving traffic to your page.",
+            "what": "Web Analytics Tools like Google Analytics allow you to analyze your website’s performance and understand your visitors better. ",
+            "why": "",
+            "how": "We recommend using an analytics tool on your site. Analytics tracking code can be installed manually into page code with the help of a developer or enabled as a feature of your CMS.",
+            "value": "",
+            "data": [],
+            "icon": "fa-tag",
+            "time": "30 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/why-web-analytics-tools-are-important-for-your-website/",
+            "best-practices": "/blog/why-web-analytics-tools-are-important-for-your-website/#best-practices",
+            "how-wordpress": "https://www.monsterinsights.com/how-to-add-google-analytics-to-wordpress-without-a-plugin/",
+            "how-shopify": "https://help.shopify.com/en/manual/reports-and-analytics/google-analytics/google-analytics-setup",
+            "how-wix": "https://support.wix.com/en/article/adding-your-google-analytics-tracking-id-to-your-wix-site"
+        },
+        "googleMapsWebsiteData": {
+            "name": "googleMapsWebsiteData",
+            "title": "Address & Phone Shown on Website",
+            "types_audit": [
+                "local-seo",
+                "seo"
+            ],
+            "section": "localseo",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "We can't identify one or both of these components on the page. Missing: Address",
+            "shortAnswer": "We can't identify one or both of these components on the page.",
+            "recommendation": "Add Business Address and Phone Number to site",
+            "append2": "",
+            "what": "Address & phone number are key pieces of information for customers to contact a local business. However they also help Google identify that the website represents a particular local business to build a complete online profile helping it rank in local search results.",
+            "why": "",
+            "how": "Ensure that your full business address and phone number are correct and clearly visible in clear text on the site and not hidden behind expanders or text that could load dynamically.",
+            "value": "false",
+            "data": {
+                "missing": "Address",
+                "phone": "+91 94937 65617"
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "localBusinessSchema": {
+            "name": "localBusinessSchema",
+            "title": "Local Business Schema",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "localseo",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No Local Business Schema identified on the page.",
+            "shortAnswer": "No Local Business Schema identified on the page.",
+            "recommendation": "Add Local Business Schema",
+            "append2": "",
+            "what": "Local Business Schema is a type of structured data markup that can be added to the code of a webpage. Adding accurate Local Business Schema categories helps Search Engines more understand your website and the business it represents so that it can rank in local search results.",
+            "why": "",
+            "how": "The approach for adding Local Business Schema depends on your website's capabilities. Your CMS may have the ability to input this directly, or you may need to install a Schema app or plugin. Alternatively you can manually create your Schema through the use of an online Schema Generator tool and copy this into the code of your site.",
+            "value": "",
+            "data": {
+                "schema": []
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasFriendlyUrl": {
+            "name": "hasFriendlyUrl",
+            "title": "Friendly Links",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "links",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "Your link URLs appear friendly (easily human or search engine readable).",
+            "shortAnswer": "Your link URLs appear friendly (easily human or search engine readable).",
+            "recommendation": null,
+            "append2": "",
+            "what": "In general, website URLs should be simple and human readable or 'friendly'. This aids in human recognition of the page in the address bar, makes manually typing a page easier, as well as providing more context around the page to Search Engines.",
+            "why": "",
+            "how": "You should aim to use short human readable URLs, with words separated by hyphens, and remove file names, special characters, code strings and multiple levels of sub-folders. Most modern CMS systems will provide options to create friendly URLs. In some systems where a website is older or a collection of files this may be more challenging to reconfigure, but can still be achieved.",
+            "value": "1",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/properly-optimized-url/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "onPageLinks": {
+            "name": "onPageLinks",
+            "title": "On-Page Links",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "links",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "We found 8 total links. 88% of your links are external links and are sending authority to other sites. % of your links are nofollow links, meaning authority is not being passed to those destination pages.",
+            "shortAnswer": "",
+            "recommendation": null,
+            "append2": "",
+            "what": "On-Page Link Structuring is a complex SEO topic with a variety of opinions covering how frequently you should link to external vs internal pages, and in which cases to use nofollow links. We provide an informational breakdown on on the page's links for your review.",
+            "why": "",
+            "how": "Some general principles in regards to link structuring include having a strong proportion of your links being to internal pages, as well as explicitly using 'Nofollow' links for any external links that may be to lower quality sites where you don't intend to pass value.",
+            "value": "9",
+            "data": {
+                "total": 8,
+                "filesCount": 1,
+                "externalFollowCount": 7,
+                "externalNofollowCount": 0,
+                "internalFollowCount": 1,
+                "internalNofollowCount": 0,
+                "externalPercentage": 88,
+                "nofollowPercentage": 0,
+                "links": [
+                    {
+                        "link": "https://www.anish.works",
+                        "type": "Internal",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://medium.com/@b.anish",
+                        "type": "External",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://medium.com/@b.anish/anthropic-just-released-a-report-on-ai-and-jobs-heres-what-it-actually-means-for-freshers-edad8958d976",
+                        "type": "External",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://medium.com/@b.anish/i-applied-to-several-pm-roles-in-one-week-heres-what-the-process-actually-looks-like-928406501807",
+                        "type": "External",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://medium.com/@b.anish/that-summarize-with-ai-button-might-be-lying-to-you-cb9198645f5c",
+                        "type": "External",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://medium.com/@b.anish/the-pm-skills-i-didnt-expect-to-learn-as-a-developer-1b8908d6144f",
+                        "type": "External",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://medium.com/@b.anish/you-cant-out-code-a-machine-here-s-what-you-can-do-284aa682704b",
+                        "type": "External",
+                        "juice": "Follow"
+                    },
+                    {
+                        "link": "https://www.linkedin.com/in/b-anish-a963bb337/",
+                        "type": "External",
+                        "juice": "Follow"
+                    }
+                ]
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasImageWithoutAlt": {
+            "name": "hasImageWithoutAlt",
+            "title": "Image Alt Attributes",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "You do not have any images missing Alt Attributes on your page.",
+            "shortAnswer": "You do not have any images missing Alt Attributes on your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Alternate Image Text or Alt Text is descriptive text that is displayed in place of an image if it can't be loaded, as well as a label on an image when it is moused over in the browser, to give more information to the visitor. Additionally, Search Engines use provided Alt Text to better understand the content of an image. Image SEO is not widely known, but having your image rank for image searches is an overlooked way of gaining traffic and backlinks to your site.",
+            "why": "",
+            "how": "We recommend adding useful and keyword rich Alt Text for pages's main images, in particular those that could have ranking potential. This should be considered on a case-by-case basis. Often there may be imagery such as UI components or tracking pixels where it may not be useful to add Alt Text, though we have tried to filter a number of these out in our analysis.",
+            "value": "1",
+            "data": {
+                "total": 2,
+                "altCount": 2,
+                "noAltCount": 0,
+                "list": []
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/alt-attribute/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasNoindexTags": {
+            "name": "hasNoindexTags",
+            "title": "Noindex Tag Test",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your page is not using the Noindex Tag which prevents indexing.",
+            "shortAnswer": "Your page is not using the Noindex Tag which prevents indexing.",
+            "recommendation": null,
+            "append2": "",
+            "what": "A critical part of a page's ranking potential is ensuring that it can actually be accessed by Search Engines. The Noindex Tag, when used on pages, tells Search Engines to ignore a page, and can destroy out it's ranking ability. Sometimes these tags are added intentionally for low value pages, but sometimes they are left over unintentionally from a theme or template that has been used on the site, or forgotten to be removed by a developer when a website moves from design and testing to live usage.",
+            "why": "",
+            "how": "If you want the page to rank and it's using a Noindex Tag, you will need to remove the tag from your page's HTML entirely. This may require access to the frontend HTML code, and may need to be done by a developer. If you are using a CMS, you may have an option enabled to prevent indexing of the page, which should be turned off.",
+            "value": "",
+            "data": null,
+            "icon": "fa-tag",
+            "time": "15 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasSchemaOrg": {
+            "name": "hasSchemaOrg",
+            "title": "Schema.org Structured Data",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "You are using JSON-LD Schema on your page.",
+            "shortAnswer": "",
+            "recommendation": null,
+            "append2": "",
+            "what": "Schema.org Structured Data Markup is a collection of data tags that can be added to your site to allow Search Engines to more easily interpret the content and use it to enhance Search Results. For example there are tags for providing information about your Local Business such as address and phone number, or adding product information on e-commerce pages so that these products can be displayed in shopping aggregators like Google Shopping.",
+            "why": "",
+            "how": "It is a good idea to start incorporating some relevant Schema.org tags into your site to improve interpretation and display by Search Engines.",
+            "value": "1",
+            "data": "JSON-LD",
+            "icon": "fa-tag",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasOpenGraphTags": {
+            "name": "hasOpenGraphTags",
+            "title": "Facebook Open Graph Tags",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page is using Facebook Open Graph Tags.",
+            "shortAnswer": "Your page is using Facebook Open Graph Tags.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Facebook Open Graph Tags are a type of structured data that can be placed on your page to control what is shown when your page is shared on Facebook. You can indicate exactly what content should appear in a sharing snippet's title, description, imagery and other information.  This is useful when pages like your homepage, products or articles are shared, and effective sharing can drive traffic and conversions. You may want to ensure that the content presented is correct and has the highest chance of attracting visitors. If you don't define specific content, Facebook may decide automatically which pieces of text and imagery are displayed which may not always be correct or appealing.",
+            "why": "",
+            "how": "We recommend defining as many of Facebook's Open Graph fields as possible, and inserting this code into the HTML of your page. Facebook has a helper tool for creating this content, or sometimes it can be written automatically with the help of a CMS plugin.",
+            "value": "1",
+            "data": {
+                "og:title": "Bonagiri Anish (B Anish) — APM &amp; PM | Engineer who builds, thinks, and ships products",
+                "og:description": "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM &amp; PM roles.",
+                "og:url": "https://anish.works",
+                "og:site_name": "B Anish (Bonagiri Anish) — Product Manager Portfolio",
+                "og:locale": "en_IN",
+                "og:image": "https://anish.works/nen.png",
+                "og:image:width": "1200",
+                "og:image:height": "630",
+                "og:image:alt": "B Anish — Product Manager",
+                "og:type": "profile"
+            },
+            "icon": "fa-tag",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasTwitterTags": {
+            "name": "hasTwitterTags",
+            "title": "X Cards",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page is using X Cards.",
+            "shortAnswer": "Your page is using X Cards.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Similar to Facebook Open Graph Tags, X Cards are a type of structured data that can be placed on your page to control what is shown when your page is shared on X. You can indicate exactly what content should appear in a sharing snippet's title, description, imagery and other information.",
+            "why": "",
+            "how": "We recommend defining as many of X`s Cards as possible, and inserting this code into the HTML of your page. X has a cards markup tool for creating this content, or sometimes it can be written automatically with the help of a CMS plugin.",
+            "value": "1",
+            "data": {
+                "twitter:card": "summary_large_image",
+                "twitter:creator": "@banish",
+                "twitter:title": "Bonagiri Anish (B Anish) — APM &amp; PM Portfolio",
+                "twitter:description": "Portfolio of Bonagiri Anish, a Hyderabad-based Product Manager. Built PMOrbit at RealPage (0 to 1), reducing handoffs by 40%. Seeking APM &amp; PM roles.",
+                "twitter:image": "https://anish.works/nen.png"
+            },
+            "icon": "fa-tag",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "finalUrl": {
+            "name": "finalUrl",
+            "title": "Final URL",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "",
+            "shortAnswer": "",
+            "recommendation": null,
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "https://www.anish.works/",
+            "data": null,
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasFlash": {
+            "name": "hasFlash",
+            "title": "Flash used?",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No Flash content has been identified on your page.",
+            "shortAnswer": "No Flash content has been identified on your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Flash is an old embedded website technology that was frequently used in heavily animated features such as games and videos. However, Flash is not supported by all mobile devices and is not easily read by search engines. Improvements to HTML and CSS and the increased speed of modern web browsers have made it possible to implement many similar features with standard web technologies.",
+            "why": "",
+            "how": "If Flash is detected on your site, you should carefully consider whether it is necessary due to the several drawbacks.",
+            "value": "",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasFavicon": {
+            "name": "hasFavicon",
+            "title": "Favicon",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page has specified a Favicon.",
+            "shortAnswer": "Your page has specified a Favicon.",
+            "recommendation": null,
+            "append2": "",
+            "what": "A Favicon is a small icon that serves as branding for your website. It's main purpose is to help visitors locate your page easier when they have multiple tabs open. It adds legitimacy to your site and helps boost your online branding as well as trust from potential consumers.",
+            "why": "",
+            "how": "Either use an online Favicon builder tool, or a graphic designer to build your Favicon, and load them into your website or CMS.",
+            "value": "1",
+            "data": null,
+            "icon": "fa-tag",
+            "time": "30 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/what-is-a-favicon/",
+            "best-practices": "/blog/what-is-a-favicon/#favgood",
+            "how-wordpress": "/blog/what-is-a-favicon/#favwp",
+            "how-shopify": "/blog/broken-links/#How-to-Redirect-Broken-Links-in-Shopify",
+            "how-wix": "/blog/what-is-a-favicon/#favwix"
+        },
+        "hasMobileViewports": {
+            "name": "hasMobileViewports",
+            "title": "Use of Mobile Viewports",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 3,
+            "maxScore": 3,
+            "priority": 2,
+            "answer": "Your page specifies a Viewport matching the device's size, allowing it to render appropriately across devices.",
+            "shortAnswer": "Your page specifies a Viewport matching the device's size, allowing it to render appropriately across devices.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The Viewport is a Meta Tag within the page's HTML which gives the browser instructions for how to control the page's dimensions and scaling. Setting the Viewport is particularly important for mobile and tablet device responsiveness, as without it, the page can appear incorrectly sized and require zooming or scrolling to view content.",
+            "why": "",
+            "how": "Make sure you include one Meta Viewport tag in the Head section of page HTML.",
+            "value": "1",
+            "data": "width=device-width, initial-scale=1",
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/viewport/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "subpages": {
+            "name": "subpages",
+            "title": "Sub-Pages List",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "subpages",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "",
+            "shortAnswer": "",
+            "recommendation": null,
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "targetTitle": false,
+        "targetDescription": false,
+        "targetH1": false,
+        "targetUrl": false,
+        "targetAlt": false
+    },
+    "errors": []
+}
+
+{
+    "success": true,
+    "results": {
+        "googleMapsProfileExists": {
+            "answer": "You can see information about your page's Google Business Profile within this report by signing up to one of our premium plans.",
+            "append2": "<a class=\"btn btn-primary btn-sm btn-report-signup\" href=\"/register\" target=\"_blank\">Signup - Free Trial</a>",
+            "what": "A Google Business Profile (GBP) is a listing representing your business that appears in Google Maps or standard Google Searches that have local intent. GBP contains key information about the business such as name, location, contact information, opening hours as well as customer ratings and reviews. GBP is an important tool for local businesses to manage their online presence, reach customers on Google, and compete against other similar businesses.",
+            "how": "If you are a local business, it is important to create your Google Business Profile (or claim it if one has been automatically created by Google) and update the details as completely and accurately as possible. We try to identify your GBP based on the website URL listed in the profile matching the one in this audit. If your GBP profile exists but we can't identify it, you may want to check that the website URL is correct.",
+            "section": "localseo",
+            "name": "googleMapsProfileExists",
+            "recommendation": null,
+            "passed": null
+        },
+        "googleMapsProfileCompleteness": false,
+        "googleMapsReviews": false
+    },
+    "errors": []
+}
+
+{
+    "success": true,
+    "results": {
+        "hasFacebook": {
+            "name": "hasFacebook",
+            "title": "Facebook Page Linked",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No associated Facebook Page found as a link on your page.",
+            "shortAnswer": "Facebook Page Link Not Found",
+            "recommendation": "Create and link your Facebook Page",
+            "append2": "",
+            "what": "Creating Social Profiles as well as linking to these from your website can help to build trust in your business and provide other mediums to nurture your customer relationships.",
+            "why": "",
+            "how": "We recommend creating all common Social Profiles and linking to these from your website. Most CMS systems will offer fields to enter your Social Profile URLs and will display these in a button row section in the footer.",
+            "value": "",
+            "data": false,
+            "icon": "fa-tag",
+            "time": "2 hours",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/social-media-links/",
+            "best-practices": "",
+            "how-wordpress": "https://en.support.wordpress.com/menus/social-links-menu/",
+            "how-shopify": "https://help.shopify.com/en/themes/customization/social-media/adding-social-media-buttons",
+            "how-wix": "https://support.wix.com/en/article/adding-and-setting-up-a-social-bar"
+        },
+        "hasTwitter": {
+            "name": "hasTwitter",
+            "title": "X (formerly Twitter) Account Linked",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No associated X Profile found as a link on your page.",
+            "shortAnswer": "X Profile Link Not Found",
+            "recommendation": "Create and link your X Profile",
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "",
+            "data": false,
+            "icon": "fa-tag",
+            "time": "2 hours",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasInstagram": {
+            "name": "hasInstagram",
+            "title": "Instagram Linked",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No associated Instagram Profile found linked on your page",
+            "shortAnswer": "Instagram Profile Link Not Found",
+            "recommendation": "Create and link an associated Instagram Profile",
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "",
+            "data": false,
+            "icon": "fa-tag",
+            "time": "2 hours",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasYoutube": {
+            "name": "hasYoutube",
+            "title": "YouTube Channel Linked",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "No associated YouTube Channel found linked on your page.",
+            "shortAnswer": "YouTube Channel Link Not Found",
+            "recommendation": "Create and link an associated YouTube Channel",
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "",
+            "data": false,
+            "icon": "fa-tag",
+            "time": "2 hours",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "youtubeActivity": {
+            "name": "youtubeActivity",
+            "title": "YouTube Channel Activity",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "No associated YouTube Channel found linked on your page.",
+            "shortAnswer": "No associated YouTube Channel found linked on your page.",
+            "recommendation": null,
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "-1",
+            "data": false,
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasLinkedIn": {
+            "name": "hasLinkedIn",
+            "title": "LinkedIn Page Linked",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "social",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "Your page has a link to a LinkedIn Profile.<br>\n                    <div class=\"row mt-4\">\n                        <div class=\"col-xl-6\">\n                            <table class=\"table table-row-dashed table-wrapped\">\n                                <tbody>\n                                    <tr>\n                                        <td class=\"pe-0 w-35px\"><img src=\"/img/icons/social/24x24/linkedin.png\" width=\"24px\" height=\"24px\" /></td>\n                                        <td>https://linkedin.com/in/b-anish-a963bb337</td>\n                                    </tr>\n                                </tbody>\n                            </table>\n                        </div>\n                    </div>\n                ",
+            "shortAnswer": "Your page has a link to a LinkedIn Profile.",
+            "recommendation": null,
+            "append2": "",
+            "what": "",
+            "why": "",
+            "how": "",
+            "value": "https://linkedin.com/in/b-anish-a963bb337",
+            "data": "https://linkedin.com/in/b-anish-a963bb337",
+            "icon": "fa-tag",
+            "time": "2 hours",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        }
+    },
+    "errors": []
+}
+
+{
+    "success": true,
+    "results": {
+        "hasSitemap": {
+            "name": "hasSitemap",
+            "title": "XML Sitemaps",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your website appears to have an XML Sitemap.",
+            "shortAnswer": "Your website appears to have an XML Sitemap.",
+            "recommendation": null,
+            "append2": "",
+            "what": "A Sitemap is an XML data file on your site that lists all of your site's pages that are available for crawling together with other useful information like last update times and crawling priority. Sitemap files help Search Engines find all your pages to give them the highest chance of being indexed and ranked.",
+            "why": "",
+            "how": "We recommend always having a Sitemaps file in place for your site. Sitemaps can be created manually using a utility, Wordpress plugin, or your CMS's Sitemap creation process. Additionally, the Sitemap should be referenced in your robots.txt file.",
+            "value": "1",
+            "data": {
+                "found": 1,
+                "tested": 1,
+                "urls": [
+                    "https://www.anish.works/sitemap.xml"
+                ]
+            },
+            "icon": "fa-tag",
+            "time": "60 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/sitemap/",
+            "best-practices": "/blog/sitemap/#sbest",
+            "how-wordpress": "/blog/sitemap/#swp",
+            "how-shopify": "/blog/sitemap/#shopi",
+            "how-wix": "/blog/sitemap/#swix"
+        },
+        "hasRobotsTxt": {
+            "name": "hasRobotsTxt",
+            "title": "Robots.txt",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your website appears to have a robots.txt file.",
+            "shortAnswer": "Your website appears to have a robots.txt file.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Robots.txt is a text file that provides instructions to Search Engine crawlers on how to crawl your site, including types of pages to access or not access. It is often the gatekeeper of your site, and normally the first thing a Search Engine bot will access.",
+            "why": "",
+            "how": "We recommend always having a robots file in place for your site. These can be automatically created using a free online utility, Wordpress plugin, or your CMS's robots.txt creation process.",
+            "value": "1",
+            "data": "http://www.anish.works/robots.txt",
+            "icon": "fa-tag",
+            "time": "60 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/robots-txt/",
+            "best-practices": "/blog/robots-txt/#What-are-some-of-the-best-SEO-practices-when-using-robots.txt?",
+            "how-wordpress": "/blog/robots-txt/#How-to-add-robots.txt-to-your-WordPress-site",
+            "how-shopify": "/blog/robots-txt/#How-to-edit-the-robots.txt-file-on-your-Shopify",
+            "how-wix": "/blog/robots-txt/#How-to-edit-the-robots.txt-file-on-your-Wix"
+        },
+        "hasLlmsTxt": {
+            "name": "hasLlmsTxt",
+            "title": "Llms.txt",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "geo",
+            "passed": false,
+            "score": 0,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "We have not detected or been able to retrieve a llms.txt file successfully.",
+            "shortAnswer": "Llms.txt Missing or Inaccessible",
+            "recommendation": "Implement a llms.txt File",
+            "append2": "",
+            "what": "Llms.txt is a proposed standard file for websites to help large language model (LLM) crawlers understand a site's content more efficiently. The file offers brief background information, guidance, and links to documentation sources.",
+            "why": "",
+            "how": "We suggest adding a llms.txt markdown file to your site. This can be automatically created with a free utility, plugin, or by your website CMS automatically.",
+            "value": "",
+            "data": "",
+            "icon": "fa-tag",
+            "time": "60 minutes",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/llms-txt/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "blockedByRobotsTxt": {
+            "name": "blockedByRobotsTxt",
+            "title": "Blocked by Robots.txt",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "seo",
+            "passed": true,
+            "score": 4,
+            "maxScore": 4,
+            "priority": 2,
+            "answer": "Your page does not appear to be blocked by robots.txt.",
+            "shortAnswer": "Your page does not appear to be blocked by robots.txt.",
+            "recommendation": null,
+            "append2": "",
+            "what": "The robots.txt file includes important instructions to Search Engines on how to crawl a site, including instructions to ignore particular pages (effectively 'blocking' them). Sometimes these instructions are added intentionally for low value pages, but sometimes they are left over by mistake when a website goes live, or can be written incorrectly excluding more pages than desired.",
+            "why": "",
+            "how": "If you want the page to rank and it's blocked by a rule in robots.txt, you may need to review your robots rules to understand why it's being blocked, and remove the rule. Because robots.txt instructions are a type of code, this may require the help of a developer to correct.",
+            "value": "",
+            "data": "http://www.anish.works/robots.txt",
+            "icon": "fa-tag",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/robots-txt/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        }
+    },
+    "errors": []
+}
+
+{
+    "success": true,
+    "results": {
+        "hasMinified": {
+            "name": "hasMinified",
+            "title": "Minification",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "All your JavaScript and CSS files appear to be minified.",
+            "shortAnswer": "All your JavaScript and CSS files appear to be minified.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Minification is a procedure run on code text files that can reduce the text size by removing white space and substituting common values or names with shorter versions. Minification also offers the additional value of making code much harder to read and reverse engineer by third parties. It is best practice to minify any exposed JS and CSS Files before publishing them to a live site.",
+            "why": "",
+            "how": " Minification can be done automatically through some development tools and website build procedures, or through minification CMS Plugins, or manually through minification tools available online.",
+            "value": "1",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasOptimizedImages": {
+            "name": "hasOptimizedImages",
+            "title": "Image Optimization",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "performance",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "All of the images on your page appear to be optimized.",
+            "shortAnswer": "All of the images on your page appear to be optimized.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Image and media files in general tend to be the largest component of file size on most modern webpages. File size can directly impact how quickly a page loads, and subsequently the quality of the experience for users. Images in general can have a large range in how much they can be optimized. For example, a high quality photograph downloaded from a camera could be 16MB, but using a reasonable level of size reduction and optimization could comfortably reduce it to 150KB without a noticeable amount of quality loss.",
+            "why": "",
+            "how": "Review the images used on your site, starting from the largest in file size to determine if there are optimization opportunities. You can use common image editing tools like Photoshop or even free online compression tools to optimize them.",
+            "value": "1",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasLegibleFontsizes": {
+            "name": "hasLegibleFontsizes",
+            "title": "Legible Font Sizes",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "The text on your page appears to be legible across devices.",
+            "shortAnswer": "The text on your page appears to be legible across devices.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Page text legibility is important from an accessibility perspective, and also to ensure your users can comfortably spend time on your site. In particular it's important  to review text legibility on mobile and tablet devices where the text may naturally be smaller or lower lighting could make it more challenging to read.",
+            "why": "",
+            "how": "We recommend reviewing the legibility of your text including less considered items like footer links and text.",
+            "value": "1",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "mobilePageInsights": {
+            "name": "mobilePageInsights",
+            "title": "PageSpeed Insights - Mobile",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "Google is indicating that your page is scoring well on their Mobile PageSpeed Insights evaluation.<br><br>Note that this evaluation is being performed from US servers and the results may differ slightly from an evaluation carried out from Google's PageSpeed Web Interface as that reporting localizes to the region in which you are running the report.",
+            "shortAnswer": "Google is indicating that your page is scoring well on their Mobile PageSpeed Insights evaluation.<br><br>Note that this evaluation is being performed from US servers and the results may differ slightly from an evaluation carried out from Google's PageSpeed Web Interface as that reporting localizes to the region in which you are running the report.",
+            "recommendation": null,
+            "append2": "",
+            "what": "PageSpeed Insights is a tool from Google that evaluates a website's performance in both mobile and desktop, providing suggestions for how to improve it. Google has indicated that performance is becoming a more important ranking factor, so understanding Google's own analysis of your site is valuable. Also irrespective of SEO rankings, it has been well researched that pages that load faster perform better in user bounce rate and conversions.",
+            "why": "",
+            "how": "We recommend reviewing and implementing some of Google's listed opportunities to improve your site.",
+            "value": "1",
+            "data": {
+                "insights": [
+                    {
+                        "id": "first-contentful-paint",
+                        "name": "First Contentful Paint",
+                        "value": 1.1999999999999999555910790149937383830547332763671875,
+                        "score": 0.9899999999999999911182158029987476766109466552734375,
+                        "raw": "1.2 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "speed-index",
+                        "name": "Speed Index",
+                        "value": 4.20000000000000017763568394002504646778106689453125,
+                        "score": 0.770000000000000017763568394002504646778106689453125,
+                        "raw": "4.2 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "largest-contentful-paint",
+                        "name": "Largest Contentful Paint",
+                        "value": 2.399999999999999911182158029987476766109466552734375,
+                        "score": 0.91000000000000003108624468950438313186168670654296875,
+                        "raw": "2.4 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "interactive",
+                        "name": "Time to Interactive",
+                        "value": 2.79999999999999982236431605997495353221893310546875,
+                        "score": 0.9699999999999999733546474089962430298328399658203125,
+                        "raw": "2.8 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "total-blocking-time",
+                        "name": "Total Blocking Time",
+                        "value": 0.0200000000000000004163336342344337026588618755340576171875,
+                        "score": 1,
+                        "raw": "20 ms",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "cumulative-layout-shift",
+                        "name": "Cumulative Layout Shift",
+                        "value": 0.001000000000000000020816681711721685132943093776702880859375,
+                        "score": 1,
+                        "raw": "0.001"
+                    }
+                ],
+                "opportunities": [
+                    {
+                        "name": "Avoid multiple page redirects",
+                        "value": 0.63000000000000000444089209850062616169452667236328125,
+                        "score": 0
+                    }
+                ],
+                "score": 95
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "desktopPageInsights": {
+            "name": "desktopPageInsights",
+            "title": "PageSpeed Insights - Desktop",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 2,
+            "maxScore": 2,
+            "priority": 2,
+            "answer": "Google is indicating that your page is scoring well on their Desktop PageSpeed Insights evaluation.",
+            "shortAnswer": "Google is indicating that your page is scoring well on their Desktop PageSpeed Insights evaluation.",
+            "recommendation": null,
+            "append2": "",
+            "what": "PageSpeed Insights is a tool from Google that evaluates a website's performance in both mobile and desktop, providing suggestions for how to improve it. Google has indicated that performance is becoming a larger ranking factor, so understanding Google's own analysis of your site is valuable. Also irrespective of SEO rankings, it has been well researched that pages that load faster perform better in user bounce rate and conversions.",
+            "why": "",
+            "how": "We recommend reviewing and implementing some of Google's listed opportunities to improve your site.",
+            "value": "1",
+            "data": {
+                "insights": [
+                    {
+                        "id": "first-contentful-paint",
+                        "name": "First Contentful Paint",
+                        "value": 0.40000000000000002220446049250313080847263336181640625,
+                        "score": 1,
+                        "raw": "0.4 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "speed-index",
+                        "name": "Speed Index",
+                        "value": 1.100000000000000088817841970012523233890533447265625,
+                        "score": 0.9499999999999999555910790149937383830547332763671875,
+                        "raw": "1.1 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "largest-contentful-paint",
+                        "name": "Largest Contentful Paint",
+                        "value": 0.8000000000000000444089209850062616169452667236328125,
+                        "score": 0.979999999999999982236431605997495353221893310546875,
+                        "raw": "0.8 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "interactive",
+                        "name": "Time to Interactive",
+                        "value": 0.8000000000000000444089209850062616169452667236328125,
+                        "score": 1,
+                        "raw": "0.8 s",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "total-blocking-time",
+                        "name": "Total Blocking Time",
+                        "value": 0.05000000000000000277555756156289135105907917022705078125,
+                        "score": 1,
+                        "raw": "50 ms",
+                        "postfix": "s"
+                    },
+                    {
+                        "id": "cumulative-layout-shift",
+                        "name": "Cumulative Layout Shift",
+                        "value": 0,
+                        "score": 1,
+                        "raw": "0"
+                    }
+                ],
+                "opportunities": [
+                    {
+                        "name": "Avoid multiple page redirects",
+                        "value": 0.190000000000000002220446049250313080847263336181640625,
+                        "score": 0
+                    }
+                ],
+                "score": 99
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "coreWebVitals": {
+            "name": "coreWebVitals",
+            "title": "Google's Core Web Vitals",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 1,
+            "answer": "Google is indicating that they do not have 'sufficient real-world speed data for this page' in order to make a Core Web Vitals assessment. This can occur for smaller websites or those that are not crawl-able by Google.",
+            "shortAnswer": "Google is indicating that they do not have 'sufficient real-world speed data for this page' in order to make a Core Web Vitals assessment. This can occur for smaller websites or those that are not crawl-able by Google.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Core Web Vitals are UI Metrics designed by Google that measure the overall quality of user experience on your site. They assess things such as the appearance of content, interactivity of the page and visual stability from the moment of page load. Core Web Vitals are gathered from real world usage data of a website (hence some smaller websites that haven't been well sampled may not return an appropriate result). Google has made Core Web Vitals a ranking factor for pages with increasing importance.",
+            "why": "",
+            "how": "To improve your Core Web Vitals scores, you may need to read Google's documentation on the topic and follow the recommendations provided in the Google's PageSpeed Insights assessment.",
+            "value": "empty",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/core-web-vitals/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "hasTapTargetSizing": {
+            "name": "hasTapTargetSizing",
+            "title": "Tap Target Sizing",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "ui",
+            "passed": true,
+            "score": 1,
+            "maxScore": 1,
+            "priority": 2,
+            "answer": "The links and buttons on your page appear to be appropriately sized for a user to easily tap on a touchscreen.",
+            "shortAnswer": "The links and buttons on your page appear to be appropriately sized for a user to easily tap on a touchscreen.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Tap Target Sizing refers to the size of buttons, links and other navigational elements on the page. On touch screen devices in particular these elements can't be too small or too close together or they will impede clicking and frustrate users.",
+            "why": "",
+            "how": "We recommend reviewing the Tap Target Sizing of your  of all your text to ensure they're easily clickable including less considered items like footer elements.",
+            "value": "1",
+            "data": [],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        }
+    },
+    "errors": []
+}
+
+{
+    "success": true,
+    "results": {
+        "topKeywordRankings": {
+            "answer": "You can see the live Keyword Rankings for your page within the report by signing up to one of our premium plans.",
+            "append2": "<a class=\"btn btn-primary btn-sm btn-report-signup\" href=\"/register\" target=\"_blank\">Signup - Free Trial</a>",
+            "what": "A goal of Search Engine Optimization is to improve the ranking of your website for particular keywords to drive more clicks and traffic to your site. The Top Organic Keyword Rankings check shows you the keywords that your site is currently ranking for in the normal '10 blue links' organic segment of a Google search result, ordered by those that are likely driving the most traffic to your site. Note this data is a snapshot and may be several weeks old in some cases.",
+            "section": "rankings",
+            "name": "topKeywordRankings",
+            "recommendation": null,
+            "passed": null,
+            "hideTable": true
+        },
+        "keywordPositions": false,
+        "totalTrafficFromSearch": false,
+        "topAIOverviewRankings": false,
+        "topPaidRankings": false
+    }
+}
+
+{
+    "success": true,
+    "results": {
+        "backlinks": {
+            "name": "backlinks",
+            "title": "Backlink Summary",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "links",
+            "passed": false,
+            "score": 0,
+            "maxScore": 10,
+            "priority": 0,
+            "answer": "You have a reasonably weak level of backlink activity to this page.",
+            "shortAnswer": "Low Backlink Activity",
+            "recommendation": "Execute a Link Building Strategy",
+            "append2": "Search Engines use backlinks as a strong indicator of a page's authority, relevance and ranking potential. There are various strategies available to gain links to a page to improve this factor",
+            "what": "Backlinks are links to your site from another site. Search Engines can see these interconnections and use them as a strong signal of the importance and authority of your page or content. Backlinks are one of the most important ranking factors, and in general, more links from authoritative websites will improve the ranking ability of your site. Building Backlinks can be a difficult and time consuming activity, though the rewards are large when done successfully.",
+            "why": "",
+            "how": "We recommend having a strategy in place for Building Backlinks to your site. Some common methods including adding your site to relevant online directories, asking other sites to link to you, performing outreach and guest blogging on other websites or creating 'lead magnet' content that encourages linking.",
+            "value": "1",
+            "data": {
+                "backlinks": 28,
+                "allbacklinks": 24,
+                "domain_authority": 1,
+                "page_strength": 1,
+                "nofollow_backlinks": 26,
+                "dofollow_backlinks": 2,
+                "edu_backlinks": 0,
+                "gov_backlinks": 0,
+                "subnets": 5,
+                "ips": 5
+            },
+            "icon": "fa-tag",
+            "time": "Ongoing",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/backlinks/",
+            "best-practices": "/blog/backlinks/#guide",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "backlinksList": {
+            "name": "backlinksList",
+            "title": "Top Backlinks",
+            "types_audit": [
+                "seo",
+                "local-seo"
+            ],
+            "section": "links",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "These are the highest value external pages we have found linking to your site.",
+            "shortAnswer": "These are the highest value external pages we have found linking to your site.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Backlinks from higher authority websites generally deliver the best ranking potential to your site. This report provides a sample of some of the highest value backlinks we can see linking to your site.",
+            "why": "",
+            "how": "",
+            "value": "1",
+            "data": [
+                {
+                    "domain_authority": 65,
+                    "anchor_text": "anish.works",
+                    "url": "https://urls-shortener.eu/share/12764",
+                    "title": "❤️ URL Shared ❤️"
+                },
+                {
+                    "domain_authority": 64,
+                    "anchor_text": "anish.works",
+                    "url": "https://quero.party/report/12765",
+                    "title": "👲 Domain Report 👲"
+                },
+                {
+                    "domain_authority": 63,
+                    "anchor_text": "anish.works",
+                    "url": "https://bye.fyi/report/12764",
+                    "title": "👲 Domain Report 👲"
+                },
+                {
+                    "domain_authority": 63,
+                    "anchor_text": "anish.works",
+                    "url": "https://purple-elephant.us/1cd5dedaf4a7279f1076c3c961065747-items.html",
+                    "title": "Where to buy 🚀 aged domains and backlinks 🔥 from purple-elephant | 1547-2791"
+                },
+                {
+                    "domain_authority": 62,
+                    "anchor_text": "anish.works",
+                    "url": "https://drjack.world/report/12764",
+                    "title": "👲 Domain Report 👲"
+                },
+                {
+                    "domain_authority": 61,
+                    "anchor_text": "anish.works",
+                    "url": "https://atomizelink.icu/report/12764",
+                    "title": "👲 Domain Report 👲"
+                },
+                {
+                    "domain_authority": 58,
+                    "anchor_text": "anish.works",
+                    "url": "https://anchorurl.cloud/share/12764",
+                    "title": "❤️ URL Shared ❤️"
+                },
+                {
+                    "domain_authority": 57,
+                    "anchor_text": "anish.works",
+                    "url": "https://byteshort.xyz/report/12764",
+                    "title": "👲 Domain Report 👲"
+                },
+                {
+                    "domain_authority": 56,
+                    "anchor_text": "anish.works",
+                    "url": "https://shortenurls.eu/share/12765",
+                    "title": "❤️ URL Shared ❤️"
+                },
+                {
+                    "domain_authority": 56,
+                    "anchor_text": "anish.works",
+                    "url": "https://metamagic.top/stats/12765",
+                    "title": "✅ Website Stats 📊"
+                }
+            ],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "/blog/backlinks/",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "backlinksTopPages": {
+            "name": "backlinksTopPages",
+            "title": "Top Pages by Backlinks",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "links",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "These are the pages on your site with the most the backlinks from other sites.",
+            "shortAnswer": "These are the pages on your site with the most the backlinks from other sites.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Your Top Pages with the most Backlinks are likely to drive the most ranking value to your site as well as having a higher potential for themselves ranking.",
+            "why": "",
+            "how": "Top Pages are useful to consider when making any change to your site (to make sure they don't get removed or are atleast redirected appropriately). They are also useful to consider from a future link building perspective; is there a particular reason these pages are gathering the most links? and do they present any new content ideas for driving further links?",
+            "value": "1",
+            "data": [
+                {
+                    "url": "https://anish.works/",
+                    "backlinks": 28
+                }
+            ],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "backlinksTopAnchors": {
+            "name": "backlinksTopAnchors",
+            "title": "Top Anchors by Backlinks",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "links",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "These are the top pieces of Anchor Text we found used to link to your site.",
+            "shortAnswer": "These are the top pieces of Anchor Text we found used to link to your site.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Anchor Text is the text that is placed inside an A Href HTML tag that links to your site. Anchor Text is a very strong ranking signal that helps Search Engines understand the content of your page and the keywords it should rank for.",
+            "why": "",
+            "how": "It is important for Anchor Text to be natural and diverse. Having a lot of unnatural Anchor Text can be a strong spam signal for Search Engines. Seeing your Anchor Text can also give you an understanding of how others are talking about your website or service.",
+            "value": "2",
+            "data": [
+                {
+                    "anchor": "anish.works",
+                    "backlinks": 27
+                },
+                {
+                    "anchor": "visit anish.works for latest info",
+                    "backlinks": 1
+                }
+            ],
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        },
+        "backlinksTopGeographies": {
+            "name": "backlinksTopGeographies",
+            "title": "Top Referring Domain Geographies",
+            "types_audit": [
+                "seo"
+            ],
+            "section": "links",
+            "passed": null,
+            "score": 0,
+            "maxScore": 0,
+            "priority": 2,
+            "answer": "These are the Top Geographies we have found linking to your site.",
+            "shortAnswer": "These are the Top Geographies we have found linking to your site.",
+            "recommendation": null,
+            "append2": "",
+            "what": "Top Geographies are locations found to be linking most frequently to your site in terms of Top Level Domain types (TLDs) and actual physical website server locations.",
+            "why": "",
+            "how": "Top Geographies are useful for understanding if you are building links in the right places for your business. Many links from an unexpected location could also point to incorrectly targeted or spammy links that could be disavowed.",
+            "value": "4",
+            "data": {
+                "tlds": [
+                    {
+                        "tld": "top",
+                        "count": 6
+                    },
+                    {
+                        "tld": "com",
+                        "count": 4
+                    },
+                    {
+                        "tld": "eu",
+                        "count": 3
+                    },
+                    {
+                        "tld": "cloud",
+                        "count": 1
+                    },
+                    {
+                        "tld": "fyi",
+                        "count": 1
+                    },
+                    {
+                        "tld": "icu",
+                        "count": 1
+                    },
+                    {
+                        "tld": "info",
+                        "count": 1
+                    },
+                    {
+                        "tld": "org",
+                        "count": 1
+                    },
+                    {
+                        "tld": "party",
+                        "count": 1
+                    },
+                    {
+                        "tld": "us",
+                        "count": 1
+                    }
+                ],
+                "countries": [
+                    {
+                        "country": "fi",
+                        "count": 20
+                    },
+                    {
+                        "country": "co",
+                        "count": 2
+                    },
+                    {
+                        "country": "sg",
+                        "count": 1
+                    },
+                    {
+                        "country": "us",
+                        "count": 1
+                    }
+                ],
+                "allbacklinks": 24
+            },
+            "icon": "",
+            "time": "",
+            "link1": "",
+            "link2": "",
+            "more-info": "",
+            "best-practices": "",
+            "how-wordpress": "",
+            "how-shopify": "",
+            "how-wix": ""
+        }
+    },
+    "errors": []
+}

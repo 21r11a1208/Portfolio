@@ -5,6 +5,7 @@ import { Nav } from "@/components/layout/Nav";
 import { CustomCursor } from "@/components/layout/CustomCursor";
 import { LoadingScreen } from "@/components/layout/LoadingScreen";
 import { ThemeProvider } from "@/components/layout/ThemeProvider";
+import { Analytics } from "@vercel/analytics/react";
 
 const syne = Syne({
   variable: "--font-syne",
@@ -279,6 +280,7 @@ export default function RootLayout({
           <CustomCursor />
           <Nav />
           {children}
+          <Analytics />
         </ThemeProvider>
       </body>
     </html>
