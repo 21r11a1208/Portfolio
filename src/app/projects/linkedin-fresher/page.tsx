@@ -52,7 +52,7 @@ export default function LinkedInFresherPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <LinkedInFresherPE />
+      <LinkedInFresherPE />;
     </>
   );
 }

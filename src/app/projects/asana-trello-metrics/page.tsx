@@ -52,7 +52,7 @@ export default function AsanaTrelloMetricsPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <AsanaTrelloMetrics />
+      <AsanaTrelloMetrics />;
     </>
   );
 }

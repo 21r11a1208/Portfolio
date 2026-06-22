@@ -52,7 +52,7 @@ export default function CluelyPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <CluelyTeardown />
+      <CluelyTeardown />;
     </>
   );
 }

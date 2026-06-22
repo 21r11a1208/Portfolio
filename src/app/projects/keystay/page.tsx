@@ -52,7 +52,7 @@ export default function KeyStayPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <KeyStayPRD />
+      <KeyStayPRD />;
     </>
   );
 }

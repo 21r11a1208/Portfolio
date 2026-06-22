@@ -52,7 +52,7 @@ export default function AgriDronePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <AgriDronePRD />
+      <AgriDronePRD />;
     </>
   );
 }

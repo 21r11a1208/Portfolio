@@ -52,7 +52,7 @@ export default function ArattaiRCAPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <ArattaiRCA />
+      <ArattaiRCA />;
     </>
   );
 }

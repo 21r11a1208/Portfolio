@@ -52,7 +52,7 @@ export default function PMOrbitPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <PMOrbitCaseStudy />
+      <PMOrbitCaseStudy />;
     </>
   );
 }

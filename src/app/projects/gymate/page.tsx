@@ -52,7 +52,7 @@ export default function GymatePage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <GymatePRD />
+      <GymatePRD />;
     </>
   );
 }

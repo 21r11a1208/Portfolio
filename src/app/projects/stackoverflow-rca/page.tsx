@@ -52,7 +52,7 @@ export default function StackOverflowRCAPage() {
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(articleSchema) }}
       />
-      <StackOverflowRCA />
+      <StackOverflowRCA />;
     </>
   );
 }
