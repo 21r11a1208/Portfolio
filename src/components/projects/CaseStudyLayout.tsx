@@ -1,6 +1,7 @@
 import { Tag } from "@/components/ui/Tag";
 import { ReadingProgressBar } from "@/components/ui/ReadingProgressBar";
 import { Project } from "@/types";
+import { projects } from "@/data/projects";
 
 interface CaseStudyLayoutProps {
   project: Pick<Project, "title" | "type" | "status" | "description">;
@@ -9,6 +10,8 @@ interface CaseStudyLayoutProps {
 }
 
 export function CaseStudyLayout({ project, readTime = "5 min read", children }: CaseStudyLayoutProps) {
+  const fullProject = projects.find(p => p.title === project.title);
+  
   return (
     <article>
       <ReadingProgressBar />
@@ -29,9 +32,26 @@ export function CaseStudyLayout({ project, readTime = "5 min read", children }: 
         <h1 className="text-4xl md:text-5xl font-display font-bold text-[var(--text)] leading-tight mb-4">
           {project.title}
         </h1>
-        <p className="text-lg font-body text-[var(--text-55)] leading-relaxed">
+        <p className="text-lg font-body text-[var(--text-55)] leading-relaxed mb-8">
           {project.description}
         </p>
+
+        {(fullProject?.problemStatement || fullProject?.businessImpact) && (
+          <div className="grid md:grid-cols-2 gap-6 p-6 rounded-2xl bg-[var(--surface-2)] border border-[var(--border)]">
+            {fullProject.problemStatement && (
+              <div>
+                <h3 className="text-sm font-display font-bold text-[var(--text)] uppercase tracking-wider mb-2">The Problem</h3>
+                <p className="text-sm font-body text-[var(--text-65)] leading-relaxed">{fullProject.problemStatement}</p>
+              </div>
+            )}
+            {fullProject.businessImpact && (
+              <div>
+                <h3 className="text-sm font-display font-bold text-[var(--accent-text)] uppercase tracking-wider mb-2">Business Outcome</h3>
+                <p className="text-sm font-body text-[var(--text-65)] leading-relaxed">{fullProject.businessImpact}</p>
+              </div>
+            )}
+          </div>
+        )}
       </header>
 
       {/* Body */}

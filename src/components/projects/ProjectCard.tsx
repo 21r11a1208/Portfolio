@@ -88,9 +88,24 @@ export function ProjectCard({ project }: ProjectCardProps) {
         {project.title}
       </h3>
 
-      <p className="text-sm font-body text-[var(--text-55)] leading-relaxed flex-1 mb-5">
+      <p className="text-sm font-body text-[var(--text-55)] leading-relaxed mb-4">
         {project.description}
       </p>
+
+      <div className="flex-1 flex flex-col gap-3 mb-5">
+        {project.problemStatement && (
+          <div>
+            <p className="text-[11px] font-display font-semibold text-[var(--text-80)] uppercase tracking-wider mb-1">Problem</p>
+            <p className="text-[12px] font-body text-[var(--text-50)] leading-relaxed line-clamp-2">{project.problemStatement}</p>
+          </div>
+        )}
+        {project.businessImpact && (
+          <div>
+            <p className="text-[11px] font-display font-semibold text-[var(--accent-text)] uppercase tracking-wider mb-1">Outcome</p>
+            <p className="text-[12px] font-body text-[var(--text-50)] leading-relaxed line-clamp-2">{project.businessImpact}</p>
+          </div>
+        )}
+      </div>
 
       <div className="flex items-center justify-between">
         <span className="inline-flex items-center gap-2 text-sm font-display font-semibold text-[var(--text-50)] group-hover:text-[var(--accent-text)] transition-colors">

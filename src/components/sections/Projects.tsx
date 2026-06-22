@@ -82,9 +82,24 @@ function FeaturedProject() {
               {featured.title}
             </h3>
 
-            <p className="text-base font-body text-[var(--text-55)] leading-relaxed mb-8 max-w-md">
+            <p className="text-base font-body text-[var(--text-55)] leading-relaxed mb-6 max-w-md">
               {featured.description}
             </p>
+
+            <div className="flex flex-col gap-4 mb-8 max-w-md">
+              {featured.problemStatement && (
+                <div>
+                  <p className="text-[11px] font-display font-bold text-[var(--text)] uppercase tracking-wider mb-1">The Problem</p>
+                  <p className="text-sm font-body text-[var(--text-50)] leading-relaxed">{featured.problemStatement}</p>
+                </div>
+              )}
+              {featured.businessImpact && (
+                <div>
+                  <p className="text-[11px] font-display font-bold text-[var(--accent-text)] uppercase tracking-wider mb-1">Business Outcome</p>
+                  <p className="text-sm font-body text-[var(--text-50)] leading-relaxed">{featured.businessImpact}</p>
+                </div>
+              )}
+            </div>
 
             <div className="flex items-center gap-4">
               <motion.span

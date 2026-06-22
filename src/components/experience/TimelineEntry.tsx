@@ -60,6 +60,24 @@ export function TimelineEntry({ entry, index }: TimelineEntryProps) {
             className="overflow-hidden"
           >
             <ul className="mt-4 flex flex-col gap-2.5 text-sm font-body text-[var(--text-65)] leading-relaxed pb-2">
+              {entry.problemStatement && (
+                <li className="flex gap-3 mb-1">
+                  <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true" />
+                  <div>
+                    <span className="font-semibold text-[var(--text)]">The Problem: </span>
+                    {entry.problemStatement}
+                  </div>
+                </li>
+              )}
+              {entry.businessImpact && (
+                <li className="flex gap-3 mb-2">
+                  <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--accent)]" aria-hidden="true" />
+                  <div>
+                    <span className="font-semibold text-[var(--text)]">Business Outcome: </span>
+                    {entry.businessImpact}
+                  </div>
+                </li>
+              )}
               {entry.achievements.map((item, i) => (
                 <li key={i} className="flex gap-3">
                   <span className="mt-1.5 flex-shrink-0 w-1.5 h-1.5 rounded-full bg-[var(--accent-25)]" aria-hidden="true" />

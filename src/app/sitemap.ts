@@ -14,6 +14,8 @@ const projectSlugs: { slug: string; lastModified: string; priority: number }[] =
   { slug: "linkedin-fresher",      lastModified: "2025-03-01", priority: 0.8 },
   { slug: "cluely",                lastModified: "2025-03-15", priority: 0.8 },
   { slug: "asana-trello-metrics",  lastModified: "2025-03-19", priority: 0.8 },
+  { slug: "college-erp",           lastModified: "2025-03-25", priority: 0.8 },
+  { slug: "linkedin-rca",          lastModified: "2025-03-25", priority: 0.8 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {
