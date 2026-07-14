@@ -46,7 +46,7 @@ export function Hero() {
               variants={item}
               className="text-xs font-display font-semibold tracking-[0.25em] uppercase text-[var(--accent-text)]"
             >
-              Available for APM & PM roles
+              Product Builder · 0→1 Operator
             </motion.span>
 
             <motion.h1
@@ -68,8 +68,8 @@ export function Hero() {
               variants={item}
               className="mt-2 max-w-xl text-base md:text-lg font-body text-[var(--text-55)] leading-relaxed"
             >
-              I built a production platform for PMO leads and executives at RealPage.
-              Now I&apos;m looking for the next problem worth solving.
+              At RealPage, I co-built PMOrbit from 0→1, helping executives gain
+              real-time visibility across 40+ teams while reducing handoff friction by 40%.
             </motion.p>
 
             <motion.div variants={item} className="flex flex-wrap gap-4 mt-4">
