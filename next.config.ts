@@ -22,11 +22,10 @@ const nextConfig: NextConfig = {
     return {
       beforeFiles: [
         {
+          // Serve /admin as /admin/index.html
+          // Note: /admin/ (with trailing slash) is handled by Next.js's default trailing-slash
+          // redirect (308 to /admin) before rewrites run, so no explicit rule needed here
           source: "/admin",
-          destination: "/admin/index.html",
-        },
-        {
-          source: "/admin/",
           destination: "/admin/index.html",
         },
       ],
