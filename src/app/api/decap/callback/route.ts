@@ -6,6 +6,13 @@ const GITHUB_TOKEN_URL = "https://github.com/login/oauth/access_token";
 const STATE_COOKIE = "decap_oauth_state";
 const PROVIDER = "github";
 
+// Canonical origin of this site — the same source of truth the rest of the app uses for
+// its metadataBase/canonical URLs (see src/app/layout.tsx, src/app/sitemap.ts). This is the
+// origin the Decap admin runs on and therefore the only window we will hand a token to.
+const CANONICAL_ORIGIN = new URL(
+  process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works",
+).origin;
+
 // Expire the state cookie once it has served its purpose.
 const CLEAR_STATE_COOKIE =
   `${STATE_COOKIE}=; Path=/api/decap; Max-Age=0; HttpOnly; Secure; SameSite=Lax`;
@@ -42,20 +49,29 @@ function readCookie(request: Request, name: string): string | null {
  * The opener only accepts messages where e.origin === base_url, matches the
  * "authorization:github:success:" prefix, JSON.parses the remainder, and reads `.token`
  * (packages/decap-cms-backend-github/src/implementation.tsx `authenticate`: `this.token
- * = state.token`). The pop-up form is confirmed by the maintained references
- * daresaydigital/decap-cms-oauth (api/callback.ts) and vencax/netlify-cms-github-oauth-
- * provider (login_script.js).
+ * = state.token`).
+ *
+ * SECURITY: the token is delivered ONLY to a replier whose origin is in `trustedOrigins`.
+ * A hostile page can open this callback in a pop-up it controls (so `window.opener` is the
+ * attacker), ride a legitimate login of a returning editor (real state cookie, real code,
+ * GitHub silently re-authorizes an already-approved app), then answer our broadcast
+ * announcement to try to receive the token at its own origin via `message.origin`. The
+ * CSRF state check does NOT stop this — nothing is forged. Gating the send on
+ * `trustedOrigins` (this site's own origin) does: the attacker's origin never matches, so
+ * the token is never posted and we leak no signal back. This mirrors the origin allow-list
+ * in the vencax/netlify-cms-github-oauth-provider reference.
  */
 function renderHandshake(
   status: "success" | "error",
   content: Record<string, string>,
+  trustedOrigins: string[],
 ): string {
-  // Embed the payload as a JS object literal. Escape "<" so a value can never break out of
-  // the <script> element (e.g. a literal "</script>"). GitHub-issued tokens are limited to
-  // [A-Za-z0-9_], so no further escaping is load-bearing here. The browser re-serialises the
-  // object with JSON.stringify, so the CMS receives byte-for-byte
-  // `authorization:github:success:{...}`.
+  // Embed values as JS literals. Escape "<" so no value can break out of the <script>
+  // element (e.g. a literal "</script>"). GitHub-issued tokens are limited to [A-Za-z0-9_],
+  // so no further escaping is load-bearing. The browser re-serialises `content` with
+  // JSON.stringify, so the CMS receives byte-for-byte `authorization:github:success:{...}`.
   const embedded = JSON.stringify(content).replace(/</g, "\\u003c");
+  const origins = JSON.stringify(trustedOrigins).replace(/</g, "\\u003c");
 
   return `<!doctype html>
 <html lang="en">
@@ -65,8 +81,12 @@ function renderHandshake(
   (function () {
     if (!window.opener) { return; }
     var content = ${embedded};
+    var trustedOrigins = ${origins};
     function receiveMessage(message) {
-      // Send the token only to the exact origin that answered our announcement — never "*".
+      // Deliver the token ONLY to the trusted CMS origin. If a third-party page opened this
+      // pop-up (window.opener) and answered our announcement, its origin is not in the list
+      // and we return without posting anything — no token, and no confirmation, leaked to it.
+      if (trustedOrigins.indexOf(message.origin) === -1) { return; }
       window.opener.postMessage(
         'authorization:${PROVIDER}:${status}:' + JSON.stringify(content),
         message.origin
@@ -74,9 +94,9 @@ function renderHandshake(
       window.removeEventListener('message', receiveMessage, false);
     }
     window.addEventListener('message', receiveMessage, false);
-    // Announce readiness. The broadcast ("*") is required and safe: this message carries
-    // no secret; its sole purpose is to make the opener reply so we learn its origin (the
-    // origin we then target above). This mirrors every maintained reference implementation.
+    // Announce readiness. The broadcast ("*") is required and safe: this message carries no
+    // secret; its sole purpose is to make the opener reply so we learn its origin, which we
+    // then check against the allow-list above before sending anything sensitive.
     window.opener.postMessage('authorizing:${PROVIDER}', '*');
   })();
 </script>
@@ -135,7 +155,14 @@ export async function GET(request: Request) {
     );
   }
 
-  const redirectUri = `${getOrigin(request)}/api/decap/callback`;
+  const requestOrigin = getOrigin(request);
+  const redirectUri = `${requestOrigin}/api/decap/callback`;
+
+  // The set of origins we are willing to hand a token to: this app's own. The canonical
+  // origin is the fixed source of truth; the request origin (the callback is same-origin
+  // with the admin) is included so a correctly-configured deployment always matches. A
+  // third-party opener at any other origin is rejected in renderHandshake's script.
+  const trustedOrigins = Array.from(new Set([CANONICAL_ORIGIN, requestOrigin]));
 
   let accessToken: string;
   try {
@@ -166,7 +193,7 @@ export async function GET(request: Request) {
       // and never contain the client secret, so they are safe to relay to the CMS.
       const reason = data.error_description || data.error || "no access_token returned";
       return htmlResponse(
-        renderHandshake("error", { error: `GitHub token exchange failed: ${reason}` }),
+        renderHandshake("error", { error: `GitHub token exchange failed: ${reason}` }, trustedOrigins),
       );
     }
 
@@ -175,10 +202,12 @@ export async function GET(request: Request) {
     // Never surface the exception detail: the failing request carries the client secret.
     console.log(e instanceof Error ? e.message : String(e));
     return htmlResponse(
-      renderHandshake("error", { error: "Could not reach GitHub to exchange the OAuth code." }),
+      renderHandshake("error", { error: "Could not reach GitHub to exchange the OAuth code." }, trustedOrigins),
     );
   }
 
   // Payload shape the CMS reads: { token, provider }. See implementation.tsx `authenticate`.
-  return htmlResponse(renderHandshake("success", { token: accessToken, provider: PROVIDER }));
+  return htmlResponse(
+    renderHandshake("success", { token: accessToken, provider: PROVIDER }, trustedOrigins),
+  );
 }
