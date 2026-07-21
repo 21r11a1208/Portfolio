@@ -1,0 +1,21 @@
+import { z } from "zod";
+
+export const CaseStudyTypeSchema = z.enum([
+  "Case Study", "Product Breakdown", "PRD", "Product Teardown",
+  "RCA", "Product Enhancement", "Metrics",
+]);
+
+export const CaseStudySummarySchema = z.object({
+  slug: z.string(),
+  title: z.string(),
+  type: CaseStudyTypeSchema,
+  status: z.enum(["Production", "Self-initiated"]).optional(),
+  description: z.string(),
+  problemStatement: z.string(),
+  businessImpact: z.string().optional(),
+  readTime: z.string().default("5 min read"),
+  order: z.number(),
+  lastModified: z.string(), // ISO date string, e.g. "2025-03-19"
+  priority: z.number().min(0).max(1),
+});
+export type CaseStudySummary = z.infer<typeof CaseStudySummarySchema>;

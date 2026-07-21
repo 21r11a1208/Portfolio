@@ -5,9 +5,9 @@ import { motion, AnimatePresence } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { ProjectCard } from "@/components/projects/ProjectCard";
-import { projects } from "@/data/projects";
 import { Tag } from "@/components/ui/Tag";
 import { Project } from "@/types";
+import type { CaseStudySummary } from "@/lib/content/schema";
 
 // Tab labels mapped to type values (null = "All")
 const TAB_LABELS: { label: string; type: Project["type"] | null }[] = [
@@ -21,13 +21,12 @@ const TAB_LABELS: { label: string; type: Project["type"] | null }[] = [
   { label: "Metrics", type: "Metrics" },
 ];
 
-function FeaturedProject() {
+function FeaturedProject({ featured }: { featured: CaseStudySummary }) {
   const router = useRouter();
   const ref = useRef<HTMLDivElement>(null);
   const [tilt, setTilt] = useState({ x: 0, y: 0 });
   const [hovering, setHovering] = useState(false);
   const [hint, setHint] = useState(false);
-  const featured = projects[0];
 
   const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
     if (!ref.current) return;
@@ -148,21 +147,25 @@ function FeaturedProject() {
   );
 }
 
-export function Projects() {
+interface ProjectsProps {
+  caseStudies: CaseStudySummary[];
+}
+
+export function Projects({ caseStudies }: ProjectsProps) {
   const [activeTab, setActiveTab] = useState<Project["type"] | null>(null);
 
   // Only show tabs that have at least one project
   const availableTabs = TAB_LABELS.filter(
-    (tab) => tab.type === null || projects.some((p) => p.type === tab.type)
+    (tab) => tab.type === null || caseStudies.some((p) => p.type === tab.type)
   );
 
   const showAll = activeTab === null;
-  const featured = projects[0];
+  const featured = caseStudies[0];
 
   // When "All": featured card + rest as grid. Otherwise: filter all projects.
   const filtered = showAll
-    ? projects.slice(1)
-    : projects.filter((p) => p.type === activeTab);
+    ? caseStudies.slice(1)
+    : caseStudies.filter((p) => p.type === activeTab);
 
   const showFeatured = showAll || featured.type === activeTab;
 
@@ -206,7 +209,7 @@ export function Projects() {
               exit={{ opacity: 0, y: -8 }}
               transition={{ duration: 0.25 }}
             >
-              <FeaturedProject />
+              <FeaturedProject featured={featured} />
             </motion.div>
           )}
         </AnimatePresence>

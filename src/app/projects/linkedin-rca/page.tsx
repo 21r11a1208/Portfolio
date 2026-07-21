@@ -46,6 +46,7 @@ const articleSchema = {
 };
 
 const project = {
+  slug: "linkedin-rca",
   title: "LinkedIn DAU Drop",
   type: "RCA" as const,
   status: "Self-initiated" as const,

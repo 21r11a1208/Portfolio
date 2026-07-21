@@ -46,6 +46,7 @@ const articleSchema = {
 };
 
 const project = {
+  slug: "college-erp",
   title: "College ERP Teardown",
   type: "Product Teardown" as const,
   status: "Self-initiated" as const,

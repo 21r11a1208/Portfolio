@@ -11,8 +11,11 @@ import { Marquee } from "@/components/ui/Marquee";
 import { CircularText } from "@/components/ui/CircularText";
 import { SectionDots } from "@/components/ui/SectionDots";
 import { BackToTop } from "@/components/ui/BackToTop";
+import { getAllCaseStudySummaries } from "@/lib/content/case-studies";
 
 export default function Home() {
+  const caseStudies = getAllCaseStudySummaries();
+
   return (
     <main>
       <ScrollRestorer />
@@ -24,7 +27,7 @@ export default function Home() {
       <Marquee />
       <About />
       <POV />
-      <Projects />
+      <Projects caseStudies={caseStudies} />
       <Writing />
       <Contact />
       <TerminalSection />

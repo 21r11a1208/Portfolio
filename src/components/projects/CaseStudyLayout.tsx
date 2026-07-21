@@ -1,16 +1,16 @@
 import { Tag } from "@/components/ui/Tag";
 import { ReadingProgressBar } from "@/components/ui/ReadingProgressBar";
 import { Project } from "@/types";
-import { projects } from "@/data/projects";
+import { getCaseStudySummary } from "@/lib/content/case-studies";
 
 interface CaseStudyLayoutProps {
-  project: Pick<Project, "title" | "type" | "status" | "description">;
+  project: Pick<Project, "slug" | "title" | "type" | "status" | "description">;
   readTime?: string;
   children: React.ReactNode;
 }
 
 export function CaseStudyLayout({ project, readTime = "5 min read", children }: CaseStudyLayoutProps) {
-  const fullProject = projects.find(p => p.title === project.title);
+  const fullProject = getCaseStudySummary(project.slug);
   
   return (
     <article>

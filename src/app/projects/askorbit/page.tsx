@@ -46,6 +46,7 @@ const articleSchema = {
 };
 
 const project = {
+  slug: "askorbit",
   title: "AskOrbit",
   type: "Product Breakdown" as const,
   status: "Production" as const,

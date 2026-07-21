@@ -8,11 +8,20 @@ local_backend: true
 media_folder: public/uploads
 public_folder: /uploads
 collections:
-  - name: pages
-    label: Pages
-    files:
-      - name: placeholder
-        label: Placeholder
-        file: content/placeholder.json
-        fields:
-          - { name: title, label: Title, widget: string }
+  - name: case_studies
+    label: Case Studies
+    folder: content/case-studies
+    create: true
+    slug: '{{slug}}'
+    fields:
+      - { label: Slug, name: slug, widget: string }
+      - { label: Title, name: title, widget: string }
+      - { label: Type, name: type, widget: select, options: [Case Study, Product Breakdown, PRD, Product Teardown, RCA, Product Enhancement, Metrics] }
+      - { label: Status, name: status, widget: select, options: [Production, Self-initiated], required: false }
+      - { label: Description, name: description, widget: text }
+      - { label: Problem Statement, name: problemStatement, widget: text }
+      - { label: Business Impact, name: businessImpact, widget: text, required: false }
+      - { label: Read Time, name: readTime, widget: string, default: "5 min read" }
+      - { label: Order, name: order, widget: number }
+      - { label: Last Modified, name: lastModified, widget: string }
+      - { label: Priority, name: priority, widget: number, min: 0, max: 1 }
