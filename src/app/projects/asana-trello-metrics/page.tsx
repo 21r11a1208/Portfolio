@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { AsanaTrelloMetrics } from "./AsanaTrelloMetrics";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/asana-trello-metrics`;
 
 const title = "Asana & Trello — Metrics";
 const description = "A PM metrics deep-dive into Asana and Trello — north star definition, supporting hierarchy, rejection rationale, and guardrails for two divergent approaches to collaborative work management.";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

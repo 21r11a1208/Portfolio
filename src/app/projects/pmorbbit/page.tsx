@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { PMOrbitCaseStudy } from "./PMOrbitCaseStudy";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/pmorbbit`;
 
 const title = "PMOrbit Case Study";
 const description = "How I co-built a production PM platform from 0 to 1 at RealPage, reducing handoff friction by 40% for PMO leads and executive leadership.";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

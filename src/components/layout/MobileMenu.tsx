@@ -1,4 +1,5 @@
 "use client";
+import { useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const NAV_LINKS = [
@@ -14,11 +15,42 @@ interface MobileMenuProps {
 }
 
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
+  const panelRef = useRef<HTMLElement>(null);
+  const closeBtnRef = useRef<HTMLButtonElement>(null);
+
+  useEffect(() => {
+    if (!open) return;
+    const previouslyFocused = document.activeElement as HTMLElement | null;
+    closeBtnRef.current?.focus();
+
+    const onKeyDown = (e: KeyboardEvent) => {
+      if (e.key === "Escape") { onClose(); return; }
+      if (e.key !== "Tab" || !panelRef.current) return;
+      const focusables = panelRef.current.querySelectorAll<HTMLElement>("a[href], button:not([disabled])");
+      if (focusables.length === 0) return;
+      const first = focusables[0];
+      const last = focusables[focusables.length - 1];
+      if (e.shiftKey && document.activeElement === first) {
+        e.preventDefault();
+        last.focus();
+      } else if (!e.shiftKey && document.activeElement === last) {
+        e.preventDefault();
+        first.focus();
+      }
+    };
+    document.addEventListener("keydown", onKeyDown);
+    return () => {
+      document.removeEventListener("keydown", onKeyDown);
+      previouslyFocused?.focus();
+    };
+  }, [open, onClose]);
+
   return (
     <AnimatePresence>
       {open && (
         <>
           <motion.div
+            key="overlay"
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             exit={{ opacity: 0 }}
@@ -26,6 +58,9 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             className="fixed inset-0 z-40 bg-black/40 backdrop-blur-sm"
           />
           <motion.nav
+            key="panel"
+            ref={panelRef}
+            id="mobile-menu"
             initial={{ x: "100%" }}
             animate={{ x: 0 }}
             exit={{ x: "100%" }}
@@ -33,6 +68,7 @@ export function MobileMenu({ open, onClose }: MobileMenuProps) {
             className="fixed right-0 top-0 bottom-0 z-50 w-72 bg-[var(--surface)] border-l border-[var(--border-8)] flex flex-col px-8 pt-24 pb-12 gap-6"
           >
             <button
+              ref={closeBtnRef}
               onClick={onClose}
               className="absolute top-6 right-6 text-[var(--text-50)] hover:text-[var(--text)] transition-colors"
               aria-label="Close menu"

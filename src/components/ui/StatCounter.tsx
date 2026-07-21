@@ -12,11 +12,9 @@ export function StatCounter({ value, suffix = "", prefix = "", label }: Stat) {
 
   useEffect(() => {
     if (!isInView) return;
-    if (reduced) { setCount(value); return; }
-    const duration = 1400;
-    const steps = 40;
+    const steps = reduced ? 1 : 40;
     const step = value / steps;
-    const interval = duration / steps;
+    const interval = (reduced ? 0 : 1400) / steps;
     let current = 0;
     const timer = setInterval(() => {
       current = Math.min(current + step, value);

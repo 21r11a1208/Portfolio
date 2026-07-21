@@ -1,4 +1,5 @@
 "use client";
+import Link from "next/link";
 import { useState } from "react";
 import { motion } from "framer-motion";
 import { useScrolled } from "@/hooks/useScrolled";
@@ -32,13 +33,13 @@ export function Nav() {
       >
         <div className="max-w-6xl mx-auto px-6 flex items-center justify-between">
           {/* Logo */}
-          <a
+          <Link
             href="/"
             data-cursor="hover"
             className="text-lg font-display font-bold text-[var(--text)] hover:text-[var(--accent-text)] transition-colors"
           >
             B Anish<span className="text-[var(--accent-text)]">.</span>
-          </a>
+          </Link>
 
           {/* Desktop nav */}
           <nav className="hidden md:flex items-center gap-8">
@@ -68,6 +69,8 @@ export function Nav() {
             <button
               onClick={() => setMobileOpen(true)}
               aria-label="Open menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
               data-cursor="hover"
               className="flex flex-col gap-1.5 p-2"
             >

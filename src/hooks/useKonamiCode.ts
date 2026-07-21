@@ -10,7 +10,7 @@ const KONAMI = [
 ];
 
 export function useKonamiCode(onSuccess: () => void) {
-  const [sequence, setSequence] = useState<string[]>([]);
+  const [, setSequence] = useState<string[]>([]);
 
   const handleKeyDown = useCallback(
     (e: KeyboardEvent) => {

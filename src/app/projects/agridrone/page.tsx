@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { AgriDronePRD } from "./AgriDronePRD";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/agridrone`;
 
 const title = "AgriDrone PRD";
 const description = "Product requirements document for a drone services marketplace connecting Indian farmers with licensed drone operators for precision agriculture.";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

@@ -1,6 +1,6 @@
 "use client";
 import { useTheme } from "next-themes";
-import { useEffect, useState } from "react";
+import { useSyncExternalStore } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 /** Aperture / iris — 8 radial spokes radiating from a center ring.
@@ -50,12 +50,12 @@ function EclipseIcon() {
   );
 }
 
+const noopSubscribe = () => () => {};
+
 export function ThemeToggle() {
   const { theme, setTheme } = useTheme();
-  const [mounted, setMounted] = useState(false);
-
   // Avoid hydration mismatch — only render after mount
-  useEffect(() => setMounted(true), []);
+  const mounted = useSyncExternalStore(noopSubscribe, () => true, () => false);
   if (!mounted) return <div className="w-8 h-8" />;
 
   const isDark = theme === "dark";

@@ -19,7 +19,7 @@ const dmSans = DM_Sans({
   display: "swap",
 });
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),

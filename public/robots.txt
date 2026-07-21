@@ -20,4 +20,4 @@ Allow: /
 User-agent: Applebot
 Allow: /
 
-Sitemap: https://anish.works/sitemap.xml
+Sitemap: https://www.anish.works/sitemap.xml

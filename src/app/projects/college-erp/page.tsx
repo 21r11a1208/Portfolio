@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { CaseStudyLayout } from "@/components/projects/CaseStudyLayout";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/college-erp`;
 
 const title = "College ERP Teardown";
 const description = "A product teardown of CampX ERP used at Geethanjali College.";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

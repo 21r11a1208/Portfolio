@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { CluelyTeardown } from "./CluelyTeardown";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/cluely`;
 
 const title = "Cluely Teardown";
 const description = "Product teardown and competitive analysis of Cluely — the AI overlay that turned ";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

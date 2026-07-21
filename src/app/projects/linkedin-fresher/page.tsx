@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { LinkedInFresherPE } from "./LinkedInFresherPE";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/linkedin-fresher`;
 
 const title = "LinkedIn for Freshers";
 const description = "A product enhancement proposal for LinkedIn — reducing the job-search friction freshers face when no explicit 0-experience filter exists.";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

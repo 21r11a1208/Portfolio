@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { StackOverflowRCA } from "./StackOverflowRCA";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/stackoverflow-rca`;
 
 const title = "Stack Overflow RCA";
 const description = "Root cause analysis of Stack Overflow";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },

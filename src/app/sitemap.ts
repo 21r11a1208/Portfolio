@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 
 // Only real crawlable pages — hash anchors are not separate indexable URLs
 const projectSlugs: { slug: string; lastModified: string; priority: number }[] = [

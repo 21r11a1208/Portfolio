@@ -1,13 +1,13 @@
 import { Metadata } from "next";
 import { GymatePRD } from "./GymatePRD";
 
-const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://anish.works";
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? "https://www.anish.works";
 const CANONICAL = `${BASE_URL}/projects/gymate`;
 
 const title = "Gymate PRD";
 const description = "Product requirements document for a location-based gym partner matching app — connecting fitness enthusiasts nearby for accountability and motivation.";
 
-export const metadata: import("next").Metadata = {
+export const metadata: Metadata = {
   title: `${title} — B Anish`,
   description,
   alternates: { canonical: CANONICAL },
