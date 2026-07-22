@@ -11,7 +11,7 @@ achievements:
   - "Co-owned product roadmap, maintained prioritised backlog across sprint cycles"
   - "Delivered role-aware dashboards, automated RAID logs, and portfolio overviews — reducing handoff friction by 40%"
   - "Shipped AskOrbit: an AI chatbot for querying project health in natural language"
-  - "Re-engineered KPI widgets and risk heatmaps, achieving 95% faster load times"
+  - "Re-engineered KPI widgets and risk heatmaps, achieving 97.3% faster load times"
   - "Built automated PDF executive report generation"
   - "Restored 100% delivery reliability by migrating email/SMS orchestration into resilient config services"
   - "Mapped login-to-dashboard funnel, uncovered two critical UX gaps resolved in next sprint"
