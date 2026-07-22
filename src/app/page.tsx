@@ -1,6 +1,7 @@
 import { ScrollRestorer } from "@/components/layout/ScrollRestorer";
 import { Hero } from "@/components/sections/Hero";
 import { About } from "@/components/sections/About";
+import { Experience } from "@/components/sections/Experience";
 import { Projects } from "@/components/sections/Projects";
 import { Writing } from "@/components/sections/Writing";
 import { Contact } from "@/components/sections/Contact";
@@ -12,9 +13,11 @@ import { CircularText } from "@/components/ui/CircularText";
 import { SectionDots } from "@/components/ui/SectionDots";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { getAllCaseStudySummaries } from "@/lib/content/case-studies";
+import { getAllExperience } from "@/lib/content/experience";
 
 export default function Home() {
   const caseStudies = getAllCaseStudySummaries();
+  const experience = getAllExperience();
 
   return (
     <main>
@@ -26,6 +29,7 @@ export default function Home() {
       <Hero />
       <Marquee />
       <About />
+      <Experience experience={experience} />
       <POV />
       <Projects caseStudies={caseStudies} />
       <Writing />

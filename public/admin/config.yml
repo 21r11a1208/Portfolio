@@ -25,3 +25,18 @@ collections:
       - { label: Order, name: order, widget: number }
       - { label: Last Modified, name: lastModified, widget: string }
       - { label: Priority, name: priority, widget: number, min: 0, max: 1 }
+  - name: experience
+    label: Experience
+    folder: content/experience
+    create: true
+    slug: '{{fields.company}}'
+    fields:
+      - { label: Company, name: company, widget: string }
+      - { label: Role, name: role, widget: string }
+      - { label: Duration, name: duration, widget: string }
+      - { label: Location, name: location, widget: string }
+      - { label: Problem Statement, name: problemStatement, widget: text, required: false }
+      - { label: Business Impact, name: businessImpact, widget: text, required: false }
+      - { label: Highlight, name: highlight, widget: string, required: false }
+      - { label: Achievements, name: achievements, widget: list }
+      - { label: Order, name: order, widget: number }

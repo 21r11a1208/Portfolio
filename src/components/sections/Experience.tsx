@@ -2,9 +2,13 @@
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
 import { TimelineEntry } from "@/components/experience/TimelineEntry";
-import { experience } from "@/data/experience";
+import type { ExperienceEntryContent } from "@/lib/content/schema";
 
-export function Experience() {
+interface ExperienceProps {
+  experience: ExperienceEntryContent[];
+}
+
+export function Experience({ experience }: ExperienceProps) {
   return (
     <section id="experience" className="py-24 md:py-32 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">

@@ -19,3 +19,17 @@ export const CaseStudySummarySchema = z.object({
   priority: z.number().min(0).max(1),
 });
 export type CaseStudySummary = z.infer<typeof CaseStudySummarySchema>;
+
+export const ExperienceEntrySchema = z.object({
+  company: z.string(),
+  role: z.string(),
+  duration: z.string(),
+  location: z.string(),
+  problemStatement: z.string().optional(),
+  businessImpact: z.string().optional(),
+  highlight: z.string().optional(),
+  achievements: z.array(z.string()),
+  link: z.string().optional(),
+  order: z.number(),
+});
+export type ExperienceEntryContent = z.infer<typeof ExperienceEntrySchema>;
