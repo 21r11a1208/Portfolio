@@ -1,3 +1,4 @@
+import type { ComponentType } from "react";
 import { Tag } from "@/components/ui/Tag";
 import { ReadingProgressBar } from "@/components/ui/ReadingProgressBar";
 import { getCaseStudySummary } from "@/lib/content/case-studies";
@@ -74,7 +75,12 @@ export function CaseStudyShell({ project, readTime = "5 min read", sections }: C
               </div>
             )}
             {section.blocks.map((block, index) => {
-              const BlockComponent = BLOCK_REGISTRY[block.type];
+              // BLOCK_REGISTRY is correctly keyed by construction (registry.ts's
+              // mapped type enforces it per-entry), but TS can't verify a
+              // runtime-widened `block.type` lookup against a union of
+              // component call signatures — the cast below just tells it what's
+              // already true at runtime. See registry.ts's comment for detail.
+              const BlockComponent = BLOCK_REGISTRY[block.type] as ComponentType<{ data: typeof block }>;
               return <BlockComponent key={index} data={block} />;
             })}
           </section>
