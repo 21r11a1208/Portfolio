@@ -51,3 +51,36 @@ collections:
       - { label: Read Time, name: readTime, widget: string }
       - { label: URL, name: url, widget: string }
       - { label: Order, name: order, widget: number }
+  - name: site
+    label: Site Content
+    files:
+      - label: About
+        name: about
+        file: content/site/about.yml
+        fields:
+          - { label: Paragraph 1, name: paragraph1, widget: text }
+          - { label: Paragraph 2, name: paragraph2, widget: text }
+          - { label: Paragraph 3, name: paragraph3, widget: text }
+          - { label: Personal Line, name: personalLine, widget: text }
+      - label: Stats
+        name: stats
+        file: content/site/stats.yml
+        fields:
+          - label: Stats
+            name: stats
+            widget: list
+            fields:
+              - { label: Value, name: value, widget: number, value_type: float }
+              - { label: Suffix, name: suffix, widget: string, required: false }
+              - { label: Prefix, name: prefix, widget: string, required: false }
+              - { label: Label, name: label, widget: string }
+      - label: Skills
+        name: skills
+        file: content/site/skills.yml
+        fields:
+          - label: Groups
+            name: groups
+            widget: list
+            fields:
+              - { label: Category, name: category, widget: string }
+              - { label: Skills, name: skills, widget: list }

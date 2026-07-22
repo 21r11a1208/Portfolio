@@ -15,11 +15,14 @@ import { BackToTop } from "@/components/ui/BackToTop";
 import { getAllCaseStudySummaries } from "@/lib/content/case-studies";
 import { getAllExperience } from "@/lib/content/experience";
 import { getAllArticles } from "@/lib/content/articles";
+import { getAbout, getSkills } from "@/lib/content/site";
 
 export default function Home() {
   const caseStudies = getAllCaseStudySummaries();
   const experience = getAllExperience();
   const articles = getAllArticles();
+  const about = getAbout();
+  const skills = getSkills();
 
   return (
     <main>
@@ -30,7 +33,7 @@ export default function Home() {
       <BackToTop />
       <Hero />
       <Marquee />
-      <About />
+      <About about={about} skills={skills} />
       <Experience experience={experience} />
       <POV />
       <Projects caseStudies={caseStudies} />

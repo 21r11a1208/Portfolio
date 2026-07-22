@@ -42,3 +42,25 @@ export const ArticleSchema = z.object({
   order: z.number(),
 });
 export type ArticleContent = z.infer<typeof ArticleSchema>;
+
+export const AboutSchema = z.object({
+  paragraph1: z.string(),
+  paragraph2: z.string(),
+  paragraph3: z.string(),
+  personalLine: z.string(),
+});
+export type AboutContent = z.infer<typeof AboutSchema>;
+
+export const StatSchema = z.object({
+  value: z.number(),
+  suffix: z.string().optional(),
+  prefix: z.string().optional(),
+  label: z.string(),
+});
+export type StatContent = z.infer<typeof StatSchema>;
+
+export const SkillGroupSchema = z.object({
+  category: z.string(),
+  skills: z.array(z.string()),
+});
+export type SkillGroupContent = z.infer<typeof SkillGroupSchema>;

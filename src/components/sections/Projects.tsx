@@ -125,7 +125,7 @@ function FeaturedProject({ featured }: { featured: CaseStudySummary }) {
             {[
               { value: "0→1", label: "Built from zero to production" },
               { value: "40%", label: "Reduction in handoff friction" },
-              { value: "95%", label: "Faster dashboard load time" },
+              { value: "97.3%", label: "Faster dashboard load time" },
               { value: "50+", label: "User interviews conducted" },
             ].map((m) => (
               <div
