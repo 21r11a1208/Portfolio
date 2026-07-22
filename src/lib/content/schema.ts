@@ -33,3 +33,12 @@ export const ExperienceEntrySchema = z.object({
   order: z.number(),
 });
 export type ExperienceEntryContent = z.infer<typeof ExperienceEntrySchema>;
+
+export const ArticleSchema = z.object({
+  title: z.string(),
+  subtitle: z.string(),
+  readTime: z.string(),
+  url: z.string().url(),
+  order: z.number(),
+});
+export type ArticleContent = z.infer<typeof ArticleSchema>;

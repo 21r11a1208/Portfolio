@@ -2,9 +2,13 @@
 import { motion } from "framer-motion";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ScrollReveal } from "@/components/ui/ScrollReveal";
-import { articles } from "@/data/articles";
+import type { ArticleContent } from "@/lib/content/schema";
 
-export function Writing() {
+interface WritingProps {
+  articles: ArticleContent[];
+}
+
+export function Writing({ articles }: WritingProps) {
   return (
     <section id="writing" className="py-24 md:py-32 px-6 md:px-12 lg:px-24">
       <div className="max-w-6xl mx-auto">

@@ -14,10 +14,12 @@ import { SectionDots } from "@/components/ui/SectionDots";
 import { BackToTop } from "@/components/ui/BackToTop";
 import { getAllCaseStudySummaries } from "@/lib/content/case-studies";
 import { getAllExperience } from "@/lib/content/experience";
+import { getAllArticles } from "@/lib/content/articles";
 
 export default function Home() {
   const caseStudies = getAllCaseStudySummaries();
   const experience = getAllExperience();
+  const articles = getAllArticles();
 
   return (
     <main>
@@ -32,7 +34,7 @@ export default function Home() {
       <Experience experience={experience} />
       <POV />
       <Projects caseStudies={caseStudies} />
-      <Writing />
+      <Writing articles={articles} />
       <Contact />
       <TerminalSection />
       <footer className="py-10 px-6 text-center border-t border-[var(--border)]">
