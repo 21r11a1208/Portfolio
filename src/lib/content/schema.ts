@@ -5,6 +5,26 @@ export const CaseStudyTypeSchema = z.enum([
   "RCA", "Product Enhancement", "Metrics",
 ]);
 
+export const ProseBlockSchema = z.object({
+  type: z.literal("prose"),
+  body: z.string(), // markdown
+});
+
+// This becomes a z.discriminatedUnion of many block types in a later stage.
+// For now there is exactly one member — write it so adding more later means
+// adding to this union, not restructuring how it's used.
+export const BlockSchema = ProseBlockSchema;
+export type Block = z.infer<typeof BlockSchema>;
+
+export const SectionSchema = z.object({
+  id: z.string(),
+  toc_label: z.string().optional(),
+  kicker: z.string().optional(),
+  heading: z.string().optional(),
+  blocks: z.array(BlockSchema),
+});
+export type Section = z.infer<typeof SectionSchema>;
+
 export const CaseStudySummarySchema = z.object({
   slug: z.string(),
   title: z.string(),
@@ -17,6 +37,7 @@ export const CaseStudySummarySchema = z.object({
   order: z.number(),
   lastModified: z.string(), // ISO date string, e.g. "2025-03-19"
   priority: z.number().min(0).max(1),
+  sections: z.array(SectionSchema).optional(),
 });
 export type CaseStudySummary = z.infer<typeof CaseStudySummarySchema>;
 
