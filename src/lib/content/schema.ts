@@ -72,9 +72,35 @@ export const RoadmapBlockSchema = z.object({
   })),
 });
 
-// A real discriminated union as of Task 3a.1 (7 members). Two more —
-// TabsBlockSchema, AccordionBlockSchema — land in task 3a.2; add them to
-// this array, don't restructure how it's used.
+export const TabsBlockSchema = z.object({
+  type: z.literal("tabs"),
+  panels: z.array(z.object({
+    label: z.string(), // the pill/tab button text
+    title: z.string(),
+    subtitle: z.string().optional(), // e.g. a role or category, shown under the title
+    meta: z.array(z.string()).optional(), // small badges, e.g. ["15-50 properties", "10+ years"]
+    badge: z.string().optional(), // status/priority text, e.g. "Complete", "P0" — render as a small pill if present
+    description: z.string().optional(), // markdown
+    userStory: z.string().optional(), // shown in its own highlighted sub-box if present
+    goals: z.array(z.string()).optional(),
+    pains: z.array(z.string()).optional(),
+    acceptanceCriteria: z.array(z.string()).optional(),
+    quote: z.string().optional(), // shown as an italic blockquote-style line if present
+  })),
+});
+
+export const AccordionBlockSchema = z.object({
+  type: z.literal("accordion"),
+  singleOpen: z.boolean().default(true), // if true, opening one item closes any other open item
+  items: z.array(z.object({
+    title: z.string(),
+    meta: z.array(z.string()).optional(), // small caption fragments shown in the collapsed header, e.g. ["Probability: Low", "Impact: Critical"]
+    body: z.string(), // markdown, revealed on expand
+  })),
+});
+
+// A real discriminated union of 9 members as of Task 3a.2 (7 as of 3a.1,
+// plus tabs/accordion here — the last 2 block types sub-stage 3a needs).
 export const BlockSchema = z.discriminatedUnion("type", [
   ProseBlockSchema,
   CalloutBlockSchema,
@@ -83,6 +109,8 @@ export const BlockSchema = z.discriminatedUnion("type", [
   CardListBlockSchema,
   ChipFlowBlockSchema,
   RoadmapBlockSchema,
+  TabsBlockSchema,
+  AccordionBlockSchema,
 ]);
 export type Block = z.infer<typeof BlockSchema>;
 

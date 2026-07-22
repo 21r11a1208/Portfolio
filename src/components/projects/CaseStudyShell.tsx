@@ -1,6 +1,7 @@
 import type { ComponentType } from "react";
 import { Tag } from "@/components/ui/Tag";
 import { ReadingProgressBar } from "@/components/ui/ReadingProgressBar";
+import { CaseStudyTocNav } from "@/components/projects/CaseStudyTocNav";
 import { getCaseStudySummary } from "@/lib/content/case-studies";
 import type { CaseStudySummary, Section } from "@/lib/content/schema";
 import { BLOCK_REGISTRY } from "@/components/projects/blocks/registry";
@@ -14,9 +15,19 @@ interface CaseStudyShellProps {
 export function CaseStudyShell({ project, readTime = "5 min read", sections }: CaseStudyShellProps) {
   const fullProject = getCaseStudySummary(project.slug);
 
+  // Generated from `sections`, not hardcoded (contrast the reference PRDs'
+  // own module-level `TOC` constants). A section with no `toc_label` is
+  // skipped entirely rather than rendered with a blank label — this is what
+  // makes an untitled/unlisted section possible later, and what keeps the
+  // 3 currently-live case studies (askorbit/college-erp/linkedin-rca, whose
+  // Task-2.2-era content never set `toc_label`) rendering no TOC nav at all,
+  // exactly as before this task.
+  const toc = sections.flatMap((s) => (s.toc_label ? [{ id: s.id, label: s.toc_label }] : []));
+
   return (
     <article>
       <ReadingProgressBar />
+      <CaseStudyTocNav toc={toc} />
 
       {/* Header */}
       <header className="mb-12 pb-10 border-b border-[var(--border)]">
