@@ -9,14 +9,16 @@ import { ChipFlowBlock } from "./ChipFlowBlock";
 import { RoadmapBlock } from "./RoadmapBlock";
 import { TabsBlock } from "./TabsBlock";
 import { AccordionBlock } from "./AccordionBlock";
+import { TimelineBlock } from "./TimelineBlock";
+import { FishboneBlock } from "./FishboneBlock";
 
 // Keyed by discriminant so each entry's component is checked against the
 // block shape for that specific `type`, not a generic catch-all — e.g.
 // registering `ProseBlock` under `callout` would fail right here, at the
 // object-literal check, rather than at some runtime call site.
 //
-// `Block` is a `z.discriminatedUnion` of 9 members as of Task 3a.2 (7 as of
-// 3a.1, plus `tabs`/`accordion` here). That's fine for THIS file: each
+// `Block` is a `z.discriminatedUnion` of 11 members as of Task 3b.1 (9 as of
+// 3a.2, plus `timeline`/`fishbone` here). That's fine for THIS file: each
 // property of the object literal below is still checked independently
 // against its own `Extract<Block, { type: K }>`, so the mapped type here
 // continues to type-check cleanly regardless of how many members `Block`
@@ -42,4 +44,6 @@ export const BLOCK_REGISTRY: BlockRegistry = {
   roadmap: RoadmapBlock,
   tabs: TabsBlock,
   accordion: AccordionBlock,
+  timeline: TimelineBlock,
+  fishbone: FishboneBlock,
 };

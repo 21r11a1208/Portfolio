@@ -99,8 +99,39 @@ export const AccordionBlockSchema = z.object({
   })),
 });
 
-// A real discriminated union of 9 members as of Task 3a.2 (7 as of 3a.1,
-// plus tabs/accordion here — the last 2 block types sub-stage 3a needs).
+export const TimelineBlockSchema = z.object({
+  type: z.literal("timeline"),
+  label: z.string().optional(), // small mono caption above the timeline, e.g. "How the 8 weeks unfolded"
+  events: z.array(z.object({
+    date: z.string(),
+    event: z.string(),
+    severity: z.string(), // free-text badge, e.g. "Catalyst", "Peak", "Collapse" — labels are bespoke per case study, not a fixed enum
+    color: z.string(), // hex color driving that event's dot + badge — bespoke per severity label, same as the reference's per-item SEVERITY_COLORS map
+    detail: z.string(),
+  })),
+});
+
+// Renders an Ishikawa/fishbone diagram. Bone tip/spine coordinates and the
+// SVG viewBox are computed from `categories.length` at render time (see
+// FishboneBlock.tsx) rather than stored here — the reference RCAs
+// hand-placed those per bone, but that isn't something a CMS editor should
+// have to fill in, and a formula generalizes to any category count.
+export const FishboneBlockSchema = z.object({
+  type: z.literal("fishbone"),
+  effectLines: z.array(z.string()), // 2-3 short lines in the "effect" box, e.g. ["99%", "Download", "Collapse"]
+  hint: z.string().optional(), // shown below the diagram when no category is selected
+  categories: z.array(z.object({
+    id: z.string(),
+    label: z.string(),
+    color: z.string(), // hex — bespoke per category, drives the bone/label/detail-panel accent
+    icon: z.string(), // emoji shown in the detail panel
+    causes: z.array(z.string()),
+    detail: z.string(),
+  })),
+});
+
+// A real discriminated union of 11 members as of Task 3b.1 (9 as of 3a.2,
+// plus timeline/fishbone here — the 2 new block types the RCA case studies need).
 export const BlockSchema = z.discriminatedUnion("type", [
   ProseBlockSchema,
   CalloutBlockSchema,
@@ -111,6 +142,8 @@ export const BlockSchema = z.discriminatedUnion("type", [
   RoadmapBlockSchema,
   TabsBlockSchema,
   AccordionBlockSchema,
+  TimelineBlockSchema,
+  FishboneBlockSchema,
 ]);
 export type Block = z.infer<typeof BlockSchema>;
 
