@@ -25,6 +25,194 @@ collections:
       - { label: Order, name: order, widget: number }
       - { label: Last Modified, name: lastModified, widget: string }
       - { label: Priority, name: priority, widget: number, min: 0, max: 1 }
+      - label: Sections
+        name: sections
+        widget: list
+        required: false
+        fields:
+          - { label: ID, name: id, widget: string, hint: "Anchor id, e.g. 'clarify' — must be unique on the page" }
+          - { label: TOC Label, name: toc_label, widget: string, required: false, hint: "Omit to leave this section out of the right-side nav" }
+          - { label: Kicker, name: kicker, widget: string, required: false, hint: "Small eyebrow above the heading, e.g. 'Step 1 of 8'" }
+          - { label: Heading, name: heading, widget: string, required: false }
+          - label: Blocks
+            name: blocks
+            widget: list
+            types:
+              - label: Prose
+                name: prose
+                widget: object
+                fields:
+                  - { label: Body, name: body, widget: markdown }
+              - label: Callout
+                name: callout
+                widget: object
+                fields:
+                  - { label: Tone, name: tone, widget: select, options: [accent, neutral], default: accent }
+                  - { label: Title, name: title, widget: string, required: false }
+                  - { label: Body, name: body, widget: markdown }
+              - label: Card Grid
+                name: card-grid
+                widget: object
+                fields:
+                  - { label: Variant, name: variant, widget: select, options: [counter, info], hint: "counter animates the value as a number on scroll; info shows it as static text" }
+                  - { label: Columns, name: columns, widget: select, options: [2, 3, 4], default: 3 }
+                  - label: Cards
+                    name: cards
+                    widget: list
+                    fields:
+                      - { label: Label, name: label, widget: string }
+                      - { label: Value, name: value, widget: string, hint: "A plain number for counter cards (e.g. 95), or short text for info cards" }
+                      - { label: Prefix, name: prefix, widget: string, required: false }
+                      - { label: Suffix, name: suffix, widget: string, required: false }
+                      - { label: Sub-caption, name: sub, widget: string, required: false }
+              - label: Icon List
+                name: icon-list
+                widget: object
+                fields:
+                  - { label: Icon, name: icon, widget: select, options: [check, cross, arrow, dot], default: dot }
+                  - { label: Columns, name: columns, widget: select, options: [1, 2, 3], default: 1 }
+                  - label: Groups
+                    name: groups
+                    widget: list
+                    fields:
+                      - { label: Group Label, name: label, widget: string, required: false, hint: "Omit for a single unlabeled list" }
+                      - { label: Color, name: color, widget: string, required: false, hint: "Hex color overriding the icon color for this group only, e.g. #3b82f6" }
+                      - { label: Items, name: items, widget: list }
+              - label: Card List
+                name: card-list
+                widget: object
+                fields:
+                  - { label: Numbered, name: numbered, widget: boolean, default: false }
+                  - label: Cards
+                    name: cards
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Body, name: body, widget: markdown, required: false }
+                      - { label: Price, name: price, widget: string, required: false }
+                      - { label: Highlight, name: highlight, widget: boolean, default: false }
+                      - { label: Items, name: items, widget: list, required: false }
+                      - { label: Note, name: note, widget: string, required: false }
+              - label: Chip Flow
+                name: chip-flow
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string, required: false }
+                  - { label: Steps, name: steps, widget: list, hint: "Do NOT include the → arrow — it's added automatically between steps" }
+                  - { label: Note, name: note, widget: string, required: false }
+              - label: Roadmap
+                name: roadmap
+                widget: object
+                fields:
+                  - label: Phases
+                    name: phases
+                    widget: list
+                    fields:
+                      - { label: Label, name: label, widget: string, hint: "e.g. 'Phase 1' or 'v1.0'" }
+                      - { label: Title, name: title, widget: string, required: false }
+                      - { label: Period, name: period, widget: string, required: false }
+                      - { label: Status, name: status, widget: string, required: false, hint: "Free text, e.g. Complete / Planned / P0" }
+                      - { label: Progress, name: progress, widget: number, min: 0, max: 100, required: false, hint: "Leave blank to hide the progress bar" }
+                      - { label: Items, name: items, widget: list }
+              - label: Tabs
+                name: tabs
+                widget: object
+                fields:
+                  - label: Panels
+                    name: panels
+                    widget: list
+                    fields:
+                      - { label: Tab Label, name: label, widget: string, hint: "The pill button text" }
+                      - { label: Title, name: title, widget: string }
+                      - { label: Subtitle, name: subtitle, widget: string, required: false }
+                      - { label: Meta Badges, name: meta, widget: list, required: false }
+                      - { label: Badge, name: badge, widget: string, required: false, hint: "e.g. Complete / P0" }
+                      - { label: Description, name: description, widget: markdown, required: false }
+                      - { label: User Story, name: userStory, widget: text, required: false }
+                      - { label: Goals, name: goals, widget: list, required: false }
+                      - { label: Pains, name: pains, widget: list, required: false }
+                      - { label: Acceptance Criteria, name: acceptanceCriteria, widget: list, required: false }
+                      - { label: Quote, name: quote, widget: text, required: false }
+              - label: Accordion
+                name: accordion
+                widget: object
+                fields:
+                  - { label: Single Open, name: singleOpen, widget: boolean, default: true, hint: "If on, opening one item closes any other open item" }
+                  - label: Items
+                    name: items
+                    widget: list
+                    fields:
+                      - { label: Title, name: title, widget: string }
+                      - { label: Meta, name: meta, widget: list, required: false, hint: "Small caption fragments in the collapsed header" }
+                      - { label: Body, name: body, widget: markdown }
+              - label: Timeline
+                name: timeline
+                widget: object
+                fields:
+                  - { label: Label, name: label, widget: string, required: false }
+                  - label: Events
+                    name: events
+                    widget: list
+                    fields:
+                      - { label: Date, name: date, widget: string }
+                      - { label: Event, name: event, widget: string }
+                      - { label: Severity, name: severity, widget: string, hint: "Free text badge, e.g. Catalyst / Peak / Collapse" }
+                      - { label: Color, name: color, widget: string, hint: "Hex color for this event's dot and badge, e.g. #f97316" }
+                      - { label: Detail, name: detail, widget: markdown }
+              - label: Fishbone Diagram
+                name: fishbone
+                widget: object
+                hint: "Ishikawa/root-cause diagram. Layout is computed automatically from the number of categories."
+                fields:
+                  - { label: Effect Lines, name: effectLines, widget: list, hint: "2-3 short lines in the effect box, e.g. 99% / Download / Collapse" }
+                  - { label: Hint Text, name: hint, widget: string, required: false, hint: "Shown below the diagram before a category is clicked" }
+                  - label: Categories
+                    name: categories
+                    widget: list
+                    fields:
+                      - { label: ID, name: id, widget: string, hint: "Unique short slug, e.g. 'network'" }
+                      - { label: Label, name: label, widget: string }
+                      - { label: Color, name: color, widget: string, hint: "Hex color, e.g. #a855f7" }
+                      - { label: Icon, name: icon, widget: string, hint: "A single emoji" }
+                      - { label: Causes, name: causes, widget: list }
+                      - { label: Detail, name: detail, widget: markdown }
+              - label: Positioning Map
+                name: positioning-map
+                widget: object
+                hint: "2-axis scatter/perceptual map. Point x/y are percentages (0-100), not pixels."
+                fields:
+                  - { label: X-Axis Labels, name: xLabels, widget: list, hint: "2 or 3 labels, evenly spaced left to right" }
+                  - { label: Y-Axis Labels, name: yLabels, widget: list, hint: "2 labels: top, then bottom" }
+                  - label: Highlight Zone
+                    name: highlight
+                    widget: object
+                    required: false
+                    fields:
+                      - { label: X Range, name: xRange, widget: list, field: { label: Value, name: value, widget: number }, min: 2, max: 2, hint: "[start%, end%]" }
+                      - { label: Y Range, name: yRange, widget: list, field: { label: Value, name: value, widget: number }, min: 2, max: 2, hint: "[start%, end%]" }
+                      - { label: Label, name: label, widget: string }
+                  - label: Points
+                    name: points
+                    widget: list
+                    fields:
+                      - { label: ID, name: id, widget: string }
+                      - { label: Label, name: label, widget: string }
+                      - { label: X (0-100), name: x, widget: number }
+                      - { label: Y (0-100), name: y, widget: number }
+                      - { label: Color, name: color, widget: string }
+                      - { label: Category, name: category, widget: string }
+                      - { label: Description, name: description, widget: text }
+              - label: Comparison Table
+                name: comparison-table
+                widget: object
+                fields:
+                  - { label: Columns, name: columns, widget: list, hint: "Competitor/product names — the first table column (Capability) is automatic" }
+                  - label: Rows
+                    name: rows
+                    widget: list
+                    fields:
+                      - { label: Row Label, name: label, widget: string }
+                      - { label: Values, name: values, widget: list, hint: "One per column. Use ✓ for yes, — for no, or short text (e.g. Partial)" }
   - name: experience
     label: Experience
     folder: content/experience
