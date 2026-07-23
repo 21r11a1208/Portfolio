@@ -21,7 +21,7 @@ collections:
       - { label: Description, name: description, widget: text }
       - { label: Problem Statement, name: problemStatement, widget: text }
       - { label: Business Impact, name: businessImpact, widget: text, required: false }
-      - { label: Read Time, name: readTime, widget: string, default: "5 min read" }
+      - { label: Read Time, name: readTime, widget: string, default: "5 min read", required: false }
       - { label: Order, name: order, widget: number }
       - { label: Last Modified, name: lastModified, widget: string }
       - { label: Priority, name: priority, widget: number, min: 0, max: 1 }
@@ -47,7 +47,7 @@ collections:
                 name: callout
                 widget: object
                 fields:
-                  - { label: Tone, name: tone, widget: select, options: [accent, neutral], default: accent }
+                  - { label: Tone, name: tone, widget: select, options: [accent, neutral], default: accent, required: false }
                   - { label: Title, name: title, widget: string, required: false }
                   - { label: Body, name: body, widget: markdown }
               - label: Card Grid
@@ -55,7 +55,7 @@ collections:
                 widget: object
                 fields:
                   - { label: Variant, name: variant, widget: select, options: [counter, info], hint: "counter animates the value as a number on scroll; info shows it as static text" }
-                  - { label: Columns, name: columns, widget: select, options: [2, 3, 4], default: 3 }
+                  - { label: Columns, name: columns, widget: select, options: [2, 3, 4], default: 3, required: false }
                   - label: Cards
                     name: cards
                     widget: list
@@ -69,8 +69,8 @@ collections:
                 name: icon-list
                 widget: object
                 fields:
-                  - { label: Icon, name: icon, widget: select, options: [check, cross, arrow, dot], default: dot }
-                  - { label: Columns, name: columns, widget: select, options: [1, 2, 3], default: 1 }
+                  - { label: Icon, name: icon, widget: select, options: [check, cross, arrow, dot], default: dot, required: false }
+                  - { label: Columns, name: columns, widget: select, options: [1, 2, 3], default: 1, required: false }
                   - label: Groups
                     name: groups
                     widget: list
@@ -82,7 +82,7 @@ collections:
                 name: card-list
                 widget: object
                 fields:
-                  - { label: Numbered, name: numbered, widget: boolean, default: false }
+                  - { label: Numbered, name: numbered, widget: boolean, default: false, required: false }
                   - label: Cards
                     name: cards
                     widget: list
@@ -90,7 +90,7 @@ collections:
                       - { label: Title, name: title, widget: string }
                       - { label: Body, name: body, widget: markdown, required: false }
                       - { label: Price, name: price, widget: string, required: false }
-                      - { label: Highlight, name: highlight, widget: boolean, default: false }
+                      - { label: Highlight, name: highlight, widget: boolean, default: false, required: false }
                       - { label: Items, name: items, widget: list, required: false }
                       - { label: Note, name: note, widget: string, required: false }
               - label: Chip Flow
@@ -137,7 +137,7 @@ collections:
                 name: accordion
                 widget: object
                 fields:
-                  - { label: Single Open, name: singleOpen, widget: boolean, default: true, hint: "If on, opening one item closes any other open item" }
+                  - { label: Single Open, name: singleOpen, widget: boolean, default: true, required: false, hint: "If on, opening one item closes any other open item" }
                   - label: Items
                     name: items
                     widget: list
