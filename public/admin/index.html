@@ -129,6 +129,124 @@
         color: #0f0f14 !important;
         fill: #0f0f14 !important;
       }
+
+      /* ═══ Editor chrome (beyond the login screen) ══════════════════════
+         Give the CMS's persistent chrome the site's identity WITHOUT
+         touching the content-editing surface. Every rule below targets a
+         chrome component only — the top App bar, the primary "New" button,
+         the collection sidebar — so form fields, widgets and entry cards
+         render stock/light and stay fully legible. Decap's default accent
+         is blue (#3a69c7); the accents that matter are remapped to lime.
+
+         Light-surface lime uses #4a6e00 (the site's own --accent-text for
+         light backgrounds; see globals.css .light) because bright lime is
+         unreadable on white. Bright lime #c8f060 is used only on the dark
+         header bar. Class fragments are Decap component names matched with
+         [class*=...], same robustness rationale as the login rules above. */
+
+      /* Top app bar → dark brand bar with a hairline underline. */
+      header[class*="AppHeader"] {
+        background: #1a1a22 !important;
+        border-bottom: 1px solid rgba(240, 237, 230, 0.08) !important;
+        box-shadow: none !important;
+        color: rgba(240, 237, 230, 0.62) !important;
+      }
+      header[class*="AppHeader"] svg {
+        fill: currentColor !important;
+      }
+
+      /* Header nav + quick-add: cream, lime on hover/active (were grey/blue). */
+      [class*="AppHeaderNavLink"],
+      [class*="AppHeaderButton"] {
+        color: rgba(240, 237, 230, 0.62) !important;
+        font-family: "DM Sans", system-ui, sans-serif !important;
+      }
+      [class*="AppHeaderNavLink"]:hover,
+      [class*="AppHeaderButton"]:hover,
+      [class*="AppHeaderNavLink"][class*="header-link-active"] {
+        color: #c8f060 !important;
+      }
+
+      /* Header account dropdown → refined dark ghost button on the dark bar. */
+      [class*="AppHeaderActions"] [class*="StyledDropdownButton"] {
+        background: #22222e !important;
+        color: #f0ede6 !important;
+        border: 1px solid rgba(240, 237, 230, 0.10) !important;
+        font-family: "DM Sans", system-ui, sans-serif !important;
+      }
+
+      /* Primary "New <collection>" button → the site's lime accent button. */
+      a[class*="CollectionTopNewButton"] {
+        background: #c8f060 !important;
+        color: #0f0f14 !important;
+        font-family: "Syne", system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        box-shadow: 0 6px 20px rgba(200, 240, 96, 0.16) !important;
+        transition: transform 0.15s ease, box-shadow 0.15s ease,
+          background 0.15s ease !important;
+      }
+      a[class*="CollectionTopNewButton"]:hover {
+        background: #d4f570 !important;
+        transform: translateY(-1px);
+        box-shadow: 0 10px 26px rgba(200, 240, 96, 0.24) !important;
+      }
+
+      /* Collection sidebar: swap Decap's blue active-pill for a lime one. */
+      a[class*="SidebarNavLink"][class*="sidebar-active"] {
+        background: rgba(200, 240, 96, 0.14) !important;
+        color: #4a6e00 !important;
+        box-shadow: inset 3px 0 0 #c8f060 !important;
+      }
+      a[class*="SidebarNavLink"]:hover {
+        color: #4a6e00 !important;
+      }
+
+      /* ── Single-entry editor toolbar ───────────────────────────────────
+         The entry editor has no AppHeader — this ToolbarContainer is its
+         only top chrome — so it gets the same dark brand bar as the
+         collection header, keeping the whole CMS cohesive. Text elements
+         are recolored individually (never the container as a whole) so the
+         Publish dropdown's popover menu keeps its own dark-on-white text.
+         Only the toolbar is touched; the edit form + live preview below
+         stay stock/light. */
+      [class*="ToolbarContainer"] {
+        background: #1a1a22 !important;
+        border-bottom: 1px solid rgba(240, 237, 230, 0.08) !important;
+        box-shadow: none !important;
+      }
+      /* Back link, back arrow and preview/meta labels → cream, lime on hover. */
+      [class*="ToolbarSectionBackLink"],
+      [class*="ToolbarSectionBackLink"] *,
+      [class*="BackArrow"],
+      [class*="ToolbarSectionMeta"],
+      [class*="ToolbarSectionMeta"] * {
+        color: rgba(240, 237, 230, 0.72) !important;
+      }
+      [class*="ToolbarSectionBackLink"]:hover,
+      [class*="ToolbarSectionBackLink"]:hover * {
+        color: #c8f060 !important;
+      }
+      /* Toolbar icons follow their (cream) text color… */
+      [class*="ToolbarContainer"] svg {
+        fill: currentColor !important;
+      }
+      /* Publish dropdown → the site's lime accent button (primary action).
+         Higher specificity than the cream text rules above, so it wins. */
+      [class*="ToolbarSectionMain"] [class*="StyledDropdownButton"] {
+        background: #c8f060 !important;
+        color: #0f0f14 !important;
+        font-family: "Syne", system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        box-shadow: 0 6px 18px rgba(200, 240, 96, 0.16) !important;
+      }
+      [class*="ToolbarSectionMain"] [class*="StyledDropdownButton"] svg {
+        fill: #0f0f14 !important;
+      }
+      /* Delete entry → red-tinted ghost that reads on the dark bar. */
+      [class*="ToolbarSectionMain"] button[class*="ToolbarButton"] {
+        background: rgba(214, 0, 50, 0.16) !important;
+        color: #ff7089 !important;
+      }
     </style>
   </head>
   <body>
