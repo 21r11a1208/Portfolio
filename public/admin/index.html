@@ -15,6 +15,14 @@
       to "/admin/" regardless of which of the three URL shapes it's served at.
     -->
     <base href="/admin/" />
+    <style>
+      /* Hides the Decap wordmark/icon on the login screen. Matched on the
+         semantic part of the class name (Emotion's hash prefix isn't stable
+         across decap-cms versions) so this survives CDN version bumps. */
+      span[class*="DecapLogoIcon"] {
+        display: none;
+      }
+    </style>
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
