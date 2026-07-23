@@ -130,8 +130,43 @@ export const FishboneBlockSchema = z.object({
   })),
 });
 
-// A real discriminated union of 11 members as of Task 3b.1 (9 as of 3a.2,
-// plus timeline/fishbone here — the 2 new block types the RCA case studies need).
+// Renders a 2-axis positioning/perceptual map. Point coordinates are 0-100
+// percentages of the plot area, not pixels — the reference (CluelyTeardown.tsx)
+// hand-placed each competitor's cx/cy in a fixed 640x400 SVG; percentages let
+// the component own the actual plot geometry and stay independent of any
+// particular viewBox size.
+export const PositioningMapBlockSchema = z.object({
+  type: z.literal("positioning-map"),
+  xLabels: z.array(z.string()), // 2 or 3 labels evenly spaced left-to-right, e.g. ["Before", "During", "After"]
+  yLabels: z.array(z.string()), // 2 labels, top and bottom, e.g. ["Individual", "Team"]
+  highlight: z.object({
+    xRange: z.tuple([z.number(), z.number()]), // 0-100
+    yRange: z.tuple([z.number(), z.number()]), // 0-100
+    label: z.string(),
+  }).optional(),
+  points: z.array(z.object({
+    id: z.string(),
+    label: z.string(),
+    x: z.number(), // 0-100
+    y: z.number(), // 0-100
+    color: z.string(),
+    category: z.string(),
+    description: z.string(),
+  })),
+});
+
+export const ComparisonTableBlockSchema = z.object({
+  type: z.literal("comparison-table"),
+  columns: z.array(z.string()), // competitor/product names — first table column ("Capability") is implicit
+  rows: z.array(z.object({
+    label: z.string(),
+    values: z.array(z.string()), // one per column; "✓" renders accent-green, "—" renders muted, anything else renders as plain text
+  })),
+});
+
+// A real discriminated union of 13 members as of Task 3c.1 (11 as of 3b.1,
+// plus positioning-map/comparison-table here — the 2 new block types Cluely's
+// competitive-map section needs).
 export const BlockSchema = z.discriminatedUnion("type", [
   ProseBlockSchema,
   CalloutBlockSchema,
@@ -144,6 +179,8 @@ export const BlockSchema = z.discriminatedUnion("type", [
   AccordionBlockSchema,
   TimelineBlockSchema,
   FishboneBlockSchema,
+  PositioningMapBlockSchema,
+  ComparisonTableBlockSchema,
 ]);
 export type Block = z.infer<typeof BlockSchema>;
 
