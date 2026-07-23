@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="robots" content="noindex" />
     <title>Content Manager</title>
+    <!--
+      Next's rewrite serves this file's content AT the url "/admin" (no
+      trailing slash) rather than "/admin/index.html" or "/admin/" — see
+      next.config.ts. Decap's config loader fetches a page-relative
+      "config.yml", which a browser resolves against "/admin" as if "admin"
+      were a filename, landing on "/config.yml" (404) instead of
+      "/admin/config.yml". This <base> pins every relative URL on the page
+      to "/admin/" regardless of which of the three URL shapes it's served at.
+    -->
+    <base href="/admin/" />
   </head>
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
