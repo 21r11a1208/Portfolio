@@ -252,5 +252,25 @@
   <body>
     <!-- Include the script that builds the page and powers Decap CMS -->
     <script src="https://unpkg.com/decap-cms@^3.0.0/dist/decap-cms.js"></script>
+
+    <script>
+      // After logout, Decap renders the login screen but leaves the previous
+      // route in the URL hash (e.g. #/collections/case_studies), so the
+      // address bar no longer matches what's on screen. Whenever the login
+      // screen is present, normalize the hash back to root. Assigning
+      // location.hash (rather than history.replaceState) fires hashchange so
+      // Decap's own hash router follows along, keeping URL and router in sync.
+      //
+      // Cheap poll instead of a MutationObserver on Decap's heavy editor DOM:
+      // it's a single querySelector, no-ops while logged in (login screen
+      // absent) and once the hash is already root.
+      setInterval(function () {
+        var onLoginScreen = document.querySelector('[class*="StyledAuthenticationPage"]');
+        var h = window.location.hash;
+        if (onLoginScreen && h && h !== "#/" && h !== "#") {
+          window.location.hash = "/";
+        }
+      }, 800);
+    </script>
   </body>
 </html>
