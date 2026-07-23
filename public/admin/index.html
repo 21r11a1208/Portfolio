@@ -15,12 +15,119 @@
       to "/admin/" regardless of which of the three URL shapes it's served at.
     -->
     <base href="/admin/" />
+
+    <!--
+      Brand fonts — the same two families the site itself uses (Syne for
+      display, DM Sans for body; see src/app/layout.tsx). Loaded straight from
+      Google Fonts because this admin page is served outside Next's font
+      pipeline. Absolute URLs, so the <base> above doesn't rewrite them.
+    -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500&family=Syne:wght@600;700;800&display=swap"
+      rel="stylesheet"
+    />
+
     <style>
-      /* Hides the Decap wordmark/icon on the login screen. Matched on the
-         semantic part of the class name (Emotion's hash prefix isn't stable
-         across decap-cms versions) so this survives CDN version bumps. */
+      /* ─────────────────────────────────────────────────────────────────
+         Login-screen branding for the Decap CMS admin.
+
+         Every selector below is scoped to elements that exist ONLY on the
+         login screen — StyledAuthenticationPage, LoginButton, DecapLogoIcon,
+         LoginButtonIcon. None of them appear in the content editor, so the
+         editor renders exactly as stock (i.e. the tested, working UI is left
+         untouched). These are Decap's semantic component-name class
+         fragments, matched with [class*=...] so they survive the Emotion
+         hash prefix changing across decap-cms@^3 CDN builds. If a future
+         Decap version renames them, the login just falls back to Decap's
+         default look — still fully functional.
+
+         Palette mirrors the site's dark theme (src/app/globals.css):
+           bg #0f0f14 · text #f0ede6 · accent lime #c8f060 / #d4f570
+         ───────────────────────────────────────────────────────────────── */
+
+      /* Full-viewport backdrop: near-black with a soft lime glow, echoing
+         the site's dark hero. Forced to a centered flex column so the
+         pseudo-element brand marks and the button stack cleanly. */
+      [class*="StyledAuthenticationPage"] {
+        background:
+          radial-gradient(58% 52% at 50% 36%, rgba(200, 240, 96, 0.12), transparent 70%),
+          #0f0f14 !important;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 0;
+        font-family: "DM Sans", system-ui, sans-serif;
+      }
+
+      /* Hide Decap's own wordmark — we render our own brand marks below. */
       span[class*="DecapLogoIcon"] {
-        display: none;
+        display: none !important;
+      }
+
+      /* Wordmark, in the site's display face. */
+      [class*="StyledAuthenticationPage"]::before {
+        content: "B Anish.";
+        order: 1;
+        font-family: "Syne", system-ui, sans-serif;
+        font-weight: 800;
+        font-size: 46px;
+        letter-spacing: -0.02em;
+        line-height: 1;
+        color: #f0ede6;
+      }
+
+      /* Eyebrow, in the lime accent — uppercase and letter-spaced to match
+         the hero's "PRODUCT BUILDER · 0→1 OPERATOR" eyebrow treatment. */
+      [class*="StyledAuthenticationPage"]::after {
+        content: "Content Manager";
+        order: 2;
+        margin-top: 15px;
+        margin-bottom: 36px;
+        font-family: "DM Sans", system-ui, sans-serif;
+        font-weight: 500;
+        font-size: 12px;
+        letter-spacing: 0.24em;
+        text-transform: uppercase;
+        color: #c8f060;
+      }
+
+      /* Login button restyled as the site's accent button: lime fill, dark
+         ink, Syne label, soft glow, lift on hover. */
+      button[class*="LoginButton"] {
+        order: 3;
+        background: #c8f060 !important;
+        color: #0f0f14 !important;
+        font-family: "Syne", system-ui, sans-serif !important;
+        font-weight: 700 !important;
+        font-size: 15px !important;
+        letter-spacing: 0.01em;
+        /* Decap's button base pins height:36px + line-height:36px with
+           box-sizing:border-box, which would swallow the padding below and
+           keep the button squat. Release both so the padding defines a
+           taller, more deliberate button. */
+        height: auto !important;
+        line-height: 1.1 !important;
+        padding: 14px 30px !important;
+        border-radius: 10px !important;
+        box-shadow: 0 8px 30px rgba(200, 240, 96, 0.18) !important;
+        transition: transform 0.18s ease, background 0.18s ease,
+          box-shadow 0.18s ease !important;
+      }
+      button[class*="LoginButton"]:hover {
+        background: #d4f570 !important;
+        transform: translateY(-2px);
+        box-shadow: 0 12px 38px rgba(200, 240, 96, 0.26) !important;
+      }
+      /* Recolor the GitHub glyph to the dark ink so it reads on the lime
+         fill (the icon otherwise inherits Decap's light-on-dark color). */
+      button[class*="LoginButton"] span[class*="LoginButtonIcon"],
+      button[class*="LoginButton"] svg,
+      button[class*="LoginButton"] svg path {
+        color: #0f0f14 !important;
+        fill: #0f0f14 !important;
       }
     </style>
   </head>
