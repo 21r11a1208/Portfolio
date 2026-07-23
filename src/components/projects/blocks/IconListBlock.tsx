@@ -25,10 +25,13 @@ const ICON_COLOR: Record<IconListBlockData["icon"], string> = {
 // the same convention). `md:` matches the breakpoint the 3 PRDs use for
 // side-by-side text comparisons (e.g. persona Goals/Pains, AgriDronePRD's
 // For-Farmers/For-Operators split) — as opposed to `sm:` for compact stat
-// grids, which CardGridBlock uses instead.
+// grids, which CardGridBlock uses instead. `3` (added for Task 3e) follows
+// CardGridBlock's own 3-column convention (`sm:grid-cols-3`) for the same
+// reason: an always-3-wide metrics-hierarchy tree, not a stat grid.
 const COLUMN_CLASSES: Record<IconListBlockData["columns"], string> = {
   1: "grid-cols-1",
   2: "grid-cols-1 md:grid-cols-2",
+  3: "grid-cols-1 sm:grid-cols-3",
 };
 
 export function IconListBlock({ data }: { data: IconListBlockData }) {
@@ -39,12 +42,17 @@ export function IconListBlock({ data }: { data: IconListBlockData }) {
       {data.groups.map((group, i) => (
         <div key={i}>
           {group.label && (
-            <p className="text-sm font-display font-semibold text-[var(--text)] mb-3">{group.label}</p>
+            <p
+              className="text-sm font-display font-semibold mb-3"
+              style={{ color: group.color ?? "var(--text)" }}
+            >
+              {group.label}
+            </p>
           )}
           <ul className="space-y-2">
             {group.items.map((item, j) => (
               <li key={j} className="flex gap-2.5 text-sm font-body text-[var(--text-65)]">
-                <span className={`${color} shrink-0`}>{glyph}</span>{item}
+                <span className={group.color ? undefined : `${color} shrink-0`} style={group.color ? { color: group.color, flexShrink: 0 } : undefined}>{glyph}</span>{item}
               </li>
             ))}
           </ul>

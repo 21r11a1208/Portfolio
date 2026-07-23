@@ -33,9 +33,10 @@ export const CardGridBlockSchema = z.object({
 export const IconListBlockSchema = z.object({
   type: z.literal("icon-list"),
   icon: z.enum(["check", "cross", "arrow", "dot"]).default("dot"),
-  columns: z.union([z.literal(1), z.literal(2)]).default(1),
+  columns: z.union([z.literal(1), z.literal(2), z.literal(3)]).default(1),
   groups: z.array(z.object({
     label: z.string().optional(), // e.g. "For Farmers" — omit for a single unlabeled list
+    color: z.string().optional(), // hex — overrides the block-level `icon` color for this group only, e.g. a metrics-hierarchy column that's bespoke-colored per category (added for Task 3e's Asana/Trello metrics tree)
     items: z.array(z.string()),
   })),
 });
