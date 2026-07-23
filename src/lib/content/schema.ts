@@ -204,7 +204,14 @@ export const CaseStudySummarySchema = z.object({
   businessImpact: z.string().optional(),
   readTime: z.string().default("5 min read"),
   order: z.number(),
-  lastModified: z.string(), // ISO date string, e.g. "2025-03-19"
+  // ISO date string, e.g. "2025-03-19". Accepts a real Date too: Decap CMS's
+  // YAML serializer re-saves this field unquoted, and an unquoted YAML
+  // scalar shaped like a date is parsed as a native Date by gray-matter's
+  // underlying js-yaml, not a string — this schema has to tolerate whichever
+  // one arrives rather than assume every writer of this file quotes it.
+  lastModified: z.union([z.string(), z.date()]).transform((v) =>
+    v instanceof Date ? v.toISOString().slice(0, 10) : v
+  ),
   priority: z.number().min(0).max(1),
   sections: z.array(SectionSchema).optional(),
 });
